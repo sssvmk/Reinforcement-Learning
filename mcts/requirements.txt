@@ -1,0 +1,12 @@
+numpy
+pandas
+matplotlib
+pyyaml
+pytest
+
+# Optional (used if already installed; code degrades gracefully if absent):
+# gymnasium      -- InventoryEnv implements the same reset/step interface
+#                   manually if gymnasium is unavailable.
+# kaggle-environments -- only for optional cross-checks against the real
+#                   ConnectX runtime; Part A works fully without it.
+# torch          -- only for the optional AlphaZero-style stretch goal.

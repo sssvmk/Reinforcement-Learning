@@ -1,0 +1,70 @@
+# MCTS: ConnectX + M5 Inventory Control
+# All paths are read from here and may be overridden by env vars M5_DIR / CONNECTX_DIR.
+
+paths:
+  m5_dir: "C:/Users/msk80743/OneDrive - GSK/m5-forecasting-accuracy"
+  connectx_dir: "C:/Users/msk80743/OneDrive - GSK/kaggle-environments-0.1.4"
+  outputs_dir: "./outputs"
+
+seed: 0
+
+connectx:
+  rows: 6
+  columns: 7
+  inarow: 4
+  # Not found in the local connectx.json for this package version (see
+  # connectx/ENV_NOTES.md) -- documented Kaggle defaults, used only for
+  # reporting; tournament.py enforces its own per-move time budget.
+  assumed_timeout_seconds: 2.0
+  assumed_steps_cap: 1000
+
+mcts_connectx:
+  c: 1.41
+  budgets: [50, 200, 800, 3200]
+  rollout: "heuristic"      # "random" or "heuristic"
+  robust_child: true        # false -> max-value child selection
+  time_budget_seconds: null # if set, overrides simulation budget
+
+tournament:
+  games_per_pairing: 200
+  negamax_depths: [2, 4, 6]
+
+inventory:
+  lead_time_L: 2
+  episode_days: 90
+  unit_cost_frac_of_price: 0.6
+  holding_cost_frac_of_unit_cost_per_day: 0.005
+  stockout_penalty_frac_of_price: 0.2
+  fixed_order_cost: 0.5
+  max_price_gap_weeks_ffill: 2
+  initial_inventory_days_of_mean_demand: 3
+  action_grid_days_of_mean_demand: [0, 0.5, 1, 1.5, 2, 3, 4, 5, 7]
+
+  series_ids:
+    - "FOODS_3_477_CA_3_evaluation"      # mid-volume FOODS (primary/starter)
+    - "FOODS_3_090_CA_3_evaluation"      # high-volume, strongly seasonal
+    - "FOODS_3_586_TX_2_evaluation"      # high-volume, stable
+    - "HOUSEHOLD_2_062_TX_1_evaluation"  # low-volume, intermittent
+    - "HOBBIES_1_234_CA_3_evaluation"    # bursty, late-launch, missing-price test
+
+  split:
+    train_frac: 0.70
+    val_frac: 0.15
+    test_frac: 0.15
+
+  mcts:
+    horizon_H: 14
+    c: 1.0
+    budgets: [50, 200, 1000]
+    rollout_policy: "base_stock"   # "base_stock" or "random"
+    demand_model: "bootstrap"       # "bootstrap", "negbin", "deterministic_mean"
+    n_seeds: 5
+
+dqn_quick:
+  enabled: false   # optional stretch; see README limitations
+
+quick:
+  games_per_pairing: 20
+  budgets: [50, 200]
+  n_seeds: 2
+  episode_days: 28

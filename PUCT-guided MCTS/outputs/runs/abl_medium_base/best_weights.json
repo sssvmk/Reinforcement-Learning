@@ -1,0 +1,8 @@
+{
+  "type": "cnn",
+  "rows": 6,
+  "cols": 7,
+  "planes": 2,
+  "width": 32,
+  "value_hidden": 64
+}

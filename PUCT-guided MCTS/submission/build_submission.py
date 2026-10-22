@@ -1,0 +1,187 @@
+"""Build the single-file Kaggle-style submission:   python submission/build_submission.py [--weights path] [--checkpoint path]
+
+* exports the best network to outputs/best_weights.npz (float32, BN folded),
+* checks NumPy-vs-PyTorch parity on >=1000 random reachable positions (raises if max |diff| >= 1e-4),
+* concatenates game.py + az_mcts.py + submission/np_net.py (torch-free) + an `agent()` wrapper + base64 weights
+  into submission/submission.py, then smoke-tests it through a mock Kaggle observation/configuration.
+"""
+from __future__ import annotations
+
+import argparse
+import base64
+import re
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT))
+sys.path.insert(0, str(ROOT / "submission"))
+
+import numpy as np  # noqa: E402
+
+from config import load_config, output_dir  # noqa: E402
+
+AGENT_TEMPLATE = '''
+# ============================== agent wrapper ==============================
+import base64 as _b64
+import io as _io
+import time as _time
+
+_DEFAULT_TIME_LIMIT = {default_time_limit!r}   # seconds; used only if configuration has no actTimeout/timeout
+_TIME_FRACTION = {time_fraction!r}             # fraction of the limit spent searching
+_MAX_SIMS = {max_sims!r}
+_C_PUCT = {c_puct!r}
+_STATE = {{"player": None, "evaluator": None, "last_moves": None}}
+
+
+def _cfg_get(o, k, d=None):
+    if o is None:
+        return d
+    if isinstance(o, dict):
+        return o.get(k, d)
+    return getattr(o, k, d)
+
+
+def _load_evaluator():
+    if _STATE["evaluator"] is None:
+        raw = _b64.b64decode("".join(_WEIGHTS_B64))
+        with np.load(_io.BytesIO(raw)) as z:
+            weights = {{k: z[k].astype(np.float32) for k in z.files}}
+        _STATE["evaluator"] = NumpyEvaluator(weights)
+    return _STATE["evaluator"]
+
+
+def _fallback(observation, configuration):
+    """Centre-preferring legal column from the raw board; never raises."""
+    try:
+        cols = int(_cfg_get(configuration, "columns", 7) or 7)
+        board = _cfg_get(observation, "board")
+        legal = [c for c in range(cols) if board[c] == 0]
+        if legal:
+            mid = (cols - 1) / 2.0
+            return int(min(legal, key=lambda c: (abs(c - mid), c)))
+    except Exception:
+        pass
+    return 0
+
+
+def agent(observation, configuration):
+    t0 = _time.perf_counter()
+    try:
+        limit = _cfg_get(configuration, "actTimeout", None) or _cfg_get(configuration, "timeout", None) or _DEFAULT_TIME_LIMIT
+        limit = float(limit)
+        state = State.from_kaggle_observation(observation, configuration)
+        legal = state.legal_moves()
+        if not legal:
+            return _fallback(observation, configuration)
+        if len(legal) == 1:
+            return int(legal[0])
+        ev = _load_evaluator()
+        p = _STATE["player"]
+        if p is None:
+            p = _STATE["player"] = AZPlayer(ev, sims=None, c_puct=_C_PUCT, reuse=True, seed=0, max_sims=_MAX_SIMS)
+        if _STATE["last_moves"] is not None and state.moves < _STATE["last_moves"]:
+            p.new_game()                       # a new game started in the same process
+        _STATE["last_moves"] = state.moves
+        budget = min(limit * _TIME_FRACTION, limit - 0.4)
+        p.time_limit = max(0.05, budget - (_time.perf_counter() - t0))
+        col = int(p.select(state))
+        if col in legal:
+            return col
+    except Exception:
+        pass
+    return _fallback(observation, configuration)
+'''
+
+
+def strip_local_imports(src: str) -> str:
+    out = []
+    for line in src.splitlines():
+        if re.match(r"\s*from __future__ import", line):
+            continue
+        if re.match(r"\s*from (game|az_mcts|np_net) import ", line):
+            continue
+        out.append(line)
+    return "\n".join(out)
+
+
+def parity_check(net, weights_path: Path, n: int = 1000, seed: int = 0, tol: float = 1e-4):
+    import torch
+    from game import random_state
+    from np_net import NumpyNet, load_weights
+    rng = np.random.default_rng(seed)
+    g = {"rows": net.rows, "cols": net.cols}
+    planes = np.stack([random_state(rng, g["rows"], g["cols"]).to_planes(net.planes) for _ in range(n)])
+    net.eval()
+    with torch.no_grad():
+        lt, vt = net(torch.from_numpy(planes))
+    ln, vn = NumpyNet(load_weights(weights_path)).forward(planes)
+    dl = float(np.abs(lt.numpy() - ln).max())
+    dv = float(np.abs(vt.numpy() - vn).max())
+    if not (dl < tol and dv < tol):
+        raise AssertionError(f"NumPy/PyTorch parity FAILED: max|dlogit|={dl:.3e}, max|dvalue|={dv:.3e} (tol {tol})")
+    return dl, dv
+
+
+def build(cfg: dict, weights_path: Path, out_path: Path) -> Path:
+    scfg = cfg["submission"]
+    b64 = base64.b64encode(Path(weights_path).read_bytes()).decode("ascii")
+    chunks = [b64[i:i + 100] for i in range(0, len(b64), 100)]
+    parts = ['"""Self-contained ConnectX agent: PUCT-MCTS + small policy/value network (NumPy inference only).\n'
+             'Generated by submission/build_submission.py. Defines agent(observation, configuration)."""',
+             "from __future__ import annotations", "import numpy as np"]
+    for name in ("game.py", "az_mcts.py"):
+        parts.append(f"\n# ============================== {name} ==============================")
+        parts.append(strip_local_imports((ROOT / name).read_text(encoding="utf-8")))
+    parts.append("\n# ============================== np_net.py ==============================")
+    parts.append(strip_local_imports((ROOT / "submission" / "np_net.py").read_text(encoding="utf-8")))
+    parts.append("\n_WEIGHTS_B64 = [")
+    parts += [f'    "{c}",' for c in chunks]
+    parts.append("]")
+    parts.append(AGENT_TEMPLATE.format(default_time_limit=scfg["default_time_limit"], time_fraction=scfg["time_fraction"],
+                                       max_sims=scfg["max_sims"], c_puct=cfg["mcts"]["c_puct"]))
+    out_path = Path(out_path)
+    out_path.write_text("\n".join(parts) + "\n", encoding="utf-8")
+    return out_path
+
+
+def smoke_test(path: Path):
+    import importlib.util
+    sp = importlib.util.spec_from_file_location("submission_built", str(path))
+    mod = importlib.util.module_from_spec(sp)
+    sp.loader.exec_module(mod)
+    board = [0] * 42
+    a = mod.agent({"board": board, "mark": 1, "step": 0}, {"rows": 6, "columns": 7, "inarow": 4, "actTimeout": 2})
+    assert isinstance(a, int) and 0 <= a < 7, a
+    return a
+
+
+def main(argv=None):
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--checkpoint", default=None, help="training checkpoint (latest.pt) to export from")
+    ap.add_argument("--weights", default=None, help="existing weights npz (skips export; parity needs a checkpoint)")
+    a = ap.parse_args(argv)
+    cfg = load_config()
+    out = output_dir(cfg)
+    wpath = out / "best_weights.npz"
+    if a.weights:
+        wpath = Path(a.weights)
+    else:
+        import torch
+        from network import build_net, export_weights
+        ck_path = Path(a.checkpoint) if a.checkpoint else out / "checkpoints" / "latest.pt"
+        if not ck_path.exists():
+            raise FileNotFoundError(f"checkpoint not found: {ck_path} (run train_az.py first)")
+        ck = torch.load(ck_path, weights_only=False)
+        net = build_net(ck["cfg"])
+        net.load_state_dict(ck["best"])
+        export_weights(net, wpath)
+        dl, dv = parity_check(net, wpath)
+        print(f"parity OK on 1000 random positions: max|dlogit|={dl:.2e}, max|dvalue|={dv:.2e}")
+    sub = build(cfg, wpath, ROOT / "submission" / "submission.py")
+    print(f"weights: {wpath} ({wpath.stat().st_size / 1024:.0f} KiB)")
+    print(f"submission: {sub} ({sub.stat().st_size / 1024:.0f} KiB); smoke move = {smoke_test(sub)}")
+
+
+if __name__ == "__main__":
+    main()

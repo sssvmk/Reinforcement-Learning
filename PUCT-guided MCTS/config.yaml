@@ -1,0 +1,85 @@
+# Single source of truth. Override kaggle_dir with the env var KAGGLE_DIR.
+kaggle_dir: "C:/Users/msk80743/OneDrive - GSK/kaggle-environments-0.1.4"
+output_dir: outputs          # relative to this project folder
+seed: 0
+
+game: {rows: 6, columns: 7, inarow: 4}
+
+network:
+  type: cnn                  # cnn | mlp
+  width: 32                  # conv channels (cnn)
+  mlp_hidden: 128            # hidden units (mlp)
+  batch_norm: true
+  input_planes: 2            # 2 = own/opp; 3 adds constant "mover is player 1" plane
+
+mcts:
+  c_puct: 1.5
+  dirichlet_alpha: 1.0
+  dirichlet_eps: 0.25
+  temp_moves: 10             # T=1 for first N plies of self-play, then argmax
+  cache_max: 200000
+
+train:                       # defaults = "full" preset (laptop sized)
+  iterations: 40
+  games_per_iter: 64
+  sims_per_move: 100
+  buffer_size: 100000
+  batch_size: 256
+  steps_per_iter: 200
+  lr: 0.002
+  weight_decay: 0.0001       # L2 (Adam weight_decay)
+  mirror_augment: true
+  gating: true
+  gate_threshold: 0.55
+  arena_games: 40
+  arena_sims: 50
+  opening_plies: 4           # random opening plies (paired across seats) for arena/eval diversity
+  parallel_games: 64         # games stepped in lockstep for batched NN evaluation
+  progress_every: 4
+  progress_games: 20
+  progress_sims: 50
+
+presets:
+  quick:
+    iterations: 3
+    games_per_iter: 8
+    sims_per_move: 25
+    buffer_size: 20000
+    batch_size: 64
+    steps_per_iter: 30
+    arena_games: 8
+    arena_sims: 15
+    progress_every: 1
+    progress_games: 6
+    progress_sims: 15
+    parallel_games: 8
+  medium:                    # used for the ablations in the README
+    iterations: 12
+    games_per_iter: 32
+    sims_per_move: 50
+    buffer_size: 50000
+    batch_size: 128
+    steps_per_iter: 100
+    arena_games: 20
+    arena_sims: 25
+    progress_every: 4
+    progress_games: 10
+    progress_sims: 25
+    parallel_games: 32
+  full: {}
+
+eval:
+  games_per_pairing: 200
+  quick_games: 20
+  workers: 12
+  opening_plies: 4
+  az_sims: [50, 200, 800]
+  mcts_sims: 200
+  mcts_c: 1.4
+  negamax_depths: [2, 4, 6]
+  negamax_time_limit: 5.0    # seconds cap per move for deep negamax
+
+submission:
+  default_time_limit: 2.0    # seconds, used if configuration has no actTimeout/timeout
+  time_fraction: 0.5         # fraction of the limit used for search
+  max_sims: 5000

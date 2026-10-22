@@ -1,0 +1,5 @@
+numpy>=1.24
+matplotlib>=3.7
+pytest>=7
+PyYAML>=6
+torch>=2.0   # training only; the submission/inference code uses NumPy only

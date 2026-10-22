@@ -1,0 +1,8 @@
+{
+  "type": "mlp",
+  "rows": 6,
+  "cols": 7,
+  "planes": 2,
+  "hidden": 128,
+  "value_hidden": 64
+}

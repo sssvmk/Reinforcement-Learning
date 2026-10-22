@@ -1,0 +1,60 @@
+# Configuration for the M5 inventory-control DQN project
+seed: 42
+
+data:
+  data_dir: "C:\\Users\\msk80743\\OneDrive - GSK\\m5-forecasting-accuracy"
+  sales_file: "sales_train_evaluation.csv"   # falls back to sales_train_validation.csv if absent
+  calendar_file: "calendar.csv"
+  prices_file: "sell_prices.csv"
+  # temporal split fractions over each series' *valid* (priced) day range
+  train_frac: 0.70
+  val_frac: 0.15
+  test_frac: 0.15
+
+series_ids:
+  # Chosen to cover different demand profiles (see README for rationale).
+  # Verified to exist in sales_train_evaluation.csv (see Step-0 inspection).
+  - "FOODS_3_090_CA_3_evaluation"      # high-volume, mean ~131/day, low zero-fraction
+  - "HOBBIES_1_006_CA_1_evaluation"    # low-volume intermittent, mean ~0.86, 66% zero days
+  - "HOUSEHOLD_1_019_CA_1_evaluation"  # mid-volume household, mean ~4.3/day
+  - "FOODS_1_019_CA_1_evaluation"      # mid-volume foods with seasonality, mean ~4.1/day
+
+env:
+  lead_time: 2
+  window_len: 90
+  init_inventory_days: 3          # initial on-hand = this many days of mean demand
+  unit_cost_frac: 0.6             # unit_cost = 0.6 * mean sell_price
+  holding_cost_frac: 0.005        # per unit per day, fraction of unit_cost
+  stockout_penalty_frac: 0.2      # fraction of sell_price
+  fixed_order_cost: 1.0
+  order_grid_multiples: [0, 0.5, 1.0, 1.5, 2.0, 3.0, 5.0, 7.0]  # x mean daily demand
+
+dqn:
+  hidden_sizes: [128, 128]
+  gamma: 0.97
+  lr: 0.0005
+  batch_size: 64
+  buffer_capacity: 100000
+  warmup_steps: 1000
+  target_update_mode: "hard"   # "hard" or "soft"
+  target_sync_every: 500       # steps, for hard sync
+  tau: 0.005                   # for soft (Polyak) update
+  double_dqn: true
+  grad_clip_norm: 10.0
+  eps_start: 1.0
+  eps_end: 0.05
+  eps_decay_steps: 20000
+  num_episodes: 150
+  eval_every: 10
+  use_replay: true             # ablation flag
+  use_target_network: true     # ablation flag
+
+baselines:
+  s_S_grid_s_multiples: [0.5, 1.0, 1.5, 2.0, 2.5]
+  s_S_grid_S_multiples: [1.5, 2.0, 2.5, 3.0, 4.0, 5.0]
+  base_stock_review_period: 1
+  newsvendor_quantiles: [0.7, 0.8, 0.9]
+
+evaluation:
+  n_test_windows: 10
+  n_seeds: 5
