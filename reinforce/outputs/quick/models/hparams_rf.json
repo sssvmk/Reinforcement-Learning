@@ -1,0 +1,57 @@
+{
+ "inventory|FOODS_3_124_CA_3_validation|I1": {
+  "lr": 0.03,
+  "B": 32,
+  "ent": 0.0
+ },
+ "inventory|FOODS_3_124_CA_3_validation|I2": {
+  "lr": 0.1,
+  "B": 32,
+  "ent": 0.01
+ },
+ "inventory|FOODS_3_124_CA_3_validation|I3": {
+  "lr": 0.03,
+  "B": 32,
+  "ent": 0.01
+ },
+ "inventory|FOODS_2_128_WI_2_validation|I1": {
+  "lr": 0.1,
+  "B": 32,
+  "ent": 0.01
+ },
+ "inventory|FOODS_2_128_WI_2_validation|I2": {
+  "lr": 0.1,
+  "B": 32,
+  "ent": 0.0
+ },
+ "inventory|FOODS_2_128_WI_2_validation|I3": {
+  "lr": 0.03,
+  "B": 32,
+  "ent": 0.01
+ },
+ "inventory|HOBBIES_1_371_WI_1_validation|I1": {
+  "lr": 0.1,
+  "B": 32,
+  "ent": 0.0
+ },
+ "inventory|HOBBIES_1_371_WI_1_validation|I2": {
+  "lr": 0.1,
+  "B": 32,
+  "ent": 0.01
+ },
+ "inventory|HOBBIES_1_371_WI_1_validation|I3": {
+  "lr": 0.1,
+  "B": 32,
+  "ent": 0.0
+ },
+ "trading|TECHM|T1": {
+  "lr": 0.1,
+  "B": 32,
+  "ent": 0.0
+ },
+ "trading|TECHM|T2": {
+  "lr": 0.03,
+  "B": 32,
+  "ent": 0.01
+ }
+}

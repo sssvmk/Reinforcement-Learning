@@ -1,0 +1,26 @@
+trading_files:
+  - "C:/Users/username/OneDrive - XXYY/Muni/project/India/TECHM/TECHM_extend.csv.gzip"
+m5_dir: "C:\\Users\\username\\OneDrive - XXYY\\m5-forecasting-accuracy\\"
+fdpg_dir: "C:\\Users\\username\\OneDrive - XXYY\\Muni\\material\\cs324 Reinforcement Learning\\Finite-difference policy gradient"
+fdpg_comparison:
+  enabled: auto          # auto | true | false ; auto = on only when fdpg_dir exists
+inventory:
+  enabled: auto          # auto | true | false ; auto = on only when all M5 files exist
+  horizon: 90            # adopted from FDPG (prompt default 90)
+  lead_time: 2           # adopted from FDPG
+  q_max_mult: 7.0        # Q_max = q_max_mult * mu (FDPG had no Q_max; used only for REINFORCE policies and (B) evaluations)
+  gamma: 0.99
+  n_paths: 64            # paths per evaluation for the equal-budget comparison methods (adopted from FDPG)
+  series: ["FOODS_3_124_CA_3_validation", "FOODS_2_128_WI_2_validation", "HOBBIES_1_371_WI_1_validation"]  # adopted from FDPG (re-chosen by the same profiling rule in audit_data.py)
+trading:
+  horizon: 250
+  cost_bps: 5.0
+  gamma: 0.995
+  n_paths: 32
+  warmup_rows: 120
+  # DEVIATION (see DATA_NOTES.md): TECHM `close` fails the price-scale audit (adjusted vs unadjusted OHLC). true = use adjusted close for
+  # returns only (as FDPG did); SAR features always stay on the unadjusted scale. false = restrict to consistent ranges (~50 rows: unusable).
+  allow_adjusted_close: true
+splits: [0.6, 0.8]       # train / validation / test boundaries (adopted from FDPG)
+seed: 0
+workers: 8

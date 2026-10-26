@@ -1,0 +1,12 @@
+domain,key,policy,estimator,metric,fdpg_reported,reproduced_here,rel_diff,status
+inventory,FOODS_3_124_CA_3_validation,I1,spsa,mean test-window profit,758.5630864672537,758.5630864672537,0.0,REPRODUCED
+inventory,FOODS_3_124_CA_3_validation,I2,spsa,mean test-window profit,808.7173290929012,808.7173290929013,1.405767301278594e-16,REPRODUCED
+inventory,FOODS_3_124_CA_3_validation,I3,spsa,mean test-window profit,761.0738263831818,761.0738263831817,-1.4937688536982683e-16,REPRODUCED
+inventory,FOODS_2_128_WI_2_validation,I1,forward,mean test-window profit,170.49788669586388,170.49788669586385,-1.6669830917671716e-16,REPRODUCED
+inventory,FOODS_2_128_WI_2_validation,I2,regression,mean test-window profit,171.64413491484768,171.64413491484765,-1.6558508943229525e-16,REPRODUCED
+inventory,FOODS_2_128_WI_2_validation,I3,central,mean test-window profit,166.94149588763267,166.94149588763264,-1.7024951932582711e-16,REPRODUCED
+inventory,HOBBIES_1_371_WI_1_validation,I1,forward,mean test-window profit,94.88055081526392,94.88055081526393,1.497762670335998e-16,REPRODUCED
+inventory,HOBBIES_1_371_WI_1_validation,I2,forward,mean test-window profit,102.86910179760764,102.86910179760764,0.0,REPRODUCED
+inventory,HOBBIES_1_371_WI_1_validation,I3,spsa,mean test-window profit,100.71049769892257,100.71049769892257,0.0,REPRODUCED
+trading,TECHM,T1,forward,test cumulative return,0.7801554664548301,0.7801554664548302,1.4230792096737001e-16,REPRODUCED
+trading,TECHM,T2,regression,test cumulative return,0.988548442035255,0.988548442035255,0.0,REPRODUCED

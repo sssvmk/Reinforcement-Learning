@@ -1,0 +1,36 @@
+# Frozen BEFORE the --full run. Anything not listed here and reported later is labelled EXPLORATORY.
+frozen: true
+primary_problems:
+  inventory: FOODS_3_124_CA_3_validation
+  trading: TECHM
+primary_policies: {inventory: I2, trading: T1}
+primary_endpoint:
+  quantity: validation J (deterministic policy, normalised units) of the best-by-validation iterate, then TEST-period profit / cumulative return of that iterate
+  selection: best deterministic validation J along the run, never test
+  budget_episodes_full: 40000
+  seeds_full: 10
+reinforce_variants:
+  baselines: [none, loo_const, loo_time, linear, loo_time_std]
+  main_baseline: loo_time          # used for hyper-parameter tuning and for the FDPG comparison
+  tuning: {grid_full: "lr {0.01,0.03,0.1} x B {16,64} x entropy {0,0.001,0.01}", tuning_seeds: [100, 101], budget_fraction: 0.5, metric: validation J}
+comparison_methods_equal_budget: [random, neldermead, spsa, central]
+hypotheses:
+  H1: a baseline (loo_time) lowers gradient variance (trace of covariance) vs no baseline, at an unchanged mean gradient (bias check)
+  H2: baselines reach 90% of the best validation J in fewer episodes than no baseline
+  H3: REINFORCE (loo_time) matches or beats the best equal-budget derivative-free method on validation J at the full budget
+  H4: REINFORCE vs FDPG (evidence A and B): two-sided Mann-Whitney on seed-level validation J / test results; no direction pre-registered
+tests:
+  across_seeds: Mann-Whitney U (seeds not paired across projects); Wilcoxon signed-rank for paired baselines within this project
+  multiple_comparison: Holm within each family (all baselines vs none; all methods vs REINFORCE loo_time)
+  windows: paired bootstrap over test windows (4000 resamples); trading: moving-block bootstrap, block 20 days
+  alpha: 0.05
+stability_classes: {tolerance: 0.05, diverged: non-finite or final val below init val - 1 norm unit, collapsed: sigma at floor early with J below 50% of best, stalled: never reaches J0 + 0.5*(Jbest - J0), converged: reaches 95% and stays within tolerance, unconverged: otherwise}
+sample_efficiency: rule "J0 + 0.9*(Jbest_ever - J0)" (Jbest_ever = best mean validation J over methods)
+gradient_quality: {where: [primary inventory I1/I2, TECHM T1], estimates: 200 per baseline at B=32, reference: loo_time with 1600 episodes (50x B), points: [initial theta, trained theta seed 0]}
+fdpg_comparison: {reads: text/CSV/JSON only, never imports or unpickles, hashes asserted unchanged, evidence_A: FDPG published CSV results, evidence_B: FDPG saved thetas re-evaluated in THIS environment (Q_max and gamma differences stated), reproduction_tolerance: "2% or inside FDPG CI else NOT REPRODUCED"}
+exploratory: [sensitivity study, integer vs fractional orders, validation-tuned benchmarks, seasonal/intermittent series]
+exploratory_added_after_freeze:    # NOT part of the frozen plan; every result below is labelled EXPLORATORY in the reports
+  neural_policies: "R-I4 / R-T3: one 16-unit tanh layer + linear skip (PyTorch); 10 seeds, baselines none/loo_time/linear, small tuning grid; equal-budget SPSA/random on the same network; reduced sensitivity (2 seeds, 20k episodes); outputs/neural_full"
+  walkforward_vs_fdpg: "FDPG's 3 expanding folds over the test region, 5 seeds, 20k episodes; R-T1/T2/T3 and equal-budget methods vs FDPG's saved CSVs (walkforward_compare.py)"
+  qmax_free: "R-I1/R-I2 trained without the Q_max cap (FDPG-like), evaluated in the uncapped environment (evaluate_qfree.py)"
+  price_scale_robustness: "returns from next-open to following-open on the unadjusted scale vs adjusted close (evaluate_priceaudit.py)"

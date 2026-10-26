@@ -1,0 +1,6 @@
+vs,strategy,mean_diff_cum_return,p_mannwhitney
+R-T1(loo_time),R-T2(loo_time),-0.126815483853265,0.30952380952380953
+R-T1(loo_time),R-T3-neural(loo_time),-0.21941862939248882,0.09523809523809523
+R-T1(loo_time),T1-position central-FD,-0.10946773086904397,0.5476190476190477
+R-T1(loo_time),T1-position SPSA,-0.27642023762190426,0.05555555555555555
+R-T1(loo_time),T1-position random-search,-0.16462072047733173,0.30952380952380953

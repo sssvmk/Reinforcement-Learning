@@ -1,0 +1,12 @@
+{
+ "trading|TECHM|T1": {
+  "lr": 0.1,
+  "B": 64,
+  "ent": 0.01
+ },
+ "trading|TECHM|T2": {
+  "lr": 0.03,
+  "B": 16,
+  "ent": 0.01
+ }
+}

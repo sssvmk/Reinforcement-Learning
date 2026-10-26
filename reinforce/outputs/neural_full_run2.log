@@ -1,0 +1,7 @@
+[neural_full] estimated runtime ~86 min (10 workers; excludes sensitivity)
+tuning REINFORCE: 16 runs
+tuning comparison methods: 36 runs
+final runs: 200
+main phase done in 118.8 min
+sensitivity: 54 runs
+done; total 173.9 min

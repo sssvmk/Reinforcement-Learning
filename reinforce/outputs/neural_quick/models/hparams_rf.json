@@ -1,0 +1,22 @@
+{
+ "inventory|FOODS_3_124_CA_3_validation|I4": {
+  "lr": 0.03,
+  "B": 32,
+  "ent": 0.01
+ },
+ "inventory|FOODS_2_128_WI_2_validation|I4": {
+  "lr": 0.03,
+  "B": 32,
+  "ent": 0.0
+ },
+ "inventory|HOBBIES_1_371_WI_1_validation|I4": {
+  "lr": 0.03,
+  "B": 32,
+  "ent": 0.0
+ },
+ "trading|TECHM|T3": {
+  "lr": 0.03,
+  "B": 32,
+  "ent": 0.01
+ }
+}

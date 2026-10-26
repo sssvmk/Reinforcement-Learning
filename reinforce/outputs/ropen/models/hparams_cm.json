@@ -1,0 +1,14 @@
+{
+ "trading|TECHM|T1|random": {
+  "step": 1.0
+ },
+ "trading|TECHM|T1|neldermead": {},
+ "trading|TECHM|T1|spsa": {
+  "a": 0.3,
+  "c": 0.2
+ },
+ "trading|TECHM|T1|central": {
+  "eps": 0.1,
+  "lr": 0.1
+ }
+}

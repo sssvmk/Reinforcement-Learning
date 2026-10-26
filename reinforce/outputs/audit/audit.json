@@ -1,0 +1,170 @@
+{
+ "trading": {
+  "TECHM_extend.csv.gzip": {
+   "rows": 4677,
+   "start": "2007-09-17",
+   "end": "2026-10-23",
+   "dates_monotonic": true,
+   "dates_duplicated": 0,
+   "high_ge_open_close": 1.0,
+   "low_le_open_close": 0.010904425914047467,
+   "rsi_in_0_100": true,
+   "sar_positive": true,
+   "close_in_range_share": 0.010904425914047467,
+   "scale_by_year": {
+    "2007": {
+     "in_range": 0.0,
+     "close_over_mid": 0.6521946541277766
+    },
+    "2008": {
+     "in_range": 0.0,
+     "close_over_mid": 0.6563912835502883
+    },
+    "2009": {
+     "in_range": 0.0,
+     "close_over_mid": 0.6681794419704489
+    },
+    "2010": {
+     "in_range": 0.0,
+     "close_over_mid": 0.6694609326495913
+    },
+    "2011": {
+     "in_range": 0.0,
+     "close_over_mid": 0.673598714696643
+    },
+    "2012": {
+     "in_range": 0.0,
+     "close_over_mid": 0.6778263705274394
+    },
+    "2013": {
+     "in_range": 0.0,
+     "close_over_mid": 0.6799975730134074
+    },
+    "2014": {
+     "in_range": 0.0,
+     "close_over_mid": 0.6860062191412339
+    },
+    "2015": {
+     "in_range": 0.0,
+     "close_over_mid": 0.6924427245328966
+    },
+    "2016": {
+     "in_range": 0.0,
+     "close_over_mid": 0.7031656564651243
+    },
+    "2017": {
+     "in_range": 0.0,
+     "close_over_mid": 0.7200477215404758
+    },
+    "2018": {
+     "in_range": 0.0,
+     "close_over_mid": 0.7380932150677427
+    },
+    "2019": {
+     "in_range": 0.0,
+     "close_over_mid": 0.753180526569786
+    },
+    "2020": {
+     "in_range": 0.0,
+     "close_over_mid": 0.7768496660338371
+    },
+    "2021": {
+     "in_range": 0.0,
+     "close_over_mid": 0.8188059452422456
+    },
+    "2022": {
+     "in_range": 0.0,
+     "close_over_mid": 0.8512068376523172
+    },
+    "2023": {
+     "in_range": 0.0,
+     "close_over_mid": 0.8884394461837782
+    },
+    "2024": {
+     "in_range": 0.0,
+     "close_over_mid": 0.9219600496436597
+    },
+    "2025": {
+     "in_range": 0.004048582995951417,
+     "close_over_mid": 0.9500208541153258
+    },
+    "2026": {
+     "in_range": 0.25510204081632654,
+     "close_over_mid": 0.9741091922366683
+    }
+   },
+   "top10_abs_returns": [
+    [
+     "2009-06-09",
+     0.2561202208016047
+    ],
+    [
+     "2009-06-03",
+     0.17653373200077493
+    ],
+    [
+     "2020-03-23",
+     -0.15468030288533818
+    ],
+    [
+     "2008-10-10",
+     -0.14747027611012264
+    ],
+    [
+     "2008-01-22",
+     -0.14466513682767645
+    ],
+    [
+     "2009-01-07",
+     -0.14373078109706305
+    ],
+    [
+     "2015-05-27",
+     -0.1423662565053625
+    ],
+    [
+     "2009-05-22",
+     0.1391889066925902
+    ],
+    [
+     "2009-06-16",
+     0.12881532436865029
+    ],
+    [
+     "2008-10-21",
+     0.12462586584794932
+    ]
+   ],
+   "rsi_best_period": 14,
+   "rsi_best_mae": 7.014462005742276e-10,
+   "rsi_timing_mae": {
+    "-1": 3.4711488295065522,
+    "0": 6.082837543645082e-10,
+    "1": 3.4709376674726657
+   },
+   "sar_best": {
+    "match_share_0.5pct": 0.8440677966101695,
+    "step": 0.02,
+    "max": 0.3,
+    "lag": 0
+   },
+   "sar_equals_prev_hl_row2": true,
+   "sar_trend_uses_prior_data": 0.9980752780153977
+  }
+ },
+ "m5": {
+  "found": [
+   "calendar.csv",
+   "sales_train_evaluation.csv",
+   "sales_train_validation.csv",
+   "sample_submission.csv",
+   "sell_prices.csv"
+  ],
+  "missing": [],
+  "chosen_by_rule": {
+   "primary": "FOODS_3_124_CA_3_validation",
+   "intermittent": "FOODS_2_128_WI_2_validation",
+   "seasonal": "HOBBIES_1_371_WI_1_validation"
+  }
+ }
+}

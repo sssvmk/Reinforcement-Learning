@@ -1,0 +1,30 @@
+{
+ "inventory|FOODS_3_124_CA_3_validation|I4|random": {
+  "step": 1.0
+ },
+ "inventory|FOODS_3_124_CA_3_validation|I4|spsa": {
+  "a": 0.3,
+  "c": 0.2
+ },
+ "inventory|FOODS_2_128_WI_2_validation|I4|random": {
+  "step": 1.0
+ },
+ "inventory|FOODS_2_128_WI_2_validation|I4|spsa": {
+  "a": 0.1,
+  "c": 0.2
+ },
+ "inventory|HOBBIES_1_371_WI_1_validation|I4|random": {
+  "step": 1.0
+ },
+ "inventory|HOBBIES_1_371_WI_1_validation|I4|spsa": {
+  "a": 0.3,
+  "c": 0.05
+ },
+ "trading|TECHM|T3|random": {
+  "step": 0.3
+ },
+ "trading|TECHM|T3|spsa": {
+  "a": 0.3,
+  "c": 0.05
+ }
+}

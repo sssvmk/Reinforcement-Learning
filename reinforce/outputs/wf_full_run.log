@@ -1,0 +1,13 @@
+[full] estimated runtime ~35 min; fold edges [3645, 3949, 4253, 4557]
+tasks: 90
+                                     strategy  cum_return_mean  cum_return_std  sharpe_mean  sharpe_std  max_drawdown_mean  max_drawdown_std  turnover_per_year_mean  turnover_per_year_std  exposure_mean  exposure_std  n_seeds
+0                              R-T1(loo_time)            0.905           0.126        0.836       0.081             -0.259             0.048                  11.034                  4.827          0.909         0.022        5
+1                              R-T2(loo_time)            0.778           0.226        0.791       0.131             -0.270             0.035                  27.002                  8.407          0.817         0.069        5
+2                       R-T3-neural(loo_time)            0.686           0.304        0.695       0.200             -0.285             0.058                  20.016                  6.365          0.859         0.045        5
+3                                    RSI_rule            1.091             NaN        0.905         NaN             -0.291               NaN                   0.832                    NaN          0.980           NaN        1
+4                            T1-position SPSA            0.629           0.174        0.758       0.110             -0.243             0.036                  17.944                  6.087          0.751         0.083        5
+5                      T1-position central-FD            0.796           0.137        0.772       0.091             -0.272             0.042                   9.071                  1.052          0.938         0.032        5
+6                   T1-position random-search            0.740           0.229        0.736       0.130             -0.287             0.028                  12.331                  4.755          0.905         0.055        5
+7                                buy_and_hold            1.075             NaN        0.892         NaN             -0.291               NaN                   0.277                    NaN          1.000           NaN        1
+8     FDPG FD-T1(forward) (own code, 5 seeds)            0.846           0.091        0.799       0.050             -0.289             0.001                  31.695                    NaN          0.993           NaN        5
+9  FDPG FD-T2(regression) (own code, 5 seeds)            1.060           0.000        0.898       0.000             -0.287             0.000                   3.568                    NaN          1.000           NaN        5

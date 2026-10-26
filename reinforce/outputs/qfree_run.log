@@ -1,0 +1,6 @@
+[qfree] estimated runtime ~51 min (2 workers; excludes sensitivity)
+tuning REINFORCE: 216 runs
+tuning comparison methods: 168 runs
+final runs: 360
+main phase done in 67.4 min
+done; total 67.4 min

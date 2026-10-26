@@ -1,0 +1,28 @@
+domain,key,reference,vs,val_diff,test_diff,test_p,test_p_paired_wilcoxon,cliffs_test,test_p_holm
+inventory,FOODS_3_124_CA_3_validation,neural reinforce-linear (best val),neural reinforce-none,0.16810126684155957,35.64258406315628,0.014019277113959953,0.037109375,0.66,0.25234698805127914
+inventory,FOODS_3_124_CA_3_validation,neural reinforce-linear (best val),neural reinforce-loo_time,0.013173832421219167,4.6040788944631,0.3846730627355087,0.232421875,0.24,1.0
+inventory,FOODS_3_124_CA_3_validation,neural reinforce-linear (best val),neural cm-spsa,0.5699397385893916,134.20336564030129,0.00018267179110955002,0.001953125,1.0,0.004932138359957851
+inventory,FOODS_3_124_CA_3_validation,neural reinforce-linear (best val),neural cm-random,0.23536556113760376,47.98094616199842,0.00018267179110955002,0.001953125,1.0,0.004932138359957851
+inventory,FOODS_3_124_CA_3_validation,neural reinforce-linear (best val),FDPG F-I1 (spsa),0.17441112852049923,44.23127668537927,0.00018267179110955002,,1.0,0.004932138359957851
+inventory,FOODS_3_124_CA_3_validation,neural reinforce-linear (best val),FDPG F-I2 (spsa),-0.047678635036446426,-5.922965940268341,0.025748080821108063,,-0.6,0.411969293137729
+inventory,FOODS_3_124_CA_3_validation,neural reinforce-linear (best val),FDPG F-I3 (central_nocrn),0.1476724371455802,35.80050482714557,0.00018267179110955002,,1.0,0.004932138359957851
+inventory,FOODS_2_128_WI_2_validation,neural reinforce-linear (best val),neural reinforce-none,0.017776797060822247,0.3784726283566897,0.7913367801006604,0.921875,0.08,1.0
+inventory,FOODS_2_128_WI_2_validation,neural reinforce-linear (best val),neural reinforce-loo_time,0.027584660117941584,1.055106692831373,0.6775849579524755,0.6953125,-0.12,1.0
+inventory,FOODS_2_128_WI_2_validation,neural reinforce-linear (best val),neural cm-spsa,0.09588653007428594,11.537913805854004,0.0211339281291611,0.048828125,0.62,0.3592767781957387
+inventory,FOODS_2_128_WI_2_validation,neural reinforce-linear (best val),neural cm-random,0.12887557994503052,17.097764561051406,0.009108496398030965,0.001953125,0.7,0.1821699279606193
+inventory,FOODS_2_128_WI_2_validation,neural reinforce-linear (best val),FDPG F-I1 (forward),-0.07609384655289975,-6.166810679176109,0.14046504815835495,,-0.4,1.0
+inventory,FOODS_2_128_WI_2_validation,neural reinforce-linear (best val),FDPG F-I2 (regression),-0.07493184543142695,-7.313058898159909,0.06402210128302689,,-0.5,0.9603315192454034
+inventory,FOODS_2_128_WI_2_validation,neural reinforce-linear (best val),FDPG F-I3 (central),-0.022092660774543527,-2.610419870944895,1.0,,0.0,1.0
+inventory,HOBBIES_1_371_WI_1_validation,neural reinforce-linear (best val),neural reinforce-none,0.04491697214625123,1.2830582232095935,0.9698499769931556,0.845703125,0.02,1.0
+inventory,HOBBIES_1_371_WI_1_validation,neural reinforce-linear (best val),neural reinforce-loo_time,0.03807652942365625,-0.15945082487996842,1.0,0.76953125,0.0,1.0
+inventory,HOBBIES_1_371_WI_1_validation,neural reinforce-linear (best val),neural cm-spsa,0.2798746889246484,5.798504676272614,0.4273553138978077,0.275390625,0.22,1.0
+inventory,HOBBIES_1_371_WI_1_validation,neural reinforce-linear (best val),neural cm-random,0.2521013707858395,-7.533198210147063,0.00024612812790522973,0.001953125,-0.98,0.005414818813915054
+inventory,HOBBIES_1_371_WI_1_validation,neural reinforce-linear (best val),FDPG F-I1 (forward),0.29606742355225935,6.479128707566886,0.00018267179110955002,,1.0,0.004932138359957851
+inventory,HOBBIES_1_371_WI_1_validation,neural reinforce-linear (best val),FDPG F-I2 (spsa_nocrn),-0.044735232704778305,-0.5422843704593561,0.9097218891455553,,-0.04,1.0
+inventory,HOBBIES_1_371_WI_1_validation,neural reinforce-linear (best val),FDPG F-I3 (spsa_nocrn),0.05430606358935108,2.8999251270329864,0.07566157214388704,,0.48,1.0
+trading,TECHM,neural reinforce-none (best val),neural reinforce-loo_time,0.014266935726523489,-0.020603811840500197,0.8501067391385259,1.0,0.06,1.0
+trading,TECHM,neural reinforce-none (best val),neural reinforce-linear,0.024463024135923606,-0.0708373515312486,1.0,0.4921875,0.0,1.0
+trading,TECHM,neural reinforce-none (best val),neural cm-spsa,0.30496502787362156,-0.3160002431732646,0.009108496398030965,0.013671875,-0.7,0.1821699279606193
+trading,TECHM,neural reinforce-none (best val),neural cm-random,0.09741488956781541,-0.23893084426256805,0.12122450301291662,0.048828125,-0.42,1.0
+trading,TECHM,neural reinforce-none (best val),FDPG F-T1 (spsa_nocrn),0.19387305520052422,-0.1391435431743987,0.5205228832757727,,-0.18,1.0
+trading,TECHM,neural reinforce-none (best val),FDPG F-T2 (regression),0.4119361022673177,-0.4385623588285308,0.0028272720911168077,,-0.8,0.05937271391345296

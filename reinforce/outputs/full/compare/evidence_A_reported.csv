@@ -1,0 +1,12 @@
+domain,key,policy,fdpg_method,fdpg_final_val,fdpg_rollouts_to_90,reinforce_final_val,reinforce_best_mean_val,reinforce_rollouts_to_90,caveat
+inventory,FOODS_3_124_CA_3_validation,I1,spsa,2.889821824623897,2065.585679879671,2.7925463551421905,2.850923757310345,5760.0,"normalisation differs (Q_max, norm rule): indicative only"
+inventory,FOODS_3_124_CA_3_validation,I2,spsa,3.112329033118013,3236.277516823214,2.552855250302195,2.8869717439797715,4960.0,"normalisation differs (Q_max, norm rule): indicative only"
+inventory,FOODS_3_124_CA_3_validation,I3,spsa,2.889935379452404,3236.277516823214,2.8781745533098446,3.0225654209814534,960.0,"normalisation differs (Q_max, norm rule): indicative only"
+inventory,FOODS_2_128_WI_2_validation,I1,forward,0.8309594785059649,5546.880459240499,0.7210527366893805,0.7358447268205062,4960.0,"normalisation differs (Q_max, norm rule): indicative only"
+inventory,FOODS_2_128_WI_2_validation,I2,regression,0.8298003749099498,10400.455623722815,-5.027225719482744,0.5110519492148233,0.0,"normalisation differs (Q_max, norm rule): indicative only"
+inventory,FOODS_2_128_WI_2_validation,I3,central,0.7770929482005252,5546.880459240499,-0.6464171261524675,-0.1511197808283106,1920.0,"normalisation differs (Q_max, norm rule): indicative only"
+inventory,HOBBIES_1_371_WI_1_validation,I1,forward,3.048145943633496,1577.7627153669252,3.152584373821573,3.230057702689808,992.0,"normalisation differs (Q_max, norm rule): indicative only"
+inventory,HOBBIES_1_371_WI_1_validation,I2,forward,3.3616401321108773,769.1970707276018,-19.65977336886882,2.6101553249787464,0.0,"normalisation differs (Q_max, norm rule): indicative only"
+inventory,HOBBIES_1_371_WI_1_validation,I3,spsa,3.191749898243513,2065.585679879671,2.9870154593954226,2.988829496012789,6944.0,"normalisation differs (Q_max, norm rule): indicative only"
+trading,TECHM,T1,forward,0.7681295031238748,4634.979201742532,0.8051282789033785,0.8244361300337305,8928.0,"normalisation differs (Q_max, norm rule): indicative only"
+trading,TECHM,T2,regression,0.636872045533193,3236.277516823214,0.7852734621309092,0.7988247962957427,29760.0,"normalisation differs (Q_max, norm rule): indicative only"

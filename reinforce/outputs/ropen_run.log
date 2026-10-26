@@ -1,0 +1,6 @@
+[ropen] estimated runtime ~24 min (2 workers; excludes sensitivity)
+tuning REINFORCE: 72 runs
+tuning comparison methods: 28 runs
+final runs: 80
+main phase done in 41.8 min
+done; total 41.8 min

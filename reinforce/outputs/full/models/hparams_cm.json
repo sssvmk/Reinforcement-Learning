@@ -1,0 +1,86 @@
+{
+ "inventory|FOODS_3_124_CA_3_validation|I1|random": {
+  "step": 0.3
+ },
+ "inventory|FOODS_3_124_CA_3_validation|I1|neldermead": {},
+ "inventory|FOODS_3_124_CA_3_validation|I1|spsa": {
+  "a": 0.3,
+  "c": 0.2
+ },
+ "inventory|FOODS_3_124_CA_3_validation|I1|central": {
+  "eps": 0.1,
+  "lr": 0.1
+ },
+ "inventory|FOODS_3_124_CA_3_validation|I2|random": {
+  "step": 1.0
+ },
+ "inventory|FOODS_3_124_CA_3_validation|I2|neldermead": {},
+ "inventory|FOODS_3_124_CA_3_validation|I2|spsa": {
+  "a": 0.3,
+  "c": 0.2
+ },
+ "inventory|FOODS_3_124_CA_3_validation|I2|central": {
+  "eps": 0.02,
+  "lr": 0.1
+ },
+ "inventory|FOODS_2_128_WI_2_validation|I1|random": {
+  "step": 0.1
+ },
+ "inventory|FOODS_2_128_WI_2_validation|I1|neldermead": {},
+ "inventory|FOODS_2_128_WI_2_validation|I1|spsa": {
+  "a": 0.3,
+  "c": 0.05
+ },
+ "inventory|FOODS_2_128_WI_2_validation|I1|central": {
+  "eps": 0.1,
+  "lr": 0.1
+ },
+ "inventory|FOODS_2_128_WI_2_validation|I2|random": {
+  "step": 0.3
+ },
+ "inventory|FOODS_2_128_WI_2_validation|I2|neldermead": {},
+ "inventory|FOODS_2_128_WI_2_validation|I2|spsa": {
+  "a": 0.3,
+  "c": 0.05
+ },
+ "inventory|FOODS_2_128_WI_2_validation|I2|central": {
+  "eps": 0.1,
+  "lr": 0.1
+ },
+ "inventory|HOBBIES_1_371_WI_1_validation|I1|random": {
+  "step": 0.1
+ },
+ "inventory|HOBBIES_1_371_WI_1_validation|I1|neldermead": {},
+ "inventory|HOBBIES_1_371_WI_1_validation|I1|spsa": {
+  "a": 0.3,
+  "c": 0.05
+ },
+ "inventory|HOBBIES_1_371_WI_1_validation|I1|central": {
+  "eps": 0.02,
+  "lr": 0.1
+ },
+ "inventory|HOBBIES_1_371_WI_1_validation|I2|random": {
+  "step": 1.0
+ },
+ "inventory|HOBBIES_1_371_WI_1_validation|I2|neldermead": {},
+ "inventory|HOBBIES_1_371_WI_1_validation|I2|spsa": {
+  "a": 0.3,
+  "c": 0.2
+ },
+ "inventory|HOBBIES_1_371_WI_1_validation|I2|central": {
+  "eps": 0.1,
+  "lr": 0.1
+ },
+ "trading|TECHM|T1|random": {
+  "step": 0.3
+ },
+ "trading|TECHM|T1|neldermead": {},
+ "trading|TECHM|T1|spsa": {
+  "a": 0.3,
+  "c": 0.05
+ },
+ "trading|TECHM|T1|central": {
+  "eps": 0.02,
+  "lr": 0.1
+ }
+}

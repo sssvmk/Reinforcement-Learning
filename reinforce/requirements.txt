@@ -1,0 +1,7 @@
+numpy
+pandas
+scipy
+matplotlib
+pytest
+pyyaml
+torch  # optional: only for neural policies R-I4/R-T3
