@@ -1,0 +1,4 @@
+role,id,store,item,cat,sales_file
+primary,FOODS_2_197_CA_4_evaluation,CA_4,FOODS_2_197,FOODS,sales_train_evaluation.csv
+intermittent,HOUSEHOLD_2_246_CA_1_evaluation,CA_1,HOUSEHOLD_2_246,HOUSEHOLD,sales_train_evaluation.csv
+seasonal,HOBBIES_1_371_WI_1_evaluation,WI_1,HOBBIES_1_371,HOBBIES,sales_train_evaluation.csv

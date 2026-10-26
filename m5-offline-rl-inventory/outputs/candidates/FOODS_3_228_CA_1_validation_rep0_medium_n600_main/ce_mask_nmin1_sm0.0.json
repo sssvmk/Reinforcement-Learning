@@ -1,0 +1,8 @@
+{
+ "name": "ce_mask_nmin1_sm0.0",
+ "family": "CE",
+ "rule": "mask",
+ "n_min": 1,
+ "lam": 0.0,
+ "smooth": 0.0
+}

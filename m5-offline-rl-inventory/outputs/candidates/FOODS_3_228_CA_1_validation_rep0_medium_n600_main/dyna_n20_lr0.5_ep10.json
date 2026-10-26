@@ -1,0 +1,7 @@
+{
+ "name": "dyna_n20_lr0.5_ep10",
+ "family": "DynaQ",
+ "n_planning": 20,
+ "lr": 0.5,
+ "epochs": 10
+}

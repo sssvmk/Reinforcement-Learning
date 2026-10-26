@@ -1,0 +1,3 @@
+primary=FOODS_3_228_CA_1_validation
+intermittent=FOODS_1_141_CA_1_validation
+seasonal=FOODS_3_697_CA_2_validation

@@ -1,0 +1,6 @@
+{
+ "name": "dqn_s3000",
+ "family": "DQN",
+ "steps": 3000,
+ "double": false
+}

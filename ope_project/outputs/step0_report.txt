@@ -1,0 +1,114 @@
+python 3.13.3 torch 2.14.1+cpu
+FILE C:\Users\msk80743\OneDrive - GSK\Muni\project\India\TECHM\TECHM_extend.csv.gzip exists True size 4117280
+shape (4677, 119)
+first cols ['tdate', 'open', 'high', 'low', 'close', 'volume', 'turnover_pp', 'nifty_close', 'nifty_volume', 'year', 'yearmonth', 'yearquarter']
+dtypes counts {dtype('float64'): 114, dtype('int64'): 4, <StringDtype(na_value=nan)>: 1}
+missing required []
+date range 2007-09-17 00:00:00 2026-10-23 00:00:00 monotonic True dups 0
+NaN count top 15:
+ nifty_R-squared_1250    2499
+R-squared               2499
+BETA                    1250
+Treynor Ratio           1250
+nifty_Alpha_1250        1250
+Alpha                   1250
+nifty_BETA_1250         1250
+Standard Deviation       750
+Sharpe Ratio             750
+tslope250                500
+d_Vola_a250_250          499
+nifty_R-squared_250      499
+d_Mtma_a250_250          499
+d_Vola_a250_50           299
+d_Mtma_a250_50           299
+NaN core: {'tdate': 0, 'open': 0, 'high': 0, 'low': 0, 'close': 0, 'volume': 0, 'sar': 1, 'RSI': 1}
+nifty_volume all zero: False
+high>=max(open,close) share 1.0
+low<=min(open,close) share 0.010904425914047467
+high>=low share 1.0
+RSI range 12.638394836583856 100.0 sar>0 share 1.0
+share low<=close<=high 0.010904425914047467
+by year (in-bounds share, median close/mid):
+          inb   ratio    n
+year                     
+2007  0.0000  0.6522   72
+2008  0.0000  0.6564  245
+2009  0.0000  0.6682  241
+2010  0.0000  0.6695  250
+2011  0.0000  0.6736  242
+2012  0.0000  0.6778  242
+2013  0.0000  0.6800  247
+2014  0.0000  0.6860  240
+2015  0.0000  0.6924  244
+2016  0.0000  0.7032  244
+2017  0.0000  0.7200  248
+2018  0.0000  0.7381  245
+2019  0.0000  0.7532  241
+2020  0.0000  0.7768  250
+2021  0.0000  0.8188  247
+2022  0.0000  0.8512  247
+2023  0.0000  0.8884  245
+2024  0.0000  0.9220  244
+2025  0.0040  0.9500  247
+2026  0.2551  0.9741  196
+10 largest |close ret|:
+           tdate       ret
+418  2009-06-09  0.256120
+414  2009-06-03  0.176534
+3057 2020-03-23 -0.154680
+264  2008-10-10 -0.147470
+87   2008-01-22 -0.144665
+320  2009-01-07 -0.143731
+1874 2015-05-27 -0.142366
+406  2009-05-22  0.139189
+423  2009-06-16  0.128815
+271  2008-10-21  0.124626
+open/prev close vs close ratio check (max |open gap|): 0.7038588437917697
+median close/open by year:
+ year
+2007    0.6506
+2008    0.6540
+2009    0.6692
+2010    0.6683
+2011    0.6733
+2012    0.6798
+2013    0.6812
+2014    0.6861
+2015    0.6921
+2016    0.7024
+2017    0.7194
+2018    0.7381
+2019    0.7534
+2020    0.7788
+2021    0.8214
+2022    0.8526
+2023    0.8929
+2024    0.9219
+2025    0.9497
+2026    0.9779
+-- RSI audit (on adjusted close and on open-based proxy) --
+RSI period/series medAbsDiff maxAbsDiff (14, 'close', 7.105427357601002e-15, 7.821299163879303e-09)
+RSI period/series medAbsDiff maxAbsDiff (21, 'close', 2.260321653063592, 9.56251112103704)
+RSI period/series medAbsDiff maxAbsDiff (14, 'open', 3.053787778293241, 24.708974813470924)
+RSI period/series medAbsDiff maxAbsDiff (9, 'close', 3.083598166104103, 12.923529456327785)
+RSI period/series medAbsDiff maxAbsDiff (21, 'open', 3.895481135749975, 23.278768314759425)
+RSI period/series medAbsDiff maxAbsDiff (9, 'open', 4.020645469743194, 28.972317213611092)
+RSI period/series medAbsDiff maxAbsDiff (7, 'close', 5.184389809319661, 21.266376183246493)
+RSI period/series medAbsDiff maxAbsDiff (7, 'open', 5.513228992372831, 34.86308737291114)
+RSI shift -1 2.6467695176809087
+RSI shift 0 7.105427357601002e-15
+RSI shift 1 2.646629527323313
+-- SAR audit --
+SAR step/max/shift medRelDiff share<1e-3 (0.02, 0.2, 0, 8.229168907636364e-06, 0.6920265021704364)
+SAR step/max/shift medRelDiff share<1e-3 (0.02, 0.3, 0, 8.27435392114495e-06, 0.6936257710760795)
+SAR step/max/shift medRelDiff share<1e-3 (0.02, 0.1, 0, 0.0015113532641646277, 0.46493031756911124)
+SAR step/max/shift medRelDiff share<1e-3 (0.02, 0.3, 1, 0.0064941323753126, 0.027416038382453736)
+SAR step/max/shift medRelDiff share<1e-3 (0.02, 0.2, 1, 0.0065320825375172475, 0.025359835503769704)
+SAR step/max/shift medRelDiff share<1e-3 (0.03, 0.2, 1, 0.00746176596159609, 0.11720356408498972)
+SAR step/max/shift medRelDiff share<1e-3 (0.03, 0.1, 1, 0.007467239958312666, 0.10578021475896733)
+SAR step/max/shift medRelDiff share<1e-3 (0.03, 0.3, 1, 0.007821901323706415, 0.1142334932602239)
+sar[t] vs high[t-1] equality share 0.007697241821680564 vs low[t-1] 0.006200555911909344
+share sar<low 0.5180671370536669 share sar>high 0.47979474021808854 reversal 0.001924310455420141
+share sar<low or >high among rows with sar 0.9980752780153977
+zero volume days 1 turnover_pp NaN 0
+clean core rows 4676

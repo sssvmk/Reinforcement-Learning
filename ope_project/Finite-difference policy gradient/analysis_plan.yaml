@@ -1,0 +1,18 @@
+# Frozen before the full evaluation run (evaluate_fdpg.py --full refuses to run without this file and records its SHA-256).
+version: 1
+primary_outcomes:
+  - name: final_validation_return
+    definition: validation J (mean window return / buy-and-hold-window-std, "norm units") of the validation-selected final policy
+  - name: rollouts_to_95pct
+    definition: training window rollouts until the validation J of the current iterate first reaches J0 + 0.95*(Jbest - J0), J0 = mean initial validation J, Jbest = best mean-curve final validation J of any method; censored at 2x budget
+  - name: gradient_cosine_similarity
+    definition: cosine between an estimator's gradient (N fresh paths) and the reference central-difference gradient (eps=0.02, ~500 fixed train windows), at the initial point, repeated draws paired by repeat index
+comparisons:
+  set: all pairs among {forward, central, spsa, regression, gaussian, random, neldermead} (gradient cosine: the 5 FD estimators only)
+  test: paired two-sided Wilcoxon signed-rank on identical seeds (repeat index for the cosine)
+  correction: Holm within each (series, policy, outcome) family; the number of comparisons is reported
+  effect_sizes: matched-pairs rank-biserial correlation and Cohen's dz
+intervals: 95% percentile bootstrap of the mean over seeds, 2000 resamples
+seeds: ">= 10 per configuration in --full (3 in --quick)"
+hyperparameters: tuned on validation only (eps, a) for the central estimator; reused for all estimators; never on test
+stability_tolerance_norm_units: 0.05

@@ -1,0 +1,8 @@
+{
+ "name": "ce_pess_lam0.5_sm0.0",
+ "family": "CE",
+ "rule": "pess",
+ "n_min": 1,
+ "lam": 0.5,
+ "smooth": 0.0
+}

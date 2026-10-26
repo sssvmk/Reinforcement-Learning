@@ -1,0 +1,75 @@
+# m5_dir can be overridden by the environment variable M5_DIR
+m5_dir: "C:/Users/msk80743/OneDrive - GSK/m5-forecasting-accuracy"
+out_dir: "outputs"
+seed: 0
+
+series:            # ids of item-store series, chosen in step 0 (see DATA_NOTES.md)
+  primary: FOODS_3_228_CA_1_validation
+  replication: [FOODS_1_141_CA_1_validation, FOODS_3_697_CA_2_validation]
+
+splits: {train: 0.6, val: 0.2}   # test is the remainder
+
+env:
+  lead_time: 2
+  gamma: 0.99
+  horizon: 90
+  unit_cost_frac: 0.6          # unit_cost = frac * mean train price
+  holding_frac: 0.005          # per unit per day, fraction of unit_cost
+  stockout_frac: 0.2           # stockout_penalty = frac * price
+  fixed_order_frac: 0.5        # fixed order cost = frac * unit_cost (small)
+  max_gap_ffill_weeks: 2
+  action_multiples: [0, 0.5, 1, 1.5, 2, 3, 4, 5, 7]   # x mean daily demand
+  demand_model: bootstrap      # bootstrap | negbin
+
+logging:
+  eps: {narrow: 0.05, medium: 0.2, wide: 0.5}
+  default_condition: medium
+  n_episodes: 600              # total train-period episodes (split train-log / fqe-log)
+  fqe_frac: 0.4
+  n_val_episodes: 100
+
+discretize:
+  n_pos_bins: 12
+  n_oh_bins: 4
+  use_event: false
+
+pool:
+  ce_settings:
+    - {rule: mask, n_min: 1, smooth: 0.0}
+    - {rule: mask, n_min: 5, smooth: 0.0}
+    - {rule: mask, n_min: 20, smooth: 0.0}
+    - {rule: pess, lam: 0.5, smooth: 0.0}
+    - {rule: pess, lam: 2.0, smooth: 0.0}
+    - {rule: pess, lam: 5.0, smooth: 0.1}
+  dyna_nplan: [0, 5, 20, 50]
+  dyna_lr: [0.1, 0.5]
+  dyna_epochs: [3, 10]
+  bc_hidden: [32, 128]
+  bc_epochs: [5, 50]
+  dqn_steps: [500, 3000, 15000]
+  cql_alpha: [0, 0.1, 0.5, 1, 5]
+  cql_steps: 3000
+  mcts_budgets: [50, 200]
+  mcts_demand: [bootstrap, mean]
+  mcts_negbin_budget: 50
+  mcts_max_decisions: 3500       # planning calls per MCTS candidate (cached); beyond it falls back to base-stock
+  mcts_h_plan: 14
+
+fqe:
+  hidden: 64
+  rounds: 25
+  steps_per_round: 120
+  lr: 0.001
+  batch: 512
+  seeds: 3
+  mcts_subsample: 1000
+  is_clip: 100.0
+
+truth:
+  n_episodes: 300
+  n_episodes_mcts: 8
+  horizon: 200                   # truncation-consistent: values bootstrap past H in learners, so truth uses a longer H
+  mode: gen                      # gen (train-fitted demand model, test calendar) | replay
+
+experiment:
+  repetitions: 2

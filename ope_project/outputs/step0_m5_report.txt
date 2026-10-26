@@ -1,0 +1,64 @@
+M5 status: {'status': 'READY', 'folder': 'C:\\Users\\msk80743\\OneDrive - GSK\\m5-forecasting-accuracy', 'found': ['calendar.csv', 'sell_prices.csv', 'sales_train_validation.csv', 'sales_train_evaluation.csv'], 'missing': [], 'reason': ''}
+  calendar.csv  103,469 bytes
+  sales_train_evaluation.csv  121,736,518 bytes
+  sales_train_validation.csv  120,007,726 bytes
+  sample_submission.csv  5,228,786 bytes
+  sell_prices.csv  203,395,785 bytes
+calendar.shape (1969, 14)
+calendar dtypes:
+date              str
+wm_yr_wk        int64
+weekday           str
+wday            int64
+month           int64
+year            int64
+d                 str
+event_name_1      str
+event_type_1      str
+event_name_2      str
+event_type_2      str
+snap_CA         int64
+snap_TX         int64
+snap_WI         int64
+calendar nulls:
+date               0
+wm_yr_wk           0
+weekday            0
+wday               0
+month              0
+year               0
+d                  0
+event_name_1    1807
+event_type_1    1807
+event_name_2    1964
+event_type_2    1964
+snap_CA            0
+snap_TX            0
+snap_WI            0
+calendar date range: 2011-01-29 .. 2016-06-19
+sales file used: sales_train_evaluation.csv
+sales shape: (30490, 1941) (series x days), d_* columns: 1941
+id columns head:
+                              id        item_id    dept_id   cat_id store_id state_id
+0  HOBBIES_1_001_CA_1_evaluation  HOBBIES_1_001  HOBBIES_1  HOBBIES     CA_1       CA
+1  HOBBIES_1_002_CA_1_evaluation  HOBBIES_1_002  HOBBIES_1  HOBBIES     CA_1       CA
+2  HOBBIES_1_003_CA_1_evaluation  HOBBIES_1_003  HOBBIES_1  HOBBIES     CA_1       CA
+S dtype int16, negatives: 0
+categories: {'FOODS': 14370, 'HOUSEHOLD': 10470, 'HOBBIES': 5650}
+states: {'CA': 12196, 'TX': 9147, 'WI': 9147}
+profile describe:
+               n       mean  zero_frac         cv     wd_amp
+count  30101.000  30101.000  30101.000  30101.000  30101.000
+mean    1550.666      1.354      0.600      1.904      0.201
+std      459.186      2.901      0.234      0.931      0.083
+min      365.000      0.013      0.002      0.252      0.025
+25%     1188.000      0.276      0.431      1.254      0.143
+50%     1809.000      0.609      0.633      1.670      0.189
+75%     1940.000      1.334      0.796      2.323      0.245
+max     1941.000    130.788      0.991     23.195      1.280
+chosen primary: FOODS_2_197_CA_4_evaluation cat=FOODS n=1941 mean=6.99 zero_frac=0.064 cv=0.58 weekday_amp=0.131
+chosen intermittent: HOUSEHOLD_2_246_CA_1_evaluation cat=HOUSEHOLD n=1940 mean=0.45 zero_frac=0.650 cv=1.54 weekday_amp=0.151
+chosen seasonal: HOBBIES_1_371_WI_1_evaluation cat=HOBBIES n=1941 mean=7.23 zero_frac=0.228 cv=1.34 weekday_amp=0.690
+primary: days=1941 valid_price_days=1941 first_date=2011-01-29 last_date=2016-05-22 price min/mean/max=2.98/3.23/3.42 invalid_days=0 events=158 snap_days=640
+intermittent: days=1940 valid_price_days=1940 first_date=2011-01-30 last_date=2016-05-22 price min/mean/max=7.87/7.87/7.87 invalid_days=0 events=158 snap_days=640
+seasonal: days=1941 valid_price_days=1941 first_date=2011-01-29 last_date=2016-05-22 price min/mean/max=0.42/0.48/0.50 invalid_days=0 events=158 snap_days=640

@@ -1,0 +1,73 @@
+# All data locations are defined here only. Env vars override: TRADING_FILES (semicolon-separated), M5_DIR.
+paths:
+  trading_files:
+    - "C:/Users/msk80743/OneDrive - GSK/Muni/project/India/TECHM/TECHM_extend.csv.gzip"
+  m5_dir: 'C:\Users\msk80743\OneDrive - GSK\m5-forecasting-accuracy'
+  outputs: "outputs"
+
+inventory:
+  enabled: auto            # auto | true | false ; auto = on when M5 files are found
+  lead_time: 2
+  unit_cost_frac: 0.6      # of mean price
+  holding_frac: 0.005      # of unit cost per unit per day
+  stockout_frac: 0.2       # of price per lost unit
+  fixed_cost_frac: 0.5     # of mean daily revenue-per-unit-demand scale: fixed = frac * unit_cost
+  q_max_days: 7
+  n_actions: 8
+  splits: {train: 0.5, val: 0.3, test: 0.2, ope_frac_of_val: 0.7}   # longer validation: 100-step windows need room
+  walk_forward: {enabled: true, folds: [[0.35, 0.60, 0.80], [0.45, 0.70, 0.90]]}
+
+trading:
+  cost_bps: 5.0
+  allow_short: false
+  warmup_rows: 60
+  min_clean_rows: 1000
+  reward_scale: 100.0      # estimators work in percent units (J reported back in return units)
+
+mdp:
+  gamma: 0.95
+  H: 100
+
+splits:
+  train: 0.6
+  val: 0.2
+  test: 0.2
+  ope_frac_of_val: 0.7     # first 70% of validation = OPE-log windows, rest = tuning-log windows
+walk_forward:
+  enabled: true
+  folds:                   # fractions of clean rows: [train_end, val_end, test_end]
+    - [0.40, 0.55, 0.70]
+    - [0.55, 0.70, 0.85]
+    - [0.70, 0.85, 1.00]
+
+behavior:
+  eps_default: 0.3
+  eps_narrow: 0.1
+  eps_wide: 0.6
+target:
+  eps_t: 0.1
+
+estimators:
+  alpha_grid: [0.0003, 0.001, 0.003, 0.01, 0.03, 0.1, 0.3]
+  kappa_grid: [1.0, 10.0, 30.0]
+  kappa_stress: 0.1
+  lambda_grid: [0.0, 0.5, 0.9]
+  epochs: 20
+  tune_epochs: 5
+  n_ckpt: 20
+  lstd_ridge: 1.0e-3
+  fqe_rounds: 30
+  fqe_ridge: 1.0e-3
+  wis_clip: 50.0
+  n_state_samples: 500
+  decay_p: 0.5
+  decay_k0: 20000.0
+
+experiment:
+  n_agents_min: 24
+  reps: 10
+  seed: 20240607
+  block_len: 20            # moving-block bootstrap length (days)
+  sizes: {small: 100, medium: 500, large: 2000}
+  ope_windows: 300
+  quick: {reps: 2, ope_windows: 60, epochs: 5, tune_epochs: 2}

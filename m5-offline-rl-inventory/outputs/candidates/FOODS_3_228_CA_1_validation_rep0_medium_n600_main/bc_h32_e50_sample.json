@@ -1,0 +1,9 @@
+{
+ "name": "bc_h32_e50_sample",
+ "family": "BC",
+ "hidden": 32,
+ "epochs": 50,
+ "stochastic": true,
+ "bc_accuracy": 0.7928086419753086,
+ "bc_kl_to_behavior": 0.09356928386629208
+}

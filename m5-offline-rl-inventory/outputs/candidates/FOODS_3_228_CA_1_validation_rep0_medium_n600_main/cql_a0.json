@@ -1,0 +1,7 @@
+{
+ "name": "cql_a0",
+ "family": "CQL",
+ "alpha": 0,
+ "steps": 3000,
+ "hidden": 64
+}

@@ -1,0 +1,6 @@
+{
+ "name": "dqn_double_s500",
+ "family": "DQN",
+ "steps": 500,
+ "double": true
+}

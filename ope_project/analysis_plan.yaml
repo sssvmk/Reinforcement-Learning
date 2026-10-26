@@ -1,0 +1,29 @@
+# Pre-registered analysis plan. Its SHA-256 is written to outputs/analysis_plan.sha256 BEFORE any experiment runs;
+# run_experiment.py refuses to run if the file was changed afterwards.
+domains: [trading]            # inventory PENDING (M5_DIR has braces); enabled automatically once M5 files are found
+instrument_caveat: "All trading conclusions rest on ONE instrument (TECHM)."
+primary_outcomes:
+  - nrmse_J          # RMSE over agents of (J_hat - J_true), divided by the range of J_true
+  - spearman         # rank correlation of J_hat with J_true across agents
+  - nregret1         # (best true - true of the agent with highest J_hat) / range of true
+primary_comparisons:  # paired over repetitions, primary fold, base condition
+  - [GTD2, TD]
+  - [TDC, TD]
+  - [ETD, TD]
+  - [GTD2, TDC]
+  - [ETD, GTD2]
+  - [GTD2, FQE]
+  - [TDC, FQE]
+statistics:
+  tests: Wilcoxon signed-rank (paired over reps) with Holm correction over all pairs
+  omnibus: Friedman over methods
+  effect_size: Cliff's delta and median paired difference
+  trading_intervals: moving-block bootstrap (block_len from config.experiment.block_len days)
+repetitions: {primary: 10, walk_forward: 10, ablation: 5}
+base_condition: {eps_b: 0.3, eps_t: 0.1, n_windows: 300, gamma: 0.95, features: sparse, schedule: constant, cost_bps: 5, protocol: A}
+ablations: [coverage_eps_b_0.1, coverage_eps_b_0.6, logsize_100, logsize_2000, gamma_0.9, gamma_0.98, eps_t_0.3,
+            dense_features, decay_schedule, lambda_0, lambda_0.9, vform_12_30, protocol_B, cost_20bps, kappa_0.1_stress]
+walk_forward_folds: 3
+hyperparameters: chosen on the tuning log with data-only objectives (MSPBE; emphatic PBE for ETD); never on ground truth
+oracle_tuned_curves: if shown, labelled OPTIMISTIC
+methods: [TD, GTD2, TDC, ETD, ETD_noreset, ETD_clip, LSTD, FQE, WIS, OracleProj, BehaviorValue, Random]

@@ -1,0 +1,10 @@
+{
+ "name": "mcts_mean_b200",
+ "family": "MCTS",
+ "budget": 200,
+ "c": 1.0,
+ "h_plan": 14,
+ "demand": "mean",
+ "max_decisions": 3500,
+ "S_rollout": 50.553618134263296
+}

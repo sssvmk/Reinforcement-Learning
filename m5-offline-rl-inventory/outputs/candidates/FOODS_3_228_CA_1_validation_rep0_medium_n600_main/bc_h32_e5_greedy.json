@@ -1,0 +1,9 @@
+{
+ "name": "bc_h32_e5_greedy",
+ "family": "BC",
+ "hidden": 32,
+ "epochs": 5,
+ "stochastic": false,
+ "bc_accuracy": 0.6687345679012345,
+ "bc_kl_to_behavior": 0.36130584788207526
+}

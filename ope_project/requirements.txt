@@ -1,0 +1,10 @@
+numpy==2.2.6
+pandas==3.0.6
+scipy
+numba==0.61.2
+scikit-learn==1.6.1
+torch==2.14.1
+PyYAML
+matplotlib
+tabulate
+pytest==9.1.1

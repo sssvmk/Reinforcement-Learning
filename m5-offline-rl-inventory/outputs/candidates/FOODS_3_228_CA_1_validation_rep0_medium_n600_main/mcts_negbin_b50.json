@@ -1,0 +1,10 @@
+{
+ "name": "mcts_negbin_b50",
+ "family": "MCTS",
+ "budget": 50,
+ "c": 1.0,
+ "h_plan": 14,
+ "demand": "negbin",
+ "max_decisions": 3500,
+ "S_rollout": 50.553618134263296
+}
