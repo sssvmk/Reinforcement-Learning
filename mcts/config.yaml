@@ -2,8 +2,8 @@
 # All paths are read from here and may be overridden by env vars M5_DIR / CONNECTX_DIR.
 
 paths:
-  m5_dir: "C:/Users/msk80743/OneDrive - GSK/m5-forecasting-accuracy"
-  connectx_dir: "C:/Users/msk80743/OneDrive - GSK/kaggle-environments-0.1.4"
+  m5_dir: "C:/Users/username/OneDrive - XXYY/m5-forecasting-accuracy"
+  connectx_dir: "C:/Users/username/OneDrive - XXYY/kaggle-environments-0.1.4"
   outputs_dir: "./outputs"
 
 seed: 0

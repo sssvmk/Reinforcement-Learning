@@ -31,7 +31,7 @@ SAMPLE_PATH = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 # The real sample lives outside this repo (per the task's file location);
 # resolve it via an environment variable with a sensible fallback so the
 # test still runs in CI environments where that absolute path is absent.
-SAMPLE_PATH = os.environ.get("CRITEO_SAMPLE_PATH", r"C:\Users\msk80743\Downloads\sample.txt")
+SAMPLE_PATH = os.environ.get("CRITEO_SAMPLE_PATH", r"C:\Users\username\Downloads\sample.txt")
 
 
 def _toy_impressions(n=400, dim=4096, seed=0):

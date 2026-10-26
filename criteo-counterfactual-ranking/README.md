@@ -3,7 +3,7 @@
 This project builds, trains, and evaluates a **ranking policy** for display
 ads using **importance sampling (IS) / off-policy evaluation (OPE) and
 learning**, on the Criteo counterfactual-learning sample
-(`C:\Users\msk80743\Downloads\sample.txt`). It implements the full pipeline
+(`C:\Users\username\Downloads\sample.txt`). It implements the full pipeline
 from raw log parsing through Plackett-Luce policy scoring, several
 off-policy estimators (IPS, SNIPS, clipped variants, doubly robust), and a
 counterfactual-risk-minimization (CRM) policy learner -- all designed to
@@ -75,11 +75,11 @@ cd criteo-counterfactual-ranking
 pip install -r requirements.txt
 
 # Step 0 - inspect the raw file and print summary stats
-python parser.py "C:\Users\msk80743\Downloads\sample.txt"
+python parser.py "C:\Users\username\Downloads\sample.txt"
 
 # Run the full pipeline: parse -> featurize -> fit reward model -> build
 # 4 policies -> evaluate all 4 on the test slice
-python train.py --path "C:\Users\msk80743\Downloads\sample.txt" --dim 4096 --n_boot 1000 --mc_samples 50
+python train.py --path "C:\Users\username\Downloads\sample.txt" --dim 4096 --n_boot 1000 --mc_samples 50
 
 # Run the test suite (sanity checks 1-6)
 python -m pytest tests -v

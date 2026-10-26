@@ -5,7 +5,7 @@
 RSI = Wilder 14 on adjusted close (exact); SAR step 0.02 / max 0.3 matches 84% of rows (partly verified). See README.md.
 
 ## (Stage 0, historical) Inventory: was PENDING
-M5 folder `C:\Users\msk80743\OneDrive - GSK\m5-forecasting-accuracy` had calendar.csv, sales_train_validation.csv, sales_train_evaluation.csv; `sell_prices.csv` was missing at that time.
+M5 folder `C:\Users\username\OneDrive - XXYY\m5-forecasting-accuracy` had calendar.csv, sales_train_validation.csv, sales_train_evaluation.csv; `sell_prices.csv` was missing at that time.
 
 ## Trading: TECHM_extend.csv.gzip
 - 4677 rows x 119 cols, 2007-09-17 to 2026-10-23, ascending, no duplicate dates, all required columns present.

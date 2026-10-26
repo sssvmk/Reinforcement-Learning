@@ -1,4 +1,4 @@
-M5 status: {'status': 'READY', 'folder': 'C:\\Users\\msk80743\\OneDrive - GSK\\m5-forecasting-accuracy', 'found': ['calendar.csv', 'sell_prices.csv', 'sales_train_validation.csv', 'sales_train_evaluation.csv'], 'missing': [], 'reason': ''}
+M5 status: {'status': 'READY', 'folder': 'C:\\Users\\username\\OneDrive - XXYY\\m5-forecasting-accuracy', 'found': ['calendar.csv', 'sell_prices.csv', 'sales_train_validation.csv', 'sales_train_evaluation.csv'], 'missing': [], 'reason': ''}
   calendar.csv  103,469 bytes
   sales_train_evaluation.csv  121,736,518 bytes
   sales_train_validation.csv  120,007,726 bytes

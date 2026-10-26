@@ -4,7 +4,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-TRADING_FILES = ["C:/Users/msk80743/OneDrive - GSK/Muni/project/India/TECHM/TECHM_extend.csv.gzip"]
+TRADING_FILES = ["C:/Users/username/OneDrive - XXYY/Muni/project/India/TECHM/TECHM_extend.csv.gzip"]
 OUT = Path(__file__).parent / "outputs" / "step0_report.txt"
 buf = io.StringIO()
 

@@ -86,7 +86,7 @@ encourage oscillation/divergence.
 
 ## 3. Dataset — M5 Forecasting - Accuracy (Walmart)
 
-Files found at `C:\Users\msk80743\OneDrive - GSK\m5-forecasting-accuracy`:
+Files found at `C:\Users\username\OneDrive - XXYY\m5-forecasting-accuracy`:
 
 | File | Shape | Notes |
 |---|---|---|

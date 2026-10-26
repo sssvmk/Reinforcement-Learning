@@ -1,6 +1,6 @@
 # ENV_NOTES: what was found in KAGGLE_DIR (read-only inspection)
 
-`KAGGLE_DIR` = `C:\Users\msk80743\OneDrive - GSK\kaggle-environments-0.1.4` (28 files; nothing was modified, imported or installed).
+`KAGGLE_DIR` = `C:\Users\username\OneDrive - XXYY\kaggle-environments-0.1.4` (28 files; nothing was modified, imported or installed).
 
 ## Contents
 A **source copy of the `kaggle-environments` package, v0.1.4 (2020 BETA)**. No competition notes, no starter notebooks for ConnectX

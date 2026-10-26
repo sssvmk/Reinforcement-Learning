@@ -1,0 +1,11 @@
+method,converged,unconverged,bound,stall,diverge
+central,0.9,0.0,0.0,0.1,0.0
+forward,0.9,0.0,0.0,0.1,0.0
+gaussian,0.7,0.2,0.0,0.1,0.0
+regression,0.8,0.1,0.0,0.1,0.0
+spsa,0.9,0.0,0.0,0.1,0.0
+central_nocrn,0.6,0.3,0.0,0.1,0.0
+grid,0.0,0.5,0.0,0.2,0.3
+neldermead,0.5,0.0,0.2,0.3,0.0
+random,0.5,0.0,0.0,0.2,0.3
+spsa_nocrn,0.7,0.2,0.0,0.1,0.0

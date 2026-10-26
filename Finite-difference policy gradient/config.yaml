@@ -1,0 +1,20 @@
+trading_files:
+  - "C:/Users/username/OneDrive - XXYY/Muni/project/India/TECHM/TECHM_extend.csv.gzip"
+m5_dir: "C:\\Users\\username\\OneDrive - XXYY\\m5-forecasting-accuracy"
+inventory:
+  enabled: auto          # auto | true | false ; auto = on only when all M5 files exist
+  horizon: 90
+  lead_time: 2
+  n_paths: 64
+trading:
+  horizon: 250
+  cost_bps: 5.0
+  n_paths: 32
+  lam: 0.0
+  warmup_rows: 120
+  # DEVIATION (see DATA_NOTES.md): TECHM `close` fails the price-scale audit (it is adjusted, open/high/low/sar are not).
+  # true = use adjusted close for returns only; SAR features always stay on the unadjusted scale. false = restrict to
+  # consistent ranges (leaves ~50 rows, i.e. unusable).
+  allow_adjusted_close: true
+seed: 0
+workers: 8

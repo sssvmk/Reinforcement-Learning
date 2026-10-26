@@ -1,0 +1,7 @@
+series,benchmark,test_profit,theta
+FOODS_3_124_CA_3_validation,oracle_base_stock,759.0134532264653,[np.float64(3.7)]
+FOODS_3_124_CA_3_validation,oracle_sS,831.5925599610198,"[np.float64(3.0), np.float64(2.5)]"
+FOODS_2_128_WI_2_validation,oracle_base_stock,171.82555966600384,[np.float64(4.800000000000001)]
+FOODS_2_128_WI_2_validation,oracle_sS,175.94007290248027,"[np.float64(4.5), np.float64(1.0)]"
+HOBBIES_1_371_WI_1_validation,oracle_base_stock,104.27796563532524,[np.float64(6.800000000000001)]
+HOBBIES_1_371_WI_1_validation,oracle_sS,113.475198638029,"[np.float64(5.5), np.float64(3.0)]"

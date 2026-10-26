@@ -281,7 +281,7 @@ left as a documented limitation / future-work item.
 
 ```powershell
 pip install -r requirements.txt -r requirements-fqe.txt
-python run_experiment.py --data "C:\Users\msk80743\Downloads\sample.txt"
+python run_experiment.py --data "C:\Users\username\Downloads\sample.txt"
 python -m pytest tests/ -v   # includes the pre-existing suite + tests/test_fqe.py
 ```
 

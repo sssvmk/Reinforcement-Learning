@@ -4,8 +4,8 @@
 Nothing was invented for inventory; setting `inventory.enabled: auto` (default) activates it once the file appears.
 
 ## Data
-- Trading: `C:/Users/msk80743/OneDrive - GSK/Muni/project/India/TECHM/TECHM_extend.csv.gzip` (4677 rows, 2007-09-17..2026-10-23, no duplicate dates).
-- M5: `C:\Users\msk80743\OneDrive - GSK\m5-forecasting-accuracy` has `calendar.csv`, `sales_train_validation.csv`, `sales_train_evaluation.csv`; **`sell_prices.csv` missing**.
+- Trading: `C:/Users/username/OneDrive - XXYY/Muni/project/India/TECHM/TECHM_extend.csv.gzip` (4677 rows, 2007-09-17..2026-10-23, no duplicate dates).
+- M5: `C:\Users\username\OneDrive - XXYY\m5-forecasting-accuracy` has `calendar.csv`, `sales_train_validation.csv`, `sales_train_evaluation.csv`; **`sell_prices.csv` missing**.
 - Paths live in `config.yaml` (override with env `TRADING_FILES`, `M5_DIR`).
 
 ### Audit findings and deviation (important)

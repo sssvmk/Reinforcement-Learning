@@ -1,5 +1,5 @@
 # Single source of truth. Override kaggle_dir with the env var KAGGLE_DIR.
-kaggle_dir: "C:/Users/msk80743/OneDrive - GSK/kaggle-environments-0.1.4"
+kaggle_dir: "C:/Users/username/OneDrive - XXYY/kaggle-environments-0.1.4"
 output_dir: outputs          # relative to this project folder
 seed: 0
 

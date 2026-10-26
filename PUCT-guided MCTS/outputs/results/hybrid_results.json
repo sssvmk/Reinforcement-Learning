@@ -9,7 +9,7 @@
    "sims": null,
    "c": 1.4,
    "rollout": "random",
-   "weights": "C:\\Users\\msk80743\\OneDrive - GSK\\Muni\\material\\cs324 Reinforcement Learning\\PUCT-guided MCTS\\outputs\\best_weights.npz",
+   "weights": "C:\\Users\\username\\OneDrive - XXYY\\Muni\\material\\cs324 Reinforcement Learning\\PUCT-guided MCTS\\outputs\\best_weights.npz",
    "c_puct": 1.5,
    "reuse": false,
    "path": null
@@ -51,7 +51,7 @@
    "sims": null,
    "c": 1.4,
    "rollout": "random",
-   "weights": "C:\\Users\\msk80743\\OneDrive - GSK\\Muni\\material\\cs324 Reinforcement Learning\\PUCT-guided MCTS\\outputs\\best_weights.npz",
+   "weights": "C:\\Users\\username\\OneDrive - XXYY\\Muni\\material\\cs324 Reinforcement Learning\\PUCT-guided MCTS\\outputs\\best_weights.npz",
    "c_puct": 1.5,
    "reuse": false,
    "path": null
@@ -63,7 +63,7 @@
    "sims": null,
    "c": 1.4,
    "rollout": "random",
-   "weights": "C:\\Users\\msk80743\\OneDrive - GSK\\Muni\\material\\cs324 Reinforcement Learning\\PUCT-guided MCTS\\outputs\\best_weights.npz",
+   "weights": "C:\\Users\\username\\OneDrive - XXYY\\Muni\\material\\cs324 Reinforcement Learning\\PUCT-guided MCTS\\outputs\\best_weights.npz",
    "c_puct": 1.5,
    "reuse": false,
    "path": null
@@ -93,7 +93,7 @@
    "sims": null,
    "c": 1.4,
    "rollout": "random",
-   "weights": "C:\\Users\\msk80743\\OneDrive - GSK\\Muni\\material\\cs324 Reinforcement Learning\\PUCT-guided MCTS\\outputs\\best_weights.npz",
+   "weights": "C:\\Users\\username\\OneDrive - XXYY\\Muni\\material\\cs324 Reinforcement Learning\\PUCT-guided MCTS\\outputs\\best_weights.npz",
    "c_puct": 1.5,
    "reuse": false,
    "path": null
@@ -135,7 +135,7 @@
    "sims": null,
    "c": 1.4,
    "rollout": "random",
-   "weights": "C:\\Users\\msk80743\\OneDrive - GSK\\Muni\\material\\cs324 Reinforcement Learning\\PUCT-guided MCTS\\outputs\\best_weights.npz",
+   "weights": "C:\\Users\\username\\OneDrive - XXYY\\Muni\\material\\cs324 Reinforcement Learning\\PUCT-guided MCTS\\outputs\\best_weights.npz",
    "c_puct": 1.5,
    "reuse": false,
    "path": null
@@ -177,7 +177,7 @@
    "sims": null,
    "c": 1.4,
    "rollout": "random",
-   "weights": "C:\\Users\\msk80743\\OneDrive - GSK\\Muni\\material\\cs324 Reinforcement Learning\\PUCT-guided MCTS\\outputs\\best_weights.npz",
+   "weights": "C:\\Users\\username\\OneDrive - XXYY\\Muni\\material\\cs324 Reinforcement Learning\\PUCT-guided MCTS\\outputs\\best_weights.npz",
    "c_puct": 1.5,
    "reuse": false,
    "path": null
@@ -189,7 +189,7 @@
    "sims": null,
    "c": 1.4,
    "rollout": "random",
-   "weights": "C:\\Users\\msk80743\\OneDrive - GSK\\Muni\\material\\cs324 Reinforcement Learning\\PUCT-guided MCTS\\outputs\\best_weights.npz",
+   "weights": "C:\\Users\\username\\OneDrive - XXYY\\Muni\\material\\cs324 Reinforcement Learning\\PUCT-guided MCTS\\outputs\\best_weights.npz",
    "c_puct": 1.5,
    "reuse": false,
    "path": null
@@ -219,7 +219,7 @@
    "sims": null,
    "c": 1.4,
    "rollout": "random",
-   "weights": "C:\\Users\\msk80743\\OneDrive - GSK\\Muni\\material\\cs324 Reinforcement Learning\\PUCT-guided MCTS\\outputs\\best_weights.npz",
+   "weights": "C:\\Users\\username\\OneDrive - XXYY\\Muni\\material\\cs324 Reinforcement Learning\\PUCT-guided MCTS\\outputs\\best_weights.npz",
    "c_puct": 1.5,
    "reuse": false,
    "path": null
@@ -261,7 +261,7 @@
    "sims": null,
    "c": 1.4,
    "rollout": "random",
-   "weights": "C:\\Users\\msk80743\\OneDrive - GSK\\Muni\\material\\cs324 Reinforcement Learning\\PUCT-guided MCTS\\outputs\\best_weights.npz",
+   "weights": "C:\\Users\\username\\OneDrive - XXYY\\Muni\\material\\cs324 Reinforcement Learning\\PUCT-guided MCTS\\outputs\\best_weights.npz",
    "c_puct": 1.5,
    "reuse": false,
    "path": null
@@ -303,7 +303,7 @@
    "sims": null,
    "c": 1.4,
    "rollout": "random",
-   "weights": "C:\\Users\\msk80743\\OneDrive - GSK\\Muni\\material\\cs324 Reinforcement Learning\\PUCT-guided MCTS\\outputs\\best_weights.npz",
+   "weights": "C:\\Users\\username\\OneDrive - XXYY\\Muni\\material\\cs324 Reinforcement Learning\\PUCT-guided MCTS\\outputs\\best_weights.npz",
    "c_puct": 1.5,
    "reuse": false,
    "path": null
@@ -315,7 +315,7 @@
    "sims": null,
    "c": 1.4,
    "rollout": "random",
-   "weights": "C:\\Users\\msk80743\\OneDrive - GSK\\Muni\\material\\cs324 Reinforcement Learning\\PUCT-guided MCTS\\outputs\\best_weights.npz",
+   "weights": "C:\\Users\\username\\OneDrive - XXYY\\Muni\\material\\cs324 Reinforcement Learning\\PUCT-guided MCTS\\outputs\\best_weights.npz",
    "c_puct": 1.5,
    "reuse": false,
    "path": null
@@ -345,7 +345,7 @@
    "sims": null,
    "c": 1.4,
    "rollout": "random",
-   "weights": "C:\\Users\\msk80743\\OneDrive - GSK\\Muni\\material\\cs324 Reinforcement Learning\\PUCT-guided MCTS\\outputs\\best_weights.npz",
+   "weights": "C:\\Users\\username\\OneDrive - XXYY\\Muni\\material\\cs324 Reinforcement Learning\\PUCT-guided MCTS\\outputs\\best_weights.npz",
    "c_puct": 1.5,
    "reuse": false,
    "path": null

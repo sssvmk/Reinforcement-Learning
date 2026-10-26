@@ -1,5 +1,5 @@
 # m5_dir can be overridden by the environment variable M5_DIR
-m5_dir: "C:/Users/msk80743/OneDrive - GSK/m5-forecasting-accuracy"
+m5_dir: "C:/Users/username/OneDrive - XXYY/m5-forecasting-accuracy"
 out_dir: "outputs"
 seed: 0
 

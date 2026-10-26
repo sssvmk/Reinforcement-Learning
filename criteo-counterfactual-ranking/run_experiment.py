@@ -10,7 +10,7 @@ estimators.py, train.py, README.md, conftest.py, requirements.txt, or any
 existing test file. Reuses their public functions directly.
 
 Run:
-    python run_experiment.py --data "C:\\Users\\msk80743\\Downloads\\sample.txt"
+    python run_experiment.py --data "C:\\Users\\username\\Downloads\\sample.txt"
 """
 from __future__ import annotations
 
@@ -316,7 +316,7 @@ def run(data_path: str, dim: int = DEFAULT_DIM, seed: int = SEED, n_boot: int = 
 
 def main():
     parser_ = argparse.ArgumentParser(description=__doc__)
-    parser_.add_argument("--data", default=r"C:\Users\msk80743\Downloads\sample.txt")
+    parser_.add_argument("--data", default=r"C:\Users\username\Downloads\sample.txt")
     parser_.add_argument("--dim", type=int, default=DEFAULT_DIM)
     parser_.add_argument("--seed", type=int, default=SEED)
     parser_.add_argument("--n-boot", type=int, default=2000)

@@ -20,8 +20,8 @@ All paths live in `config.yaml` and nowhere else in the code:
 
 ```yaml
 paths:
-  m5_dir: "C:/Users/msk80743/OneDrive - GSK/m5-forecasting-accuracy"
-  connectx_dir: "C:/Users/msk80743/OneDrive - GSK/kaggle-environments-0.1.4"
+  m5_dir: "C:/Users/username/OneDrive - XXYY/m5-forecasting-accuracy"
+  connectx_dir: "C:/Users/username/OneDrive - XXYY/kaggle-environments-0.1.4"
   outputs_dir: "./outputs"
 ```
 

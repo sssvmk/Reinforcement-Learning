@@ -2,7 +2,7 @@ import numpy as np, pandas as pd
 from pathlib import Path
 from step0_audit import psar, rsi_wilder
 
-f = "C:/Users/msk80743/OneDrive - GSK/Muni/project/India/TECHM/TECHM_extend.csv.gzip"
+f = "C:/Users/username/OneDrive - XXYY/Muni/project/India/TECHM/TECHM_extend.csv.gzip"
 df = pd.read_csv(f, compression="gzip"); df["tdate"] = pd.to_datetime(df.tdate)
 out = []
 P = out.append

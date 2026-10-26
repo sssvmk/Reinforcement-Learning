@@ -1,8 +1,8 @@
 # All data locations are defined here only. Env vars override: TRADING_FILES (semicolon-separated), M5_DIR.
 paths:
   trading_files:
-    - "C:/Users/msk80743/OneDrive - GSK/Muni/project/India/TECHM/TECHM_extend.csv.gzip"
-  m5_dir: 'C:\Users\msk80743\OneDrive - GSK\m5-forecasting-accuracy'
+    - "C:/Users/username/OneDrive - XXYY/Muni/project/India/TECHM/TECHM_extend.csv.gzip"
+  m5_dir: 'C:\Users\username\OneDrive - XXYY\m5-forecasting-accuracy'
   outputs: "outputs"
 
 inventory:

@@ -2,7 +2,7 @@
 seed: 42
 
 data:
-  data_dir: "C:\\Users\\msk80743\\OneDrive - GSK\\m5-forecasting-accuracy"
+  data_dir: "C:\\Users\\username\\OneDrive - XXYY\\m5-forecasting-accuracy"
   sales_file: "sales_train_evaluation.csv"   # falls back to sales_train_validation.csv if absent
   calendar_file: "calendar.csv"
   prices_file: "sell_prices.csv"

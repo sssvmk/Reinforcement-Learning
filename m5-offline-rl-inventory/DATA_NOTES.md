@@ -1,6 +1,6 @@
 # DATA_NOTES (step 0, read-only inspection)
 
-m5_dir: `C:\Users\msk80743\OneDrive - GSK\m5-forecasting-accuracy`
+m5_dir: `C:\Users\username\OneDrive - XXYY\m5-forecasting-accuracy`
 
 ## File listing
 ```
@@ -10,10 +10,10 @@ sales_train_validation.csv  120,007,726 bytes
 sample_submission.csv  5,228,786 bytes
 sell_prices.csv  203,395,785 bytes
 ```
-- found `sales_train_validation.csv` -> `C:\Users\msk80743\OneDrive - GSK\m5-forecasting-accuracy\sales_train_validation.csv`
-- found `sales_train_evaluation.csv` -> `C:\Users\msk80743\OneDrive - GSK\m5-forecasting-accuracy\sales_train_evaluation.csv`
-- found `calendar.csv` -> `C:\Users\msk80743\OneDrive - GSK\m5-forecasting-accuracy\calendar.csv`
-- found `sell_prices.csv` -> `C:\Users\msk80743\OneDrive - GSK\m5-forecasting-accuracy\sell_prices.csv`
+- found `sales_train_validation.csv` -> `C:\Users\username\OneDrive - XXYY\m5-forecasting-accuracy\sales_train_validation.csv`
+- found `sales_train_evaluation.csv` -> `C:\Users\username\OneDrive - XXYY\m5-forecasting-accuracy\sales_train_evaluation.csv`
+- found `calendar.csv` -> `C:\Users\username\OneDrive - XXYY\m5-forecasting-accuracy\calendar.csv`
+- found `sell_prices.csv` -> `C:\Users\username\OneDrive - XXYY\m5-forecasting-accuracy\sell_prices.csv`
 - `sample_submission.csv` ignored by design.
 
 ### calendar.csv

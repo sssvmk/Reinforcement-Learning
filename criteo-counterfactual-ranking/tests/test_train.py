@@ -7,7 +7,7 @@ from parser import parse_impressions
 from policy import PlackettLucePolicy
 from train import load_impressions, policy_weights, temporal_split
 
-SAMPLE_PATH = r"C:\Users\msk80743\Downloads\sample.txt"
+SAMPLE_PATH = r"C:\Users\username\Downloads\sample.txt"
 
 
 def _toy_phis(n, dim=16, seed=0):

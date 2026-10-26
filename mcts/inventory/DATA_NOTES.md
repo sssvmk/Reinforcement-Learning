@@ -1,7 +1,7 @@
 # M5 Inventory Data — Step 0 Notes
 
 All findings below come from directly reading the local files in `M5_DIR`
-(`C:\Users\msk80743\OneDrive - GSK\m5-forecasting-accuracy`), read-only.
+(`C:\Users\username\OneDrive - XXYY\m5-forecasting-accuracy`), read-only.
 Nothing was written back into `M5_DIR`.
 
 ## File listing (flat, no subfolders, no zips)

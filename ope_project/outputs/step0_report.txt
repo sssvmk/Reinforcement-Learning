@@ -1,5 +1,5 @@
 python 3.13.3 torch 2.14.1+cpu
-FILE C:\Users\msk80743\OneDrive - GSK\Muni\project\India\TECHM\TECHM_extend.csv.gzip exists True size 4117280
+FILE C:\Users\username\OneDrive - XXYY\Muni\project\India\TECHM\TECHM_extend.csv.gzip exists True size 4117280
 shape (4677, 119)
 first cols ['tdate', 'open', 'high', 'low', 'close', 'volume', 'turnover_pp', 'nifty_close', 'nifty_volume', 'year', 'yearmonth', 'yearquarter']
 dtypes counts {dtype('float64'): 114, dtype('int64'): 4, <StringDtype(na_value=nan)>: 1}

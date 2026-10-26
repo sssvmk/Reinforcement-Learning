@@ -34,6 +34,6 @@ Caveat: because of the unadjusted scale, SAR features may jump on ex-dates.
 All trading conclusions rest on a single instrument.
 
 ## M5 inventory: READY and run
-Path supplied by the user (`C:\Users\msk80743\OneDrive - GSK\m5-forecasting-accuracy`); audit in `outputs/step0_m5_report.txt`. Uses `sales_train_evaluation.csv`. Series: primary FOODS_2_197_CA_4, intermittent HOUSEHOLD_2_246_CA_1 (65% zeros), seasonal HOBBIES_1_371_WI_1. 0 invalid-price days in all three. Prices forward-filled at most 2 weeks. Results in `outputs/results_full_inv.md`.
+Path supplied by the user (`C:\Users\username\OneDrive - XXYY\m5-forecasting-accuracy`); audit in `outputs/step0_m5_report.txt`. Uses `sales_train_evaluation.csv`. Series: primary FOODS_2_197_CA_4, intermittent HOUSEHOLD_2_246_CA_1 (65% zeros), seasonal HOBBIES_1_371_WI_1. 0 invalid-price days in all three. Prices forward-filled at most 2 weeks. Results in `outputs/results_full_inv.md`.
 The folder itself exists with calendar.csv, sales_train_{validation,evaluation}.csv, sell_prices.csv, sample_submission.csv.
 `inventory.enabled: auto` turns it on when env var `M5_DIR` is set to the real path (or the braces are removed in config.yaml). No code change needed.
