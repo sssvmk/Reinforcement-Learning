@@ -2,6 +2,37 @@
 
 Everything here was written and run in this folder; all outputs are under `outputs/` (`outputs/quick/`, `outputs/full/`). The FDPG project folder was only **read** (text/CSV/JSON; no import, execution or unpickling) and its 305 files were SHA-256 hashed before and after (asserted identical).
 
+## Background: what is REINFORCE?
+REINFORCE (Williams, 1992) is the basic Monte Carlo policy-gradient algorithm. It learns a stochastic policy π_θ(a|s) by running whole episodes and nudging the parameters toward actions that led to high returns, and away from actions that led to low returns.
+
+**The idea.** The gradient of expected return can be written as
+
+∇J(θ) = E[ Σ_t ∇ log π_θ(a_t | s_t) · G_t ]
+
+where G_t is the return from step t onward. This is the score-function (likelihood-ratio) estimator: only the policy's own gradient is needed, not the environment's dynamics.
+
+**The algorithm.**
+1. Run the current policy for an episode and record states, actions and rewards.
+2. For each step t, compute the return G_t = r_{t+1} + γ r_{t+2} + …
+3. Update: θ ← θ + α · γ^t · G_t · ∇ log π_θ(a_t | s_t), summed over the episode (or averaged over several episodes).
+4. Repeat.
+
+**Baseline (the standard improvement).** Subtract a baseline b(s_t) from G_t, so the update uses (G_t − b(s_t)). This leaves the gradient unbiased but cuts the variance a lot. Common baselines are the average return, or a learned state-value function V(s). With a learned V(s) the method is often called REINFORCE with baseline, a step toward actor-critic. (This project compares `none`, `loo_time`, `linear` and related baselines.)
+
+**Strengths.** Simple, unbiased, works with any differentiable stochastic policy including neural networks, handles continuous actions, needs no model of the environment.
+
+**Weaknesses.** High variance, so it needs many episodes; it updates only after each full episode and credit assignment is poor over long episodes; it is on-policy, so old data cannot be reused without importance weights.
+
+**Compared with finite-difference policy gradient (FDPG).**
+
+| | REINFORCE | Finite differences |
+|---|---|---|
+| Needs a differentiable policy | Yes (∇ log π) | No |
+| Policy must be stochastic | Yes | No, deterministic works |
+| Cost grows with parameters | No, one rollout gives the whole gradient | Yes, roughly n or 2n rollouts per gradient |
+| Variance | High, reduced by baselines | High, reduced by common random numbers |
+| Good for | Neural and larger policies | A handful of parameters, non-differentiable policies |
+
 ## Data and assumptions
 See `DATA_NOTES.md` (audit, MDP, costs) and `FDPG_INVENTORY.md` (what was reused from FDPG and compatibility).
 - Trading `TECHM_extend.csv.gzip`: price-scale audit **fails** (`close` is adjusted, OHLC are not). Deviation, as in FDPG: adjusted `close` for returns (`allow_adjusted_close`). Dates run to 2026-10-23 as supplied.
