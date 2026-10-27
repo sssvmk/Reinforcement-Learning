@@ -1,0 +1,12 @@
+key,policy,vs,n_pairs,diff_trpo_minus,p_wilcoxon_paired,p_mannwhitney,cliffs_delta,p_holm,verdict
+FOODS_2_128_WI_2_validation,I1,trpo:trpo,10,-0.02732823701139111,0.001953125,0.07566157214388704,-0.48,0.021484375,TRPO worse
+FOODS_2_128_WI_2_validation,I2,trpo:trpo,10,-0.00052457318201089,0.921875,0.6231762238821174,-0.14,1.0,no significant difference
+FOODS_2_128_WI_2_validation,I3,trpo:trpo,10,0.04952759692143836,0.10546875,0.10410988966022681,0.44,0.6328125,no significant difference
+FOODS_3_124_CA_3_validation,I1,trpo:trpo,10,-0.00538168473970071,0.083984375,0.47267559351158717,-0.2,0.587890625,no significant difference
+FOODS_3_124_CA_3_validation,I2,trpo:trpo,10,-0.10506934275874005,0.001953125,0.0017062493689195964,-0.84,0.021484375,TRPO worse
+FOODS_3_124_CA_3_validation,I3,trpo:trpo,10,0.011788301162890535,0.375,0.8501067391385259,0.06,1.0,no significant difference
+HOBBIES_1_371_WI_1_validation,I1,trpo:trpo,10,-0.030402004961475004,0.02734375,0.5707503880581739,-0.16,0.24609375,no significant difference
+HOBBIES_1_371_WI_1_validation,I2,trpo:trpo,10,-0.043897747324306916,0.064453125,0.3074894566186813,-0.28,0.515625,no significant difference
+HOBBIES_1_371_WI_1_validation,I3,trpo:trpo,10,0.012547963762030313,0.375,0.6775849579524755,0.12,1.0,no significant difference
+TECHM,T1,trpo:trpo,10,0.05971623236904393,0.431640625,0.8501067391385259,0.06,1.0,no significant difference
+TECHM,T2,trpo:trpo,10,-0.030044006459156215,0.6953125,0.9698499769931556,-0.02,1.0,no significant difference

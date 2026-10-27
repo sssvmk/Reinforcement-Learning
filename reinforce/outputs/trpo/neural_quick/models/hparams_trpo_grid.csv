@@ -1,0 +1,13 @@
+domain,key,policy,tuned,hp,val_J
+inventory,FOODS_3_124_CA_3_validation,I4,trpo,"{""delta"": 0.01, ""lam"": 0.97}",2.899962301321769
+inventory,FOODS_3_124_CA_3_validation,I4,trpo,"{""delta"": 0.03, ""lam"": 0.97}",2.937731185133707
+inventory,FOODS_3_124_CA_3_validation,I4,vpg,"{""lr"": 0.03}",2.7460942783999966
+inventory,FOODS_2_128_WI_2_validation,I4,trpo,"{""delta"": 0.01, ""lam"": 0.97}",0.6083946921226797
+inventory,FOODS_2_128_WI_2_validation,I4,trpo,"{""delta"": 0.03, ""lam"": 0.97}",0.645356617118495
+inventory,FOODS_2_128_WI_2_validation,I4,vpg,"{""lr"": 0.03}",0.7789779529860088
+inventory,HOBBIES_1_371_WI_1_validation,I4,trpo,"{""delta"": 0.01, ""lam"": 0.97}",2.790820976542373
+inventory,HOBBIES_1_371_WI_1_validation,I4,trpo,"{""delta"": 0.03, ""lam"": 0.97}",2.8717643173958454
+inventory,HOBBIES_1_371_WI_1_validation,I4,vpg,"{""lr"": 0.03}",2.877542060704448
+trading,TECHM,T3,trpo,"{""delta"": 0.01, ""lam"": 0.97}",0.3930674432806759
+trading,TECHM,T3,trpo,"{""delta"": 0.03, ""lam"": 0.97}",0.6341008007528913
+trading,TECHM,T3,vpg,"{""lr"": 0.03}",0.3930674432806759

@@ -1,0 +1,21 @@
+# TRPO analysis plan. Written while the --full run was in progress and BEFORE any full-mode result was inspected
+# (quick-mode outputs were seen only to debug code). Anything not listed here is EXPLORATORY.
+project: TRPO on M5 inventory (R-I1/I2/I3) and TECHM trading (R-T1/T2); linear/tabular policies only
+primary_outcomes:
+  - final validation return (last checkpoint, deterministic policy), 10 seeds, 40,000 episodes
+  - episodes to reach 95% of the gain (J0 -> best method's mean final J)
+  - worst single-iteration drop of the common-path return (stability)
+trpo_settings: {B: 32, gae: [0.9, 0.97, 1.0], delta_grid: [0.003, 0.01, 0.03, 0.1], damping: 0.01 x mean diag(F), cg_iters: 20, backtracking: 10 halvings, value_fn: ridge linear in features + time_remaining}
+tuning: {metric: validation J only, seeds: [100, 101], budget_fraction: 0.5, vpg_lr_grid: [0.01, 0.03, 0.1]}
+variants: [trpo, vpg (GAE + Adam, no trust region), ng_fixed (natural gradient, fixed step, no KL check), trpo_mc (lambda=1), trpo_nostd (no advantage standardisation)]
+baselines_reused_from_this_folder: [reinforce:loo_time, reinforce:none, cm:random, cm:neldermead, cm:spsa, cm:central]   # same seeds and theta0 -> paired tests
+hypotheses:
+  H1: realised mean KL stays <= delta for accepted TRPO steps, and the surrogate gain correlates positively with the realised common-path gain
+  H2: TRPO has a smaller worst single-iteration drop than VPG at matched budget
+  H3: TRPO matches or beats REINFORCE (loo_time) on final validation return; no direction pre-registered for sample efficiency
+  H4: CG (20 iterations) direction has cosine > 0.99 with the exact damped solve (P <= 130)
+tests: {paired: Wilcoxon signed-rank by seed, multiple_comparison: Holm over all comparison rows, effect_size: Cliffs delta, ci: bootstrap 95%, alpha: 0.05}
+stability_classes: {diverge: non-finite, collapse: final < J0 - 5% of gain, stall: gain < 50%, converge: otherwise}
+exploratory: [sensitivity sweeps (delta, lambda, gamma, B, damping, CG iterations, sigma0, standardisation, horizon; 5 seeds), integer vs fractional orders, walk-forward for R-T1]
+not_implemented: []
+exploratory_added_after_freeze: "Added AFTER the main full results had been seen, so all three are EXPLORATORY, with no pre-registered hypotheses and reduced tuning: (1) neural TRPO policies R-I4/R-T3 (PyTorch MLP, Gauss-Newton Fisher; variants trpo and vpg; tuning 12 configs, 1 seed, half budget; 10 final seeds); (2) entropy bonus c in {0.003,0.01,0.03} at TRPO's tuned (delta, lambda), 2 tuning seeds, vs plain TRPO from outputs/trpo/full (not in the grid: c=0); (3) Q_max-free I1/I2 trained and evaluated without the order cap (trpo, vpg vs REINFORCE Q_max-free, capped TRPO, FDPG). Sensitivity not run for these. Holm applied within each set only."

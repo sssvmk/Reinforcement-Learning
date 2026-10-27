@@ -1,0 +1,5 @@
+key,policy,vs,diff_trpo_minus,p_wilcoxon,cliffs_delta,p_holm
+FOODS_2_128_WI_2_validation,I4,trpo:vpg,-0.14759689917520125,0.5,-1.0,1.0
+FOODS_3_124_CA_3_validation,I4,trpo:vpg,0.027251839848686732,1.0,0.0,1.0
+HOBBIES_1_371_WI_1_validation,I4,trpo:vpg,0.03127017158382994,1.0,0.0,1.0
+TECHM,T3,trpo:vpg,-0.1609519643118925,0.5,-0.5,1.0

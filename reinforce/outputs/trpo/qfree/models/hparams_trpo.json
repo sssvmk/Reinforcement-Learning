@@ -1,0 +1,56 @@
+{
+ "inventory|FOODS_3_124_CA_3_validation|I1": {
+  "trpo": {
+   "delta": 0.003,
+   "lam": 0.97
+  },
+  "vpg": {
+   "lr": 0.03
+  }
+ },
+ "inventory|FOODS_3_124_CA_3_validation|I2": {
+  "trpo": {
+   "delta": 0.1,
+   "lam": 0.9
+  },
+  "vpg": {
+   "lr": 0.1
+  }
+ },
+ "inventory|FOODS_2_128_WI_2_validation|I1": {
+  "trpo": {
+   "delta": 0.01,
+   "lam": 0.9
+  },
+  "vpg": {
+   "lr": 0.01
+  }
+ },
+ "inventory|FOODS_2_128_WI_2_validation|I2": {
+  "trpo": {
+   "delta": 0.01,
+   "lam": 0.9
+  },
+  "vpg": {
+   "lr": 0.1
+  }
+ },
+ "inventory|HOBBIES_1_371_WI_1_validation|I1": {
+  "trpo": {
+   "delta": 0.003,
+   "lam": 0.97
+  },
+  "vpg": {
+   "lr": 0.1
+  }
+ },
+ "inventory|HOBBIES_1_371_WI_1_validation|I2": {
+  "trpo": {
+   "delta": 0.03,
+   "lam": 0.97
+  },
+  "vpg": {
+   "lr": 0.1
+  }
+ }
+}

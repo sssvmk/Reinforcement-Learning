@@ -1,5 +1,7 @@
 # REINFORCE (Monte Carlo policy gradient with baselines) on inventory control and TECHM trading
 
+> **Phase 3 (TRPO)** lives in the same folder: see `README_TRPO.md`, code in `trpo/`, outputs in `outputs/trpo/`.
+
 Everything here was written and run in this folder; all outputs are under `outputs/` (`outputs/quick/`, `outputs/full/`). The FDPG project folder was only **read** (text/CSV/JSON; no import, execution or unpickling) and its 305 files were SHA-256 hashed before and after (asserted identical).
 
 ## Background: what is REINFORCE?

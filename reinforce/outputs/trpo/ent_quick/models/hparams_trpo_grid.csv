@@ -1,0 +1,23 @@
+domain,key,policy,tuned,hp,val_J
+inventory,FOODS_3_124_CA_3_validation,I1,ent,"{""ent_coef"": 0.01}",2.9394054943922243
+inventory,FOODS_3_124_CA_3_validation,I1,ent,"{""ent_coef"": 0.03}",2.919724341533617
+inventory,FOODS_3_124_CA_3_validation,I2,ent,"{""ent_coef"": 0.01}",2.777573236267617
+inventory,FOODS_3_124_CA_3_validation,I2,ent,"{""ent_coef"": 0.03}",2.9580663641010267
+inventory,FOODS_3_124_CA_3_validation,I3,ent,"{""ent_coef"": 0.01}",2.8221868548259392
+inventory,FOODS_3_124_CA_3_validation,I3,ent,"{""ent_coef"": 0.03}",2.750331780217381
+inventory,FOODS_2_128_WI_2_validation,I1,ent,"{""ent_coef"": 0.01}",0.7685143604573463
+inventory,FOODS_2_128_WI_2_validation,I1,ent,"{""ent_coef"": 0.03}",0.6399912757269816
+inventory,FOODS_2_128_WI_2_validation,I2,ent,"{""ent_coef"": 0.01}",0.7744130950876829
+inventory,FOODS_2_128_WI_2_validation,I2,ent,"{""ent_coef"": 0.03}",0.7374927247869401
+inventory,FOODS_2_128_WI_2_validation,I3,ent,"{""ent_coef"": 0.01}",0.6635707542745874
+inventory,FOODS_2_128_WI_2_validation,I3,ent,"{""ent_coef"": 0.03}",0.2061188672845359
+inventory,HOBBIES_1_371_WI_1_validation,I1,ent,"{""ent_coef"": 0.01}",3.360849382036543
+inventory,HOBBIES_1_371_WI_1_validation,I1,ent,"{""ent_coef"": 0.03}",3.356591826484493
+inventory,HOBBIES_1_371_WI_1_validation,I2,ent,"{""ent_coef"": 0.01}",3.044832895213345
+inventory,HOBBIES_1_371_WI_1_validation,I2,ent,"{""ent_coef"": 0.03}",3.3180058133382
+inventory,HOBBIES_1_371_WI_1_validation,I3,ent,"{""ent_coef"": 0.01}",3.188694244033241
+inventory,HOBBIES_1_371_WI_1_validation,I3,ent,"{""ent_coef"": 0.03}",3.2335832711809878
+trading,TECHM,T1,ent,"{""ent_coef"": 0.01}",0.9578013393789652
+trading,TECHM,T1,ent,"{""ent_coef"": 0.03}",0.8873207589123345
+trading,TECHM,T2,ent,"{""ent_coef"": 0.01}",0.807482620825137
+trading,TECHM,T2,ent,"{""ent_coef"": 0.03}",1.0118888057568336

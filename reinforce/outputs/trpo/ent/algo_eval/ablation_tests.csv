@@ -1,0 +1,12 @@
+key,policy,vs,diff_trpo_minus,p_wilcoxon,cliffs_delta,p_holm
+FOODS_2_128_WI_2_validation,I1,trpo:trpo_ent,,1.0,,1.0
+FOODS_2_128_WI_2_validation,I2,trpo:trpo_ent,,1.0,,1.0
+FOODS_2_128_WI_2_validation,I3,trpo:trpo_ent,,1.0,,1.0
+FOODS_3_124_CA_3_validation,I1,trpo:trpo_ent,,1.0,,1.0
+FOODS_3_124_CA_3_validation,I2,trpo:trpo_ent,,1.0,,1.0
+FOODS_3_124_CA_3_validation,I3,trpo:trpo_ent,,1.0,,1.0
+HOBBIES_1_371_WI_1_validation,I1,trpo:trpo_ent,,1.0,,1.0
+HOBBIES_1_371_WI_1_validation,I2,trpo:trpo_ent,,1.0,,1.0
+HOBBIES_1_371_WI_1_validation,I3,trpo:trpo_ent,,1.0,,1.0
+TECHM,T1,trpo:trpo_ent,,1.0,,1.0
+TECHM,T2,trpo:trpo_ent,,1.0,,1.0

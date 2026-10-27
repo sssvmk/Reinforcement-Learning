@@ -101,6 +101,9 @@ class GaussInv(Stoch):
     def phi_of(self, aux):
         return aux[0]
 
+    def act_of(self, aux):
+        return aux[1]            # pre-clipping sample (multiplier m or quantity ratio q/mu)
+
     def logp(self, theta, aux):
         phi, x, _, _ = aux
         m, ls = phi @ theta[:self.F], theta[self.F]
@@ -156,6 +159,9 @@ class SoftmaxInv(Stoch):
     def phi_of(self, aux):
         return aux[0]
 
+    def act_of(self, aux):
+        return aux[2]            # action index
+
     def logp(self, theta, aux):
         phi, _, a = aux
         p = softmax(phi @ theta.reshape(self.F, self.A))
@@ -205,6 +211,9 @@ class BernoulliT(Stoch):
     def phi_of(self, aux):
         return aux[0]
 
+    def act_of(self, aux):
+        return aux[2]            # sampled action in {0, 1} (in 'sample' mode)
+
     def logp(self, theta, aux):
         x, _, a, _ = aux
         z = x @ theta
@@ -246,6 +255,9 @@ class SoftmaxT(Stoch):
 
     def phi_of(self, aux):
         return aux[0]
+
+    def act_of(self, aux):
+        return aux[2]            # action index
 
     def logp(self, theta, aux):
         x, _, a = aux
@@ -379,6 +391,9 @@ class NeuralBernT(Stoch):
 
     def phi_of(self, aux):
         return aux[0]
+
+    def act_of(self, aux):
+        return aux[2]
 
     def logp(self, theta, aux):
         x, _, a, _, _ = aux

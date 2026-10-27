@@ -93,7 +93,10 @@ def simulate(policy, theta, env, starts, H, rng=None, mode="mean", record=False,
             if rec is None:
                 P = sc.shape[1]
                 phi0 = policy.phi_of(aux)
-                rec = {"rew": np.zeros((N, H)), "phi": np.zeros((N, H, phi0.shape[1])), "score": np.zeros((N, H, P)), "ent": np.zeros((N, P))}
+                rec = {"rew": np.zeros((N, H)), "phi": np.zeros((N, H, phi0.shape[1])), "score": np.zeros((N, H, P)), "ent": np.zeros((N, P)),
+                       "act": np.zeros((N, H))}
+            if hasattr(policy, "act_of"):
+                rec["act"][:, j] = policy.act_of(aux)
             rec["score"][:, j] = sc
             rec["phi"][:, j] = policy.phi_of(aux)
             rec["ent"] += policy.ent_grad(theta, aux)

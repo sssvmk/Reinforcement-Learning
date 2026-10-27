@@ -1,0 +1,33 @@
+domain,key,policy,tuned,hp,val_J
+inventory,FOODS_3_124_CA_3_validation,I4,trpo,"{""delta"": 0.01, ""lam"": 0.9}",3.057782681235501
+inventory,FOODS_3_124_CA_3_validation,I4,trpo,"{""delta"": 0.01, ""lam"": 0.97}",3.0975856074880177
+inventory,FOODS_3_124_CA_3_validation,I4,trpo,"{""delta"": 0.03, ""lam"": 0.9}",3.096044237530771
+inventory,FOODS_3_124_CA_3_validation,I4,trpo,"{""delta"": 0.03, ""lam"": 0.97}",3.0895490312222873
+inventory,FOODS_3_124_CA_3_validation,I4,trpo,"{""delta"": 0.1, ""lam"": 0.9}",3.142042975218501
+inventory,FOODS_3_124_CA_3_validation,I4,trpo,"{""delta"": 0.1, ""lam"": 0.97}",3.149257554667479
+inventory,FOODS_3_124_CA_3_validation,I4,vpg,"{""lr"": 0.01}",2.9243272775438296
+inventory,FOODS_3_124_CA_3_validation,I4,vpg,"{""lr"": 0.03}",3.0457356610401694
+inventory,FOODS_2_128_WI_2_validation,I4,trpo,"{""delta"": 0.01, ""lam"": 0.9}",0.6879702522688907
+inventory,FOODS_2_128_WI_2_validation,I4,trpo,"{""delta"": 0.01, ""lam"": 0.97}",0.7264143980639512
+inventory,FOODS_2_128_WI_2_validation,I4,trpo,"{""delta"": 0.03, ""lam"": 0.9}",0.6751841240306602
+inventory,FOODS_2_128_WI_2_validation,I4,trpo,"{""delta"": 0.03, ""lam"": 0.97}",0.7830391811020082
+inventory,FOODS_2_128_WI_2_validation,I4,trpo,"{""delta"": 0.1, ""lam"": 0.9}",0.7524408714733815
+inventory,FOODS_2_128_WI_2_validation,I4,trpo,"{""delta"": 0.1, ""lam"": 0.97}",0.7625735132154619
+inventory,FOODS_2_128_WI_2_validation,I4,vpg,"{""lr"": 0.01}",0.7954953400672929
+inventory,FOODS_2_128_WI_2_validation,I4,vpg,"{""lr"": 0.03}",0.7712378581486645
+inventory,HOBBIES_1_371_WI_1_validation,I4,trpo,"{""delta"": 0.01, ""lam"": 0.9}",2.883585615478326
+inventory,HOBBIES_1_371_WI_1_validation,I4,trpo,"{""delta"": 0.01, ""lam"": 0.97}",3.132803942593973
+inventory,HOBBIES_1_371_WI_1_validation,I4,trpo,"{""delta"": 0.03, ""lam"": 0.9}",2.984222082397722
+inventory,HOBBIES_1_371_WI_1_validation,I4,trpo,"{""delta"": 0.03, ""lam"": 0.97}",3.2636611508598876
+inventory,HOBBIES_1_371_WI_1_validation,I4,trpo,"{""delta"": 0.1, ""lam"": 0.9}",3.11093127740459
+inventory,HOBBIES_1_371_WI_1_validation,I4,trpo,"{""delta"": 0.1, ""lam"": 0.97}",3.3049367432759076
+inventory,HOBBIES_1_371_WI_1_validation,I4,vpg,"{""lr"": 0.01}",3.2806225056674068
+inventory,HOBBIES_1_371_WI_1_validation,I4,vpg,"{""lr"": 0.03}",3.3650657853709167
+trading,TECHM,T3,trpo,"{""delta"": 0.01, ""lam"": 0.9}",0.523622095521664
+trading,TECHM,T3,trpo,"{""delta"": 0.01, ""lam"": 0.97}",0.7242755357770453
+trading,TECHM,T3,trpo,"{""delta"": 0.03, ""lam"": 0.9}",0.6131125566288934
+trading,TECHM,T3,trpo,"{""delta"": 0.03, ""lam"": 0.97}",0.5855141572924034
+trading,TECHM,T3,trpo,"{""delta"": 0.1, ""lam"": 0.9}",0.530546668292359
+trading,TECHM,T3,trpo,"{""delta"": 0.1, ""lam"": 0.97}",0.6948599735540468
+trading,TECHM,T3,vpg,"{""lr"": 0.01}",0.9816499294447901
+trading,TECHM,T3,vpg,"{""lr"": 0.03}",1.02047114162115
