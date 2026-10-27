@@ -1,0 +1,10 @@
+numpy==2.2.6
+pandas==3.0.6
+scipy==1.18.1
+scikit-learn==1.6.1
+statsmodels==0.15.0
+torch==2.14.1
+matplotlib==3.10.8
+PyYAML==6.0.3
+pytest==9.1.1
+# optional (imported only by one cross-check path): cvxpy==1.9.3, lightgbm==4.7.0

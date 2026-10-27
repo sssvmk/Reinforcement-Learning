@@ -1,0 +1,631 @@
+42 runs, budget 12000 rollouts each, 10 workers
+[1/42] cvar/grid_fdpg_0.0005/seed100: best-val skill 0.332, test skill 0.195, 77s
+[2/42] cvar/grid_fdpg_0.0005/seed101: best-val skill 0.340, test skill 0.241, 77s
+[3/42] cvar/grid_fdpg_0.002/seed100: best-val skill 0.466, test skill 0.337, 77s
+[4/42] cvar/grid_fdpg_0.002/seed101: best-val skill 0.412, test skill 0.264, 77s
+[5/42] cvar/grid_fdpg_0.008/seed100: best-val skill 0.510, test skill 0.228, 76s
+[6/42] cvar/grid_fdpg_0.008/seed101: best-val skill 0.338, test skill 0.025, 76s
+[7/42] cvar/grid_fdpg_spsa_0.0005/seed100: best-val skill 0.425, test skill 0.278, 66s
+[8/42] cvar/grid_fdpg_spsa_0.0005/seed101: best-val skill 0.406, test skill 0.227, 67s
+[9/42] cvar/grid_fdpg_spsa_0.002/seed100: best-val skill 0.387, test skill 0.214, 65s
+[10/42] cvar/grid_fdpg_spsa_0.002/seed101: best-val skill 0.273, test skill 0.098, 65s
+[11/42] cvar/grid_fdpg_spsa_0.008/seed100: best-val skill 0.320, test skill 0.040, 28s
+[12/42] cvar/grid_fdpg_spsa_0.008/seed101: best-val skill 0.156, test skill -0.086, 28s
+[13/42] cvar/grid_reinforce_0.0001/seed100: best-val skill 0.041, test skill 0.005, 32s
+[14/42] cvar/grid_reinforce_0.0001/seed101: best-val skill 0.344, test skill 0.224, 30s
+[15/42] cvar/grid_reinforce_0.0003/seed100: best-val skill 0.073, test skill 0.050, 51s
+[16/42] cvar/grid_reinforce_0.0003/seed101: best-val skill 0.367, test skill 0.227, 51s
+[17/42] cvar/grid_reinforce_0.001/seed100: best-val skill 0.099, test skill 0.031, 51s
+[18/42] cvar/grid_reinforce_0.001/seed101: best-val skill 0.210, test skill 0.177, 51s
+[19/42] cvar/grid_a2c_0.0001/seed100: best-val skill 0.000, test skill 0.000, 54s
+[20/42] cvar/grid_a2c_0.0001/seed101: best-val skill 0.322, test skill 0.231, 54s
+[21/42] cvar/grid_a2c_0.0003/seed100: best-val skill 0.000, test skill 0.000, 51s
+[22/42] cvar/grid_a2c_0.0003/seed101: best-val skill 0.384, test skill 0.309, 51s
+[23/42] cvar/grid_a2c_0.001/seed100: best-val skill 0.000, test skill 0.000, 44s
+[24/42] cvar/grid_a2c_0.001/seed101: best-val skill 0.399, test skill 0.298, 45s
+[25/42] cvar/grid_dpg_1e-05/seed100: best-val skill 0.278, test skill 0.023, 161s
+[26/42] cvar/grid_dpg_1e-05/seed101: best-val skill 0.000, test skill 0.000, 160s
+[27/42] cvar/grid_dpg_3e-05/seed100: best-val skill 0.176, test skill 0.051, 162s
+[28/42] cvar/grid_dpg_3e-05/seed101: best-val skill 0.000, test skill 0.000, 160s
+[29/42] cvar/grid_dpg_0.0001/seed100: best-val skill 0.298, test skill 0.162, 158s
+[30/42] cvar/grid_dpg_0.0001/seed101: best-val skill 0.000, test skill 0.000, 161s
+[31/42] cvar/grid_trpo_0.001/seed100: best-val skill 0.000, test skill 0.000, 27s
+[32/42] cvar/grid_trpo_0.001/seed101: best-val skill 0.317, test skill 0.285, 30s
+[33/42] cvar/grid_trpo_0.003/seed100: best-val skill 0.003, test skill -0.120, 37s
+[34/42] cvar/grid_trpo_0.003/seed101: best-val skill 0.283, test skill 0.125, 39s
+[35/42] cvar/grid_trpo_0.01/seed100: best-val skill 0.000, test skill 0.000, 49s
+[36/42] cvar/grid_trpo_0.01/seed101: best-val skill 0.307, test skill 0.168, 45s
+[37/42] cvar/grid_ppo_0.0001/seed100: best-val skill 0.000, test skill 0.000, 296s
+[38/42] cvar/grid_ppo_0.0001/seed101: best-val skill 0.250, test skill 0.161, 292s
+[39/42] cvar/grid_ppo_0.0003/seed100: best-val skill 0.194, test skill 0.164, 278s
+[40/42] cvar/grid_ppo_0.0003/seed101: best-val skill 0.244, test skill 0.131, 274s
+[41/42] cvar/grid_ppo_0.001/seed100: best-val skill 0.094, test skill -0.036, 198s
+[42/42] cvar/grid_ppo_0.001/seed101: best-val skill 0.177, test skill 0.014, 194s
+objective  algo       lr     
+cvar       a2c        0.00010    0.159574
+                      0.00030    0.176933
+                      0.00100   -0.128083
+           dpg        0.00001   -0.544824
+                      0.00003   -2.248796
+                      0.00010   -0.954413
+           fdpg       0.00050    0.336180
+                      0.00200    0.439267
+                      0.00800    0.423955
+           fdpg_spsa  0.00050    0.410591
+                      0.00200    0.288720
+                      0.00800    0.077434
+           ppo        0.00010   -1.415219
+                      0.00030    0.067974
+                      0.00100   -0.654218
+           reinforce  0.00010    0.160583
+                      0.00030    0.062582
+                      0.00100   -0.837663
+           trpo       0.00100    0.116604
+                      0.00300    0.090300
+                      0.01000   -0.716724
+done in 9.3 min
+42 runs, budget 12000 rollouts each, 10 workers
+[1/42] meanvar/grid_fdpg_0.0005/seed100: best-val skill 0.339, test skill 0.434, 70s
+[2/42] meanvar/grid_fdpg_0.0005/seed101: best-val skill 0.331, test skill 0.457, 71s
+[3/42] meanvar/grid_fdpg_0.002/seed100: best-val skill 0.632, test skill 1.180, 70s
+[4/42] meanvar/grid_fdpg_0.002/seed101: best-val skill 0.574, test skill 0.915, 70s
+[5/42] meanvar/grid_fdpg_0.008/seed100: best-val skill 1.279, test skill 2.793, 70s
+[6/42] meanvar/grid_fdpg_0.008/seed101: best-val skill 1.090, test skill 2.280, 70s
+[7/42] meanvar/grid_fdpg_spsa_0.0005/seed100: best-val skill 0.374, test skill 0.541, 61s
+[8/42] meanvar/grid_fdpg_spsa_0.0005/seed101: best-val skill 0.408, test skill 0.512, 61s
+[9/42] meanvar/grid_fdpg_spsa_0.002/seed100: best-val skill 0.520, test skill 1.210, 60s
+[10/42] meanvar/grid_fdpg_spsa_0.002/seed101: best-val skill 0.774, test skill 1.246, 61s
+[11/42] meanvar/grid_fdpg_spsa_0.008/seed100: best-val skill 0.943, test skill 2.059, 49s
+[12/42] meanvar/grid_fdpg_spsa_0.008/seed101: best-val skill 1.256, test skill 2.309, 50s
+[13/42] meanvar/grid_reinforce_0.0001/seed100: best-val skill 0.041, test skill -0.287, 66s
+[14/42] meanvar/grid_reinforce_0.0001/seed101: best-val skill 0.204, test skill 0.195, 70s
+[15/42] meanvar/grid_reinforce_0.0003/seed100: best-val skill 0.019, test skill -0.228, 68s
+[16/42] meanvar/grid_reinforce_0.0003/seed101: best-val skill 0.152, test skill 0.178, 68s
+[17/42] meanvar/grid_reinforce_0.001/seed100: best-val skill 0.000, test skill 0.000, 67s
+[18/42] meanvar/grid_reinforce_0.001/seed101: best-val skill 0.100, test skill -0.083, 68s
+[19/42] meanvar/grid_a2c_0.0001/seed100: best-val skill 0.195, test skill 0.257, 73s
+[20/42] meanvar/grid_a2c_0.0001/seed101: best-val skill 0.087, test skill 0.095, 73s
+[21/42] meanvar/grid_a2c_0.0003/seed100: best-val skill 0.356, test skill 0.471, 84s
+[22/42] meanvar/grid_a2c_0.0003/seed101: best-val skill 0.168, test skill 0.137, 81s
+[23/42] meanvar/grid_a2c_0.001/seed100: best-val skill 0.493, test skill 0.872, 38s
+[24/42] meanvar/grid_a2c_0.001/seed101: best-val skill 0.422, test skill 0.664, 57s
+[25/42] meanvar/grid_dpg_1e-05/seed100: best-val skill 0.342, test skill -0.050, 221s
+[26/42] meanvar/grid_dpg_1e-05/seed101: best-val skill 0.350, test skill 0.296, 223s
+[27/42] meanvar/grid_dpg_3e-05/seed100: best-val skill 0.220, test skill -0.318, 216s
+[28/42] meanvar/grid_dpg_3e-05/seed101: best-val skill 0.502, test skill -0.132, 220s
+[29/42] meanvar/grid_dpg_0.0001/seed100: best-val skill 0.315, test skill 0.223, 230s
+[30/42] meanvar/grid_dpg_0.0001/seed101: best-val skill 0.851, test skill 1.212, 222s
+[31/42] meanvar/grid_trpo_0.001/seed100: best-val skill 0.309, test skill 0.456, 54s
+[32/42] meanvar/grid_trpo_0.001/seed101: best-val skill 0.161, test skill 0.378, 36s
+[33/42] meanvar/grid_trpo_0.003/seed100: best-val skill 0.402, test skill 0.788, 38s
+[34/42] meanvar/grid_trpo_0.003/seed101: best-val skill 0.160, test skill 0.461, 36s
+[35/42] meanvar/grid_trpo_0.01/seed100: best-val skill 0.455, test skill 1.133, 58s
+[36/42] meanvar/grid_trpo_0.01/seed101: best-val skill 0.089, test skill 0.073, 59s
+[37/42] meanvar/grid_ppo_0.0001/seed100: best-val skill 0.150, test skill 0.137, 311s
+[38/42] meanvar/grid_ppo_0.0001/seed101: best-val skill 0.432, test skill 0.437, 318s
+[39/42] meanvar/grid_ppo_0.0003/seed100: best-val skill 0.460, test skill 0.260, 279s
+[40/42] meanvar/grid_ppo_0.0003/seed101: best-val skill 0.118, test skill 0.243, 277s
+[41/42] meanvar/grid_ppo_0.001/seed100: best-val skill 0.724, test skill 0.477, 190s
+[42/42] meanvar/grid_ppo_0.001/seed101: best-val skill 0.866, test skill 1.287, 192s
+objective  algo       lr     
+meanvar    a2c        0.00010    0.124564
+                      0.00030    0.219210
+                      0.00100    0.338931
+           dpg        0.00001   -1.349293
+                      0.00003   -0.942478
+                      0.00010   -0.861477
+           fdpg       0.00050    0.335240
+                      0.00200    0.603218
+                      0.00800    1.184743
+           fdpg_spsa  0.00050    0.390101
+                      0.00200    0.646365
+                      0.00800    1.085278
+           ppo        0.00010   -2.158764
+                      0.00030   -0.236277
+                      0.00100    0.468238
+           reinforce  0.00010    0.106404
+                      0.00030   -0.021658
+                      0.00100   -0.761453
+           trpo       0.00100    0.192285
+                      0.00300    0.184257
+                      0.01000    0.141310
+done in 10.3 min
+42 runs, budget 12000 rollouts each, 10 workers
+[1/42] neutral_cond/grid_fdpg_0.0005/seed100: best-val skill 0.139, test skill 0.101, 73s
+[2/42] neutral_cond/grid_fdpg_0.0005/seed101: best-val skill 0.183, test skill 0.177, 72s
+[3/42] neutral_cond/grid_fdpg_0.002/seed100: best-val skill 0.188, test skill 0.163, 74s
+[4/42] neutral_cond/grid_fdpg_0.002/seed101: best-val skill 0.278, test skill 0.258, 70s
+[5/42] neutral_cond/grid_fdpg_0.008/seed100: best-val skill 0.127, test skill 0.174, 71s
+[6/42] neutral_cond/grid_fdpg_0.008/seed101: best-val skill 0.217, test skill 0.250, 69s
+[7/42] neutral_cond/grid_fdpg_spsa_0.0005/seed100: best-val skill 0.246, test skill 0.228, 68s
+[8/42] neutral_cond/grid_fdpg_spsa_0.0005/seed101: best-val skill 0.216, test skill 0.192, 66s
+[9/42] neutral_cond/grid_fdpg_spsa_0.002/seed100: best-val skill 0.078, test skill 0.125, 67s
+[10/42] neutral_cond/grid_fdpg_spsa_0.002/seed101: best-val skill 0.083, test skill 0.141, 68s
+[11/42] neutral_cond/grid_fdpg_spsa_0.008/seed100: best-val skill 0.000, test skill 0.000, 61s
+[12/42] neutral_cond/grid_fdpg_spsa_0.008/seed101: best-val skill 0.000, test skill 0.000, 59s
+[13/42] neutral_cond/grid_reinforce_0.0001/seed100: best-val skill 0.067, test skill 0.060, 74s
+[14/42] neutral_cond/grid_reinforce_0.0001/seed101: best-val skill 0.099, test skill 0.110, 78s
+[15/42] neutral_cond/grid_reinforce_0.0003/seed100: best-val skill 0.024, test skill 0.015, 80s
+[16/42] neutral_cond/grid_reinforce_0.0003/seed101: best-val skill 0.032, test skill 0.100, 75s
+[17/42] neutral_cond/grid_reinforce_0.001/seed100: best-val skill 0.000, test skill 0.000, 82s
+[18/42] neutral_cond/grid_reinforce_0.001/seed101: best-val skill 0.018, test skill 0.047, 74s
+[19/42] neutral_cond/grid_a2c_0.0001/seed100: best-val skill 0.139, test skill 0.158, 84s
+[20/42] neutral_cond/grid_a2c_0.0001/seed101: best-val skill 0.211, test skill 0.202, 81s
+[21/42] neutral_cond/grid_a2c_0.0003/seed100: best-val skill 0.031, test skill 0.115, 86s
+[22/42] neutral_cond/grid_a2c_0.0003/seed101: best-val skill 0.138, test skill 0.150, 84s
+[23/42] neutral_cond/grid_a2c_0.001/seed100: best-val skill 0.000, test skill 0.000, 57s
+[24/42] neutral_cond/grid_a2c_0.001/seed101: best-val skill 0.105, test skill 0.163, 58s
+[25/42] neutral_cond/grid_dpg_1e-05/seed100: best-val skill 0.072, test skill 0.124, 184s
+[26/42] neutral_cond/grid_dpg_1e-05/seed101: best-val skill 0.137, test skill 0.098, 186s
+[27/42] neutral_cond/grid_dpg_3e-05/seed100: best-val skill 0.022, test skill 0.099, 175s
+[28/42] neutral_cond/grid_dpg_3e-05/seed101: best-val skill 0.152, test skill 0.090, 191s
+[29/42] neutral_cond/grid_dpg_0.0001/seed100: best-val skill 0.029, test skill 0.038, 169s
+[30/42] neutral_cond/grid_dpg_0.0001/seed101: best-val skill 0.194, test skill 0.172, 204s
+[31/42] neutral_cond/grid_trpo_0.001/seed100: best-val skill 0.131, test skill 0.135, 76s
+[32/42] neutral_cond/grid_trpo_0.001/seed101: best-val skill 0.078, test skill 0.087, 76s
+[33/42] neutral_cond/grid_trpo_0.003/seed100: best-val skill 0.077, test skill 0.107, 88s
+[34/42] neutral_cond/grid_trpo_0.003/seed101: best-val skill 0.084, test skill 0.101, 76s
+[35/42] neutral_cond/grid_trpo_0.01/seed100: best-val skill 0.000, test skill 0.000, 70s
+[36/42] neutral_cond/grid_trpo_0.01/seed101: best-val skill 0.062, test skill 0.074, 70s
+[37/42] neutral_cond/grid_ppo_0.0001/seed100: best-val skill 0.000, test skill 0.000, 218s
+[38/42] neutral_cond/grid_ppo_0.0001/seed101: best-val skill 0.203, test skill 0.118, 213s
+[39/42] neutral_cond/grid_ppo_0.0003/seed100: best-val skill 0.000, test skill 0.000, 207s
+[40/42] neutral_cond/grid_ppo_0.0003/seed101: best-val skill 0.020, test skill 0.044, 192s
+[41/42] neutral_cond/grid_ppo_0.001/seed100: best-val skill 0.000, test skill 0.000, 93s
+[42/42] neutral_cond/grid_ppo_0.001/seed101: best-val skill 0.128, test skill 0.146, 86s
+objective     algo       lr     
+neutral_cond  a2c        0.00010    0.137374
+                         0.00030   -0.108326
+                         0.00100   -8.142445
+              dpg        0.00001   -0.832276
+                         0.00003   -0.999648
+                         0.00010   -1.481418
+              fdpg       0.00050    0.161234
+                         0.00200    0.232987
+                         0.00800    0.172166
+              fdpg_spsa  0.00050    0.222034
+                         0.00200    0.028023
+                         0.00800   -0.179632
+              ppo        0.00010   -4.203616
+                         0.00030   -2.565233
+                         0.00100   -1.015082
+              reinforce  0.00010    0.056627
+                         0.00030   -0.080033
+                         0.00100   -0.801589
+              trpo       0.00100   -0.848102
+                         0.00300   -1.078703
+                         0.01000   -1.298837
+done in 9.6 min
+42 runs, budget 12000 rollouts each, 10 workers
+[1/42] cvar_cond/grid_fdpg_0.0005/seed100: best-val skill 0.228, test skill 0.134, 77s
+[2/42] cvar_cond/grid_fdpg_0.0005/seed101: best-val skill 0.289, test skill 0.205, 77s
+[3/42] cvar_cond/grid_fdpg_0.002/seed100: best-val skill 0.101, test skill 0.076, 77s
+[4/42] cvar_cond/grid_fdpg_0.002/seed101: best-val skill 0.170, test skill 0.140, 76s
+[5/42] cvar_cond/grid_fdpg_0.008/seed100: best-val skill 0.000, test skill 0.000, 77s
+[6/42] cvar_cond/grid_fdpg_0.008/seed101: best-val skill 0.000, test skill 0.000, 75s
+[7/42] cvar_cond/grid_fdpg_spsa_0.0005/seed100: best-val skill 0.094, test skill 0.136, 72s
+[8/42] cvar_cond/grid_fdpg_spsa_0.0005/seed101: best-val skill 0.165, test skill 0.131, 72s
+[9/42] cvar_cond/grid_fdpg_spsa_0.002/seed100: best-val skill 0.000, test skill 0.000, 71s
+[10/42] cvar_cond/grid_fdpg_spsa_0.002/seed101: best-val skill 0.071, test skill 0.112, 71s
+[11/42] cvar_cond/grid_fdpg_spsa_0.008/seed100: best-val skill 0.000, test skill 0.000, 39s
+[12/42] cvar_cond/grid_fdpg_spsa_0.008/seed101: best-val skill 0.000, test skill 0.000, 38s
+[13/42] cvar_cond/grid_reinforce_0.0001/seed100: best-val skill 0.116, test skill 0.095, 45s
+[14/42] cvar_cond/grid_reinforce_0.0001/seed101: best-val skill 0.122, test skill 0.122, 45s
+[15/42] cvar_cond/grid_reinforce_0.0003/seed100: best-val skill 0.046, test skill 0.027, 49s
+[16/42] cvar_cond/grid_reinforce_0.0003/seed101: best-val skill 0.021, test skill 0.064, 47s
+[17/42] cvar_cond/grid_reinforce_0.001/seed100: best-val skill 0.000, test skill 0.000, 48s
+[18/42] cvar_cond/grid_reinforce_0.001/seed101: best-val skill 0.000, test skill 0.000, 48s
+[19/42] cvar_cond/grid_a2c_0.0001/seed100: best-val skill 0.067, test skill 0.036, 51s
+[20/42] cvar_cond/grid_a2c_0.0001/seed101: best-val skill 0.181, test skill 0.117, 52s
+[21/42] cvar_cond/grid_a2c_0.0003/seed100: best-val skill 0.056, test skill 0.032, 61s
+[22/42] cvar_cond/grid_a2c_0.0003/seed101: best-val skill 0.105, test skill 0.060, 60s
+[23/42] cvar_cond/grid_a2c_0.001/seed100: best-val skill 0.000, test skill 0.000, 53s
+[24/42] cvar_cond/grid_a2c_0.001/seed101: best-val skill 0.000, test skill 0.000, 54s
+[25/42] cvar_cond/grid_dpg_1e-05/seed100: best-val skill 0.000, test skill 0.000, 177s
+[26/42] cvar_cond/grid_dpg_1e-05/seed101: best-val skill 0.000, test skill 0.000, 175s
+[27/42] cvar_cond/grid_dpg_3e-05/seed100: best-val skill 0.000, test skill 0.000, 180s
+[28/42] cvar_cond/grid_dpg_3e-05/seed101: best-val skill 0.000, test skill 0.000, 176s
+[29/42] cvar_cond/grid_dpg_0.0001/seed100: best-val skill 0.000, test skill 0.000, 173s
+[30/42] cvar_cond/grid_dpg_0.0001/seed101: best-val skill 0.000, test skill 0.000, 178s
+[31/42] cvar_cond/grid_trpo_0.001/seed100: best-val skill 0.000, test skill 0.000, 40s
+[32/42] cvar_cond/grid_trpo_0.001/seed101: best-val skill 0.064, test skill 0.021, 40s
+[33/42] cvar_cond/grid_trpo_0.003/seed100: best-val skill 0.000, test skill 0.000, 40s
+[34/42] cvar_cond/grid_trpo_0.003/seed101: best-val skill 0.000, test skill 0.000, 40s
+[35/42] cvar_cond/grid_trpo_0.01/seed100: best-val skill 0.000, test skill 0.000, 78s
+[36/42] cvar_cond/grid_trpo_0.01/seed101: best-val skill 0.000, test skill 0.000, 77s
+[37/42] cvar_cond/grid_ppo_0.0001/seed100: best-val skill 0.000, test skill 0.000, 240s
+[38/42] cvar_cond/grid_ppo_0.0001/seed101: best-val skill 0.000, test skill 0.000, 249s
+[39/42] cvar_cond/grid_ppo_0.0003/seed100: best-val skill 0.000, test skill 0.000, 199s
+[40/42] cvar_cond/grid_ppo_0.0003/seed101: best-val skill 0.000, test skill 0.000, 199s
+[41/42] cvar_cond/grid_ppo_0.001/seed100: best-val skill 0.000, test skill 0.000, 142s
+[42/42] cvar_cond/grid_ppo_0.001/seed101: best-val skill 0.000, test skill 0.000, 144s
+objective  algo       lr     
+cvar_cond  a2c        0.00010     0.039927
+                      0.00030    -0.719395
+                      0.00100    -5.933753
+           dpg        0.00001   -13.150875
+                      0.00003   -30.255476
+                      0.00010   -50.902388
+           fdpg       0.00050     0.254708
+                      0.00200    -0.055218
+                      0.00800    -1.164606
+           fdpg_spsa  0.00050    -0.230934
+                      0.00200    -1.871908
+                      0.00800    -3.223995
+           ppo        0.00010    -6.805774
+                      0.00030    -6.520130
+                      0.00100   -19.425621
+           reinforce  0.00010     0.008134
+                      0.00030    -0.841047
+                      0.00100    -5.438171
+           trpo       0.00100    -0.777394
+                      0.00300    -3.166263
+                      0.01000    -9.530792
+done in 8.7 min
+42 runs, budget 12000 rollouts each, 10 workers
+[1/42] meanvar_cond/grid_fdpg_0.0005/seed100: best-val skill 0.254, test skill 0.174, 73s
+[2/42] meanvar_cond/grid_fdpg_0.0005/seed101: best-val skill 0.336, test skill 0.309, 74s
+[3/42] meanvar_cond/grid_fdpg_0.002/seed100: best-val skill 0.297, test skill 0.250, 74s
+[4/42] meanvar_cond/grid_fdpg_0.002/seed101: best-val skill 0.474, test skill 0.420, 71s
+[5/42] meanvar_cond/grid_fdpg_0.008/seed100: best-val skill 0.041, test skill 0.159, 71s
+[6/42] meanvar_cond/grid_fdpg_0.008/seed101: best-val skill 0.199, test skill 0.295, 70s
+[7/42] meanvar_cond/grid_fdpg_spsa_0.0005/seed100: best-val skill 0.385, test skill 0.348, 70s
+[8/42] meanvar_cond/grid_fdpg_spsa_0.0005/seed101: best-val skill 0.353, test skill 0.298, 72s
+[9/42] meanvar_cond/grid_fdpg_spsa_0.002/seed100: best-val skill 0.000, test skill 0.000, 70s
+[10/42] meanvar_cond/grid_fdpg_spsa_0.002/seed101: best-val skill 0.139, test skill 0.202, 69s
+[11/42] meanvar_cond/grid_fdpg_spsa_0.008/seed100: best-val skill 0.000, test skill 0.000, 49s
+[12/42] meanvar_cond/grid_fdpg_spsa_0.008/seed101: best-val skill 0.000, test skill 0.000, 48s
+[13/42] meanvar_cond/grid_reinforce_0.0001/seed100: best-val skill 0.113, test skill 0.103, 73s
+[14/42] meanvar_cond/grid_reinforce_0.0001/seed101: best-val skill 0.170, test skill 0.185, 75s
+[15/42] meanvar_cond/grid_reinforce_0.0003/seed100: best-val skill 0.043, test skill 0.025, 76s
+[16/42] meanvar_cond/grid_reinforce_0.0003/seed101: best-val skill 0.043, test skill 0.060, 79s
+[17/42] meanvar_cond/grid_reinforce_0.001/seed100: best-val skill 0.000, test skill 0.000, 79s
+[18/42] meanvar_cond/grid_reinforce_0.001/seed101: best-val skill 0.017, test skill 0.076, 78s
+[19/42] meanvar_cond/grid_a2c_0.0001/seed100: best-val skill 0.206, test skill 0.186, 82s
+[20/42] meanvar_cond/grid_a2c_0.0001/seed101: best-val skill 0.386, test skill 0.310, 83s
+[21/42] meanvar_cond/grid_a2c_0.0003/seed100: best-val skill 0.282, test skill 0.246, 75s
+[22/42] meanvar_cond/grid_a2c_0.0003/seed101: best-val skill 0.347, test skill 0.323, 75s
+[23/42] meanvar_cond/grid_a2c_0.001/seed100: best-val skill 0.029, test skill 0.049, 41s
+[24/42] meanvar_cond/grid_a2c_0.001/seed101: best-val skill 0.017, test skill -0.079, 42s
+[25/42] meanvar_cond/grid_dpg_1e-05/seed100: best-val skill 0.082, test skill 0.149, 166s
+[26/42] meanvar_cond/grid_dpg_1e-05/seed101: best-val skill 0.227, test skill 0.142, 168s
+[27/42] meanvar_cond/grid_dpg_3e-05/seed100: best-val skill 0.000, test skill 0.000, 168s
+[28/42] meanvar_cond/grid_dpg_3e-05/seed101: best-val skill 0.232, test skill 0.126, 171s
+[29/42] meanvar_cond/grid_dpg_0.0001/seed100: best-val skill 0.000, test skill 0.000, 165s
+[30/42] meanvar_cond/grid_dpg_0.0001/seed101: best-val skill 0.269, test skill 0.236, 169s
+[31/42] meanvar_cond/grid_trpo_0.001/seed100: best-val skill 0.178, test skill 0.132, 39s
+[32/42] meanvar_cond/grid_trpo_0.001/seed101: best-val skill 0.154, test skill 0.117, 46s
+[33/42] meanvar_cond/grid_trpo_0.003/seed100: best-val skill 0.000, test skill 0.000, 63s
+[34/42] meanvar_cond/grid_trpo_0.003/seed101: best-val skill 0.076, test skill 0.103, 61s
+[35/42] meanvar_cond/grid_trpo_0.01/seed100: best-val skill 0.000, test skill 0.000, 75s
+[36/42] meanvar_cond/grid_trpo_0.01/seed101: best-val skill 0.000, test skill 0.000, 67s
+[37/42] meanvar_cond/grid_ppo_0.0001/seed100: best-val skill 0.000, test skill 0.000, 300s
+[38/42] meanvar_cond/grid_ppo_0.0001/seed101: best-val skill 0.112, test skill 0.096, 304s
+[39/42] meanvar_cond/grid_ppo_0.0003/seed100: best-val skill 0.000, test skill 0.000, 285s
+[40/42] meanvar_cond/grid_ppo_0.0003/seed101: best-val skill 0.060, test skill 0.078, 291s
+[41/42] meanvar_cond/grid_ppo_0.001/seed100: best-val skill 0.000, test skill 0.000, 147s
+[42/42] meanvar_cond/grid_ppo_0.001/seed101: best-val skill 0.000, test skill 0.000, 172s
+objective     algo       lr     
+meanvar_cond  a2c        0.00010    0.295639
+                         0.00030    0.294115
+                         0.00100   -0.151545
+              dpg        0.00001   -1.604666
+                         0.00003   -2.571531
+                         0.00010   -8.299185
+              fdpg       0.00050    0.294944
+                         0.00200    0.385943
+                         0.00800    0.119993
+              fdpg_spsa  0.00050    0.319343
+                         0.00200   -0.243765
+                         0.00800   -0.775125
+              ppo        0.00010   -1.930566
+                         0.00030   -1.260730
+                         0.00100   -2.429761
+              reinforce  0.00010    0.084163
+                         0.00030   -0.263227
+                         0.00100   -1.973033
+              trpo       0.00100    0.009146
+                         0.00300   -1.232137
+                         0.01000   -4.120936
+done in 10.5 min
+35 runs, budget 30000 rollouts each, 10 workers
+[1/35] cvar/fdpg/seed0: best-val skill 0.537, test skill 0.308, 88s
+[2/35] cvar/fdpg/seed1: best-val skill 0.556, test skill 0.444, 106s
+[3/35] cvar/fdpg/seed2: best-val skill 0.517, test skill 0.349, 105s
+[4/35] cvar/fdpg/seed3: best-val skill 0.488, test skill 0.359, 105s
+[5/35] cvar/fdpg/seed4: best-val skill 0.594, test skill 0.400, 105s
+[6/35] cvar/fdpg_spsa/seed0: best-val skill 0.391, test skill 0.290, 105s
+[7/35] cvar/fdpg_spsa/seed1: best-val skill 0.421, test skill 0.302, 107s
+[8/35] cvar/fdpg_spsa/seed2: best-val skill 0.296, test skill 0.169, 108s
+[9/35] cvar/fdpg_spsa/seed3: best-val skill 0.401, test skill 0.229, 109s
+[10/35] cvar/fdpg_spsa/seed4: best-val skill 0.399, test skill 0.272, 112s
+[11/35] cvar/reinforce/seed0: best-val skill 0.267, test skill 0.169, 146s
+[12/35] cvar/reinforce/seed1: best-val skill 0.210, test skill 0.031, 143s
+[13/35] cvar/reinforce/seed2: best-val skill 0.218, test skill 0.073, 147s
+[14/35] cvar/reinforce/seed3: best-val skill 0.206, test skill 0.083, 145s
+[15/35] cvar/reinforce/seed4: best-val skill 0.345, test skill 0.189, 143s
+[16/35] cvar/a2c/seed0: best-val skill 0.446, test skill 0.321, 151s
+[17/35] cvar/a2c/seed1: best-val skill 0.382, test skill 0.280, 162s
+[18/35] cvar/a2c/seed2: best-val skill 0.060, test skill 0.127, 163s
+[19/35] cvar/a2c/seed3: best-val skill 0.321, test skill 0.239, 163s
+[20/35] cvar/a2c/seed4: best-val skill 0.207, test skill -0.001, 143s
+[21/35] cvar/dpg/seed0: best-val skill 0.294, test skill 0.123, 459s
+[22/35] cvar/dpg/seed1: best-val skill 0.363, test skill 0.037, 498s
+[23/35] cvar/dpg/seed2: best-val skill 0.292, test skill 0.058, 478s
+[24/35] cvar/dpg/seed3: best-val skill 0.136, test skill -0.011, 493s
+[25/35] cvar/dpg/seed4: best-val skill 0.295, test skill 0.009, 462s
+[26/35] cvar/trpo/seed0: best-val skill 0.274, test skill 0.205, 118s
+[27/35] cvar/trpo/seed1: best-val skill 0.292, test skill 0.205, 125s
+[28/35] cvar/trpo/seed2: best-val skill 0.257, test skill 0.049, 126s
+[29/35] cvar/trpo/seed3: best-val skill 0.284, test skill 0.099, 129s
+[30/35] cvar/trpo/seed4: best-val skill 0.300, test skill 0.115, 123s
+[31/35] cvar/ppo/seed0: best-val skill 0.368, test skill -0.011, 662s
+[32/35] cvar/ppo/seed1: best-val skill 0.068, test skill 0.039, 625s
+[33/35] cvar/ppo/seed2: best-val skill 0.000, test skill 0.000, 624s
+[34/35] cvar/ppo/seed3: best-val skill 0.082, test skill -0.073, 651s
+[35/35] cvar/ppo/seed4: best-val skill 0.113, test skill -0.281, 620s
+                     best_val_val_skill  best_val_test_skill  days_to_95
+objective algo                                                          
+cvar      a2c                  0.321148             0.239225         NaN
+          dpg                  0.294450             0.037071         NaN
+          fdpg                 0.537074             0.359398         NaN
+          fdpg_spsa            0.399469             0.271590         NaN
+          ppo                  0.082256            -0.011318         NaN
+          reinforce            0.217826             0.082713         NaN
+          trpo                 0.284260             0.115488         NaN
+done in 18.4 min
+35 runs, budget 30000 rollouts each, 10 workers
+[1/35] meanvar/fdpg/seed0: best-val skill 2.147, test skill 4.027, 54s
+[2/35] meanvar/fdpg/seed1: best-val skill 1.688, test skill 3.349, 57s
+[3/35] meanvar/fdpg/seed2: best-val skill 1.820, test skill 3.705, 56s
+[4/35] meanvar/fdpg/seed3: best-val skill 1.502, test skill 3.823, 58s
+[5/35] meanvar/fdpg/seed4: best-val skill 1.848, test skill 3.759, 57s
+[6/35] meanvar/fdpg_spsa/seed0: best-val skill 1.363, test skill 3.384, 56s
+[7/35] meanvar/fdpg_spsa/seed1: best-val skill 2.042, test skill 3.667, 56s
+[8/35] meanvar/fdpg_spsa/seed2: best-val skill 1.948, test skill 3.532, 56s
+[9/35] meanvar/fdpg_spsa/seed3: best-val skill 1.771, test skill 3.560, 56s
+[10/35] meanvar/fdpg_spsa/seed4: best-val skill 2.167, test skill 3.666, 56s
+[11/35] meanvar/reinforce/seed0: best-val skill 0.302, test skill 0.361, 77s
+[12/35] meanvar/reinforce/seed1: best-val skill 0.120, test skill -0.584, 75s
+[13/35] meanvar/reinforce/seed2: best-val skill 0.136, test skill 0.237, 76s
+[14/35] meanvar/reinforce/seed3: best-val skill 0.269, test skill 0.193, 76s
+[15/35] meanvar/reinforce/seed4: best-val skill 0.275, test skill 0.058, 75s
+[16/35] meanvar/a2c/seed0: best-val skill 0.610, test skill 1.541, 87s
+[17/35] meanvar/a2c/seed1: best-val skill 0.729, test skill 1.433, 87s
+[18/35] meanvar/a2c/seed2: best-val skill 0.691, test skill 0.852, 87s
+[19/35] meanvar/a2c/seed3: best-val skill 0.390, test skill 1.404, 87s
+[20/35] meanvar/a2c/seed4: best-val skill 0.212, test skill 0.434, 87s
+[21/35] meanvar/dpg/seed0: best-val skill 0.219, test skill -0.003, 279s
+[22/35] meanvar/dpg/seed1: best-val skill 0.432, test skill 0.892, 273s
+[23/35] meanvar/dpg/seed2: best-val skill 0.563, test skill 0.708, 282s
+[24/35] meanvar/dpg/seed3: best-val skill 1.502, test skill 2.710, 315s
+[25/35] meanvar/dpg/seed4: best-val skill 0.670, test skill 1.216, 238s
+[26/35] meanvar/trpo/seed0: best-val skill 0.557, test skill 0.630, 55s
+[27/35] meanvar/trpo/seed1: best-val skill 0.133, test skill 0.665, 55s
+[28/35] meanvar/trpo/seed2: best-val skill 0.178, test skill 0.014, 56s
+[29/35] meanvar/trpo/seed3: best-val skill 0.390, test skill 1.228, 53s
+[30/35] meanvar/trpo/seed4: best-val skill 0.473, test skill 0.776, 54s
+[31/35] meanvar/ppo/seed0: best-val skill 0.837, test skill 1.507, 411s
+[32/35] meanvar/ppo/seed1: best-val skill 0.136, test skill 1.188, 414s
+[33/35] meanvar/ppo/seed2: best-val skill 0.749, test skill 2.864, 378s
+[34/35] meanvar/ppo/seed3: best-val skill 0.536, test skill 0.857, 369s
+[35/35] meanvar/ppo/seed4: best-val skill 1.057, test skill 3.349, 360s
+                     best_val_val_skill  best_val_test_skill  days_to_95
+objective algo                                                          
+cvar      a2c                  0.321148             0.239225         NaN
+          dpg                  0.294450             0.037071         NaN
+          fdpg                 0.537074             0.359398         NaN
+          fdpg_spsa            0.399469             0.271590         NaN
+          ppo                  0.082256            -0.011318         NaN
+          reinforce            0.217826             0.082713         NaN
+          trpo                 0.284260             0.115488         NaN
+meanvar   a2c                  0.610055             1.404256         NaN
+          dpg                  0.562689             0.891708     13248.0
+          fdpg                 1.820391             3.759429      9120.0
+          fdpg_spsa            1.948323             3.560011      7488.0
+          ppo                  0.748653             1.507216     27456.0
+          reinforce            0.269243             0.193330         NaN
+          trpo                 0.389985             0.665404         NaN
+done in 10.7 min
+35 runs, budget 30000 rollouts each, 10 workers
+[1/35] neutral_cond/fdpg/seed0: best-val skill 0.313, test skill 0.275, 50s
+[2/35] neutral_cond/fdpg/seed1: best-val skill 0.321, test skill 0.287, 49s
+[3/35] neutral_cond/fdpg/seed2: best-val skill 0.299, test skill 0.267, 49s
+[4/35] neutral_cond/fdpg/seed3: best-val skill 0.304, test skill 0.274, 49s
+[5/35] neutral_cond/fdpg/seed4: best-val skill 0.295, test skill 0.264, 48s
+[6/35] neutral_cond/fdpg_spsa/seed0: best-val skill 0.206, test skill 0.209, 54s
+[7/35] neutral_cond/fdpg_spsa/seed1: best-val skill 0.227, test skill 0.211, 54s
+[8/35] neutral_cond/fdpg_spsa/seed2: best-val skill 0.201, test skill 0.178, 55s
+[9/35] neutral_cond/fdpg_spsa/seed3: best-val skill 0.251, test skill 0.230, 54s
+[10/35] neutral_cond/fdpg_spsa/seed4: best-val skill 0.197, test skill 0.182, 54s
+[11/35] neutral_cond/reinforce/seed0: best-val skill 0.140, test skill 0.144, 68s
+[12/35] neutral_cond/reinforce/seed1: best-val skill 0.007, test skill 0.008, 69s
+[13/35] neutral_cond/reinforce/seed2: best-val skill 0.041, test skill 0.033, 69s
+[14/35] neutral_cond/reinforce/seed3: best-val skill 0.063, test skill 0.065, 69s
+[15/35] neutral_cond/reinforce/seed4: best-val skill 0.123, test skill 0.137, 68s
+[16/35] neutral_cond/a2c/seed0: best-val skill 0.172, test skill 0.153, 79s
+[17/35] neutral_cond/a2c/seed1: best-val skill 0.077, test skill 0.075, 78s
+[18/35] neutral_cond/a2c/seed2: best-val skill 0.130, test skill 0.138, 79s
+[19/35] neutral_cond/a2c/seed3: best-val skill 0.168, test skill 0.146, 79s
+[20/35] neutral_cond/a2c/seed4: best-val skill 0.190, test skill 0.160, 78s
+[21/35] neutral_cond/dpg/seed0: best-val skill 0.052, test skill 0.049, 304s
+[22/35] neutral_cond/dpg/seed1: best-val skill 0.134, test skill 0.115, 293s
+[23/35] neutral_cond/dpg/seed2: best-val skill 0.000, test skill 0.000, 308s
+[24/35] neutral_cond/dpg/seed3: best-val skill 0.061, test skill 0.054, 302s
+[25/35] neutral_cond/dpg/seed4: best-val skill 0.106, test skill 0.171, 297s
+[26/35] neutral_cond/trpo/seed0: best-val skill 0.000, test skill 0.000, 80s
+[27/35] neutral_cond/trpo/seed1: best-val skill 0.047, test skill 0.066, 80s
+[28/35] neutral_cond/trpo/seed2: best-val skill 0.197, test skill 0.160, 81s
+[29/35] neutral_cond/trpo/seed3: best-val skill 0.136, test skill 0.119, 80s
+[30/35] neutral_cond/trpo/seed4: best-val skill 0.026, test skill 0.060, 80s
+[31/35] neutral_cond/ppo/seed0: best-val skill 0.000, test skill 0.000, 277s
+[32/35] neutral_cond/ppo/seed1: best-val skill 0.000, test skill 0.000, 259s
+[33/35] neutral_cond/ppo/seed2: best-val skill 0.000, test skill 0.000, 282s
+[34/35] neutral_cond/ppo/seed3: best-val skill 0.000, test skill 0.000, 288s
+[35/35] neutral_cond/ppo/seed4: best-val skill 0.000, test skill 0.000, 225s
+                        best_val_val_skill  best_val_test_skill  days_to_95
+objective    algo                                                          
+cvar         a2c                  0.321148             0.239225         NaN
+             dpg                  0.294450             0.037071         NaN
+             fdpg                 0.537074             0.359398         NaN
+             fdpg_spsa            0.399469             0.271590         NaN
+             ppo                  0.082256            -0.011318         NaN
+             reinforce            0.217826             0.082713         NaN
+             trpo                 0.284260             0.115488         NaN
+meanvar      a2c                  0.610055             1.404256         NaN
+             dpg                  0.562689             0.891708     13248.0
+             fdpg                 1.820391             3.759429      9120.0
+             fdpg_spsa            1.948323             3.560011      7488.0
+             ppo                  0.748653             1.507216     27456.0
+             reinforce            0.269243             0.193330         NaN
+             trpo                 0.389985             0.665404         NaN
+neutral_cond a2c                  0.168435             0.145581         NaN
+             dpg                  0.061080             0.053913         NaN
+             fdpg                 0.303605             0.274070         NaN
+             fdpg_spsa            0.205766             0.209263         NaN
+             ppo                  0.000000             0.000000         NaN
+             reinforce            0.062653             0.064737         NaN
+             trpo                 0.047328             0.066205         NaN
+done in 9.0 min
+35 runs, budget 30000 rollouts each, 10 workers
+[1/35] cvar_cond/fdpg/seed0: best-val skill 0.234, test skill 0.152, 86s
+[2/35] cvar_cond/fdpg/seed1: best-val skill 0.272, test skill 0.184, 81s
+[3/35] cvar_cond/fdpg/seed2: best-val skill 0.236, test skill 0.143, 86s
+[4/35] cvar_cond/fdpg/seed3: best-val skill 0.251, test skill 0.196, 87s
+[5/35] cvar_cond/fdpg/seed4: best-val skill 0.261, test skill 0.194, 83s
+[6/35] cvar_cond/fdpg_spsa/seed0: best-val skill 0.206, test skill 0.153, 97s
+[7/35] cvar_cond/fdpg_spsa/seed1: best-val skill 0.131, test skill 0.093, 98s
+[8/35] cvar_cond/fdpg_spsa/seed2: best-val skill 0.032, test skill -0.023, 98s
+[9/35] cvar_cond/fdpg_spsa/seed3: best-val skill 0.087, test skill 0.103, 96s
+[10/35] cvar_cond/fdpg_spsa/seed4: best-val skill 0.141, test skill 0.116, 99s
+[11/35] cvar_cond/reinforce/seed0: best-val skill 0.118, test skill 0.074, 152s
+[12/35] cvar_cond/reinforce/seed1: best-val skill 0.000, test skill 0.000, 153s
+[13/35] cvar_cond/reinforce/seed2: best-val skill 0.018, test skill 0.016, 161s
+[14/35] cvar_cond/reinforce/seed3: best-val skill 0.003, test skill -0.005, 161s
+[15/35] cvar_cond/reinforce/seed4: best-val skill 0.146, test skill 0.115, 156s
+[16/35] cvar_cond/a2c/seed0: best-val skill 0.060, test skill 0.051, 173s
+[17/35] cvar_cond/a2c/seed1: best-val skill 0.000, test skill 0.000, 169s
+[18/35] cvar_cond/a2c/seed2: best-val skill 0.037, test skill 0.048, 171s
+[19/35] cvar_cond/a2c/seed3: best-val skill 0.157, test skill 0.142, 169s
+[20/35] cvar_cond/a2c/seed4: best-val skill 0.000, test skill 0.000, 161s
+[21/35] cvar_cond/dpg/seed0: best-val skill 0.000, test skill 0.000, 397s
+[22/35] cvar_cond/dpg/seed1: best-val skill 0.000, test skill 0.000, 380s
+[23/35] cvar_cond/dpg/seed2: best-val skill 0.000, test skill 0.000, 387s
+[24/35] cvar_cond/dpg/seed3: best-val skill 0.000, test skill 0.000, 376s
+[25/35] cvar_cond/dpg/seed4: best-val skill 0.000, test skill 0.000, 384s
+[26/35] cvar_cond/trpo/seed0: best-val skill 0.000, test skill 0.000, 99s
+[27/35] cvar_cond/trpo/seed1: best-val skill 0.000, test skill 0.000, 109s
+[28/35] cvar_cond/trpo/seed2: best-val skill 0.000, test skill 0.000, 99s
+[29/35] cvar_cond/trpo/seed3: best-val skill 0.000, test skill 0.000, 104s
+[30/35] cvar_cond/trpo/seed4: best-val skill 0.000, test skill 0.000, 109s
+[31/35] cvar_cond/ppo/seed0: best-val skill 0.000, test skill 0.000, 490s
+[32/35] cvar_cond/ppo/seed1: best-val skill 0.000, test skill 0.000, 488s
+[33/35] cvar_cond/ppo/seed2: best-val skill 0.000, test skill 0.000, 522s
+[34/35] cvar_cond/ppo/seed3: best-val skill 0.000, test skill 0.000, 487s
+[35/35] cvar_cond/ppo/seed4: best-val skill 0.000, test skill 0.000, 520s
+                        best_val_val_skill  best_val_test_skill  days_to_95
+objective    algo                                                          
+cvar         a2c                  0.321148             0.239225         NaN
+             dpg                  0.294450             0.037071         NaN
+             fdpg                 0.537074             0.359398         NaN
+             fdpg_spsa            0.399469             0.271590         NaN
+             ppo                  0.082256            -0.011318         NaN
+             reinforce            0.217826             0.082713         NaN
+             trpo                 0.284260             0.115488         NaN
+cvar_cond    a2c                  0.037104             0.047634         NaN
+             dpg                  0.000000             0.000000         NaN
+             fdpg                 0.250693             0.184226         NaN
+             fdpg_spsa            0.130605             0.103042         NaN
+             ppo                  0.000000             0.000000         NaN
+             reinforce            0.017944             0.016237         NaN
+             trpo                 0.000000             0.000000         NaN
+meanvar      a2c                  0.610055             1.404256         NaN
+             dpg                  0.562689             0.891708     13248.0
+             fdpg                 1.820391             3.759429      9120.0
+             fdpg_spsa            1.948323             3.560011      7488.0
+             ppo                  0.748653             1.507216     27456.0
+             reinforce            0.269243             0.193330         NaN
+             trpo                 0.389985             0.665404         NaN
+neutral_cond a2c                  0.168435             0.145581         NaN
+             dpg                  0.061080             0.053913         NaN
+             fdpg                 0.303605             0.274070         NaN
+             fdpg_spsa            0.205766             0.209263         NaN
+             ppo                  0.000000             0.000000         NaN
+             reinforce            0.062653             0.064737         NaN
+             trpo                 0.047328             0.066205         NaN
+done in 15.5 min
+35 runs, budget 30000 rollouts each, 10 workers
+[1/35] meanvar_cond/fdpg/seed0: best-val skill 0.521, test skill 0.442, 71s
+[2/35] meanvar_cond/fdpg/seed1: best-val skill 0.534, test skill 0.456, 69s
+[3/35] meanvar_cond/fdpg/seed2: best-val skill 0.517, test skill 0.440, 69s
+[4/35] meanvar_cond/fdpg/seed3: best-val skill 0.498, test skill 0.434, 70s
+[5/35] meanvar_cond/fdpg/seed4: best-val skill 0.494, test skill 0.425, 68s
+[6/35] meanvar_cond/fdpg_spsa/seed0: best-val skill 0.344, test skill 0.326, 76s
+[7/35] meanvar_cond/fdpg_spsa/seed1: best-val skill 0.343, test skill 0.301, 77s
+[8/35] meanvar_cond/fdpg_spsa/seed2: best-val skill 0.297, test skill 0.255, 80s
+[9/35] meanvar_cond/fdpg_spsa/seed3: best-val skill 0.398, test skill 0.349, 78s
+[10/35] meanvar_cond/fdpg_spsa/seed4: best-val skill 0.325, test skill 0.288, 76s
+[11/35] meanvar_cond/reinforce/seed0: best-val skill 0.236, test skill 0.249, 153s
+[12/35] meanvar_cond/reinforce/seed1: best-val skill 0.006, test skill 0.008, 161s
+[13/35] meanvar_cond/reinforce/seed2: best-val skill 0.065, test skill 0.042, 161s
+[14/35] meanvar_cond/reinforce/seed3: best-val skill 0.106, test skill 0.105, 175s
+[15/35] meanvar_cond/reinforce/seed4: best-val skill 0.209, test skill 0.229, 173s
+[16/35] meanvar_cond/a2c/seed0: best-val skill 0.349, test skill 0.309, 194s
+[17/35] meanvar_cond/a2c/seed1: best-val skill 0.275, test skill 0.250, 195s
+[18/35] meanvar_cond/a2c/seed2: best-val skill 0.214, test skill 0.224, 196s
+[19/35] meanvar_cond/a2c/seed3: best-val skill 0.400, test skill 0.322, 194s
+[20/35] meanvar_cond/a2c/seed4: best-val skill 0.176, test skill 0.148, 194s
+[21/35] meanvar_cond/dpg/seed0: best-val skill 0.000, test skill 0.000, 552s
+[22/35] meanvar_cond/dpg/seed1: best-val skill 0.113, test skill 0.019, 534s
+[23/35] meanvar_cond/dpg/seed2: best-val skill 0.000, test skill 0.000, 559s
+[24/35] meanvar_cond/dpg/seed3: best-val skill 0.067, test skill 0.060, 573s
+[25/35] meanvar_cond/dpg/seed4: best-val skill 0.089, test skill 0.057, 560s
+[26/35] meanvar_cond/trpo/seed0: best-val skill 0.005, test skill 0.017, 84s
+[27/35] meanvar_cond/trpo/seed1: best-val skill 0.000, test skill 0.000, 81s
+[28/35] meanvar_cond/trpo/seed2: best-val skill 0.000, test skill 0.000, 82s
+[29/35] meanvar_cond/trpo/seed3: best-val skill 0.182, test skill 0.173, 81s
+[30/35] meanvar_cond/trpo/seed4: best-val skill 0.061, test skill 0.073, 82s
+[31/35] meanvar_cond/ppo/seed0: best-val skill 0.000, test skill 0.000, 769s
+[32/35] meanvar_cond/ppo/seed1: best-val skill 0.000, test skill 0.000, 772s
+[33/35] meanvar_cond/ppo/seed2: best-val skill 0.117, test skill 0.073, 747s
+[34/35] meanvar_cond/ppo/seed3: best-val skill 0.000, test skill 0.000, 785s
+[35/35] meanvar_cond/ppo/seed4: best-val skill 0.000, test skill 0.000, 772s
+                        best_val_val_skill  best_val_test_skill  days_to_95
+objective    algo                                                          
+cvar         a2c                  0.321148             0.239225         NaN
+             dpg                  0.294450             0.037071         NaN
+             fdpg                 0.537074             0.359398         NaN
+             fdpg_spsa            0.399469             0.271590         NaN
+             ppo                  0.082256            -0.011318         NaN
+             reinforce            0.217826             0.082713         NaN
+             trpo                 0.284260             0.115488         NaN
+cvar_cond    a2c                  0.037104             0.047634         NaN
+             dpg                  0.000000             0.000000         NaN
+             fdpg                 0.250693             0.184226         NaN
+             fdpg_spsa            0.130605             0.103042         NaN
+             ppo                  0.000000             0.000000         NaN
+             reinforce            0.017944             0.016237         NaN
+             trpo                 0.000000             0.000000         NaN
+meanvar      a2c                  0.610055             1.404256         NaN
+             dpg                  0.562689             0.891708     13248.0
+             fdpg                 1.820391             3.759429      9120.0
+             fdpg_spsa            1.948323             3.560011      7488.0
+             ppo                  0.748653             1.507216     27456.0
+             reinforce            0.269243             0.193330         NaN
+             trpo                 0.389985             0.665404         NaN
+meanvar_cond a2c                  0.275356             0.249691         NaN
+             dpg                  0.066897             0.018517         NaN
+             fdpg                 0.516641             0.439526         NaN
+             fdpg_spsa            0.342782             0.301321         NaN
+             ppo                  0.000000             0.000000         NaN
+             reinforce            0.105631             0.105436         NaN
+             trpo                 0.004501             0.016908         NaN
+neutral_cond a2c                  0.168435             0.145581         NaN
+             dpg                  0.061080             0.053913         NaN
+             fdpg                 0.303605             0.274070         NaN
+             fdpg_spsa            0.205766             0.209263         NaN
+             ppo                  0.000000             0.000000         NaN
+             reinforce            0.062653             0.064737         NaN
+             trpo                 0.047328             0.066205         NaN
+done in 19.5 min
+ALL DONE

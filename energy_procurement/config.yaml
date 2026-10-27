@@ -1,0 +1,14 @@
+energy_file: "C:/Users/username/OneDrive - XXYY/spain enegry/energy_dataset.csv"
+weather_file: "C:/Users/username/OneDrive - XXYY/spain enegry/weather_features.csv"
+# env vars ENERGY_FILE / WEATHER_FILE override the paths above
+customer_avg_load_mw: 10
+cap_multiplier: 1.5
+rho: 0.0
+pi: 0.0
+cutoff_days: 2
+alpha: 0.95
+splits:
+  train: [2015, 2016]
+  val: [2017]
+  test: [2018]
+seed: 0

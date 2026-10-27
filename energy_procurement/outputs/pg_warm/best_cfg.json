@@ -1,0 +1,23 @@
+{
+ "neutral|a2c": {
+  "lr": 0.0001
+ },
+ "neutral|dpg": {
+  "lr": 1e-05
+ },
+ "neutral|fdpg": {
+  "lr": 0.002
+ },
+ "neutral|fdpg_spsa": {
+  "lr": 0.0005
+ },
+ "neutral|ppo": {
+  "lr": 0.0001
+ },
+ "neutral|reinforce": {
+  "lr": 0.0001
+ },
+ "neutral|trpo": {
+  "lr": 0.001
+ }
+}

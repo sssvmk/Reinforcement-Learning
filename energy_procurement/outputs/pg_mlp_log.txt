@@ -1,0 +1,616 @@
+6 runs, budget 12000 rollouts each, 6 workers
+[1/6] neutral_cond/grid_reinforce_mlp_1e-05/seed100: best-val skill 0.000, test skill 0.001, 28s
+[2/6] neutral_cond/grid_reinforce_mlp_1e-05/seed101: best-val skill 0.017, test skill 0.015, 28s
+[3/6] neutral_cond/grid_reinforce_mlp_2.9999999999999997e-05/seed100: best-val skill 0.000, test skill 0.000, 28s
+[4/6] neutral_cond/grid_reinforce_mlp_2.9999999999999997e-05/seed101: best-val skill 0.047, test skill 0.043, 28s
+[5/6] neutral_cond/grid_reinforce_mlp_0.0001/seed100: best-val skill 0.000, test skill 0.000, 28s
+[6/6] neutral_cond/grid_reinforce_mlp_0.0001/seed101: best-val skill 0.123, test skill 0.110, 28s
+objective     algo           lr     
+neutral_cond  reinforce_mlp  0.00001    0.008491
+                             0.00003    0.023053
+                             0.00010    0.051046
+done in 0.7 min
+6 runs, budget 12000 rollouts each, 6 workers
+[1/6] neutral_cond/grid_a2c_mlp_1e-05/seed100: best-val skill 0.003, test skill 0.005, 46s
+[2/6] neutral_cond/grid_a2c_mlp_1e-05/seed101: best-val skill 0.026, test skill 0.026, 45s
+[3/6] neutral_cond/grid_a2c_mlp_2.9999999999999997e-05/seed100: best-val skill 0.008, test skill 0.012, 45s
+[4/6] neutral_cond/grid_a2c_mlp_2.9999999999999997e-05/seed101: best-val skill 0.085, test skill 0.083, 45s
+[5/6] neutral_cond/grid_a2c_mlp_0.0001/seed100: best-val skill 0.049, test skill 0.058, 45s
+[6/6] neutral_cond/grid_a2c_mlp_0.0001/seed101: best-val skill 0.206, test skill 0.194, 45s
+objective     algo     lr     
+neutral_cond  a2c_mlp  0.00001    0.014721
+                       0.00003    0.045828
+                       0.00010    0.106495
+done in 1.0 min
+6 runs, budget 12000 rollouts each, 6 workers
+[1/6] neutral_cond/grid_trpo_mlp_0.0001/seed100: best-val skill 0.083, test skill 0.083, 30s
+[2/6] neutral_cond/grid_trpo_mlp_0.0001/seed101: best-val skill 0.158, test skill 0.139, 30s
+[3/6] neutral_cond/grid_trpo_mlp_0.00030000000000000003/seed100: best-val skill 0.097, test skill 0.103, 30s
+[4/6] neutral_cond/grid_trpo_mlp_0.00030000000000000003/seed101: best-val skill 0.174, test skill 0.164, 30s
+[5/6] neutral_cond/grid_trpo_mlp_0.001/seed100: best-val skill 0.028, test skill 0.025, 30s
+[6/6] neutral_cond/grid_trpo_mlp_0.001/seed101: best-val skill 0.166, test skill 0.128, 30s
+objective     algo      lr    
+neutral_cond  trpo_mlp  0.0001    0.114684
+                        0.0003    0.105732
+                        0.0010   -0.049816
+done in 0.8 min
+6 runs, budget 12000 rollouts each, 6 workers
+[1/6] neutral_cond/grid_ppo_mlp_1e-05/seed100: best-val skill 0.107, test skill 0.088, 165s
+[2/6] neutral_cond/grid_ppo_mlp_1e-05/seed101: best-val skill 0.191, test skill 0.166, 164s
+[3/6] neutral_cond/grid_ppo_mlp_2.9999999999999997e-05/seed100: best-val skill 0.042, test skill 0.033, 163s
+[4/6] neutral_cond/grid_ppo_mlp_2.9999999999999997e-05/seed101: best-val skill 0.148, test skill 0.134, 165s
+[5/6] neutral_cond/grid_ppo_mlp_0.0001/seed100: best-val skill 0.025, test skill 0.021, 163s
+[6/6] neutral_cond/grid_ppo_mlp_0.0001/seed101: best-val skill 0.066, test skill 0.067, 162s
+objective     algo     lr     
+neutral_cond  ppo_mlp  0.00001   -1.316067
+                       0.00003   -7.748276
+                       0.00010   -2.255856
+done in 3.0 min
+6 runs, budget 12000 rollouts each, 6 workers
+[1/6] neutral_cond/grid_dpg_mlp_1.0000000000000002e-06/seed100: best-val skill 0.189, test skill 0.174, 140s
+[2/6] neutral_cond/grid_dpg_mlp_1.0000000000000002e-06/seed101: best-val skill 0.220, test skill 0.189, 141s
+[3/6] neutral_cond/grid_dpg_mlp_3e-06/seed100: best-val skill 0.126, test skill 0.110, 141s
+[4/6] neutral_cond/grid_dpg_mlp_3e-06/seed101: best-val skill 0.186, test skill 0.168, 141s
+[5/6] neutral_cond/grid_dpg_mlp_1e-05/seed100: best-val skill 0.156, test skill 0.160, 139s
+[6/6] neutral_cond/grid_dpg_mlp_1e-05/seed101: best-val skill 0.162, test skill 0.151, 140s
+objective     algo     lr      
+neutral_cond  dpg_mlp  0.000001    0.153370
+                       0.000003   -0.337079
+                       0.000010   -0.693803
+done in 2.7 min
+6 runs, budget 12000 rollouts each, 6 workers
+[1/6] cvar_cond/grid_reinforce_mlp_1e-05/seed100: best-val skill 0.000, test skill 0.000, 27s
+[2/6] cvar_cond/grid_reinforce_mlp_1e-05/seed101: best-val skill 0.021, test skill 0.013, 27s
+[3/6] cvar_cond/grid_reinforce_mlp_2.9999999999999997e-05/seed100: best-val skill 0.000, test skill 0.000, 26s
+[4/6] cvar_cond/grid_reinforce_mlp_2.9999999999999997e-05/seed101: best-val skill 0.059, test skill 0.035, 26s
+[5/6] cvar_cond/grid_reinforce_mlp_0.0001/seed100: best-val skill 0.000, test skill 0.000, 26s
+[6/6] cvar_cond/grid_reinforce_mlp_0.0001/seed101: best-val skill 0.140, test skill 0.082, 26s
+objective  algo           lr     
+cvar_cond  reinforce_mlp  0.00001    0.004428
+                          0.00003    0.005108
+                          0.00010   -0.076757
+done in 0.7 min
+6 runs, budget 12000 rollouts each, 6 workers
+[1/6] cvar_cond/grid_a2c_mlp_1e-05/seed100: best-val skill 0.016, test skill 0.006, 50s
+[2/6] cvar_cond/grid_a2c_mlp_1e-05/seed101: best-val skill 0.016, test skill 0.015, 50s
+[3/6] cvar_cond/grid_a2c_mlp_2.9999999999999997e-05/seed100: best-val skill 0.039, test skill 0.014, 50s
+[4/6] cvar_cond/grid_a2c_mlp_2.9999999999999997e-05/seed101: best-val skill 0.039, test skill 0.037, 50s
+[5/6] cvar_cond/grid_a2c_mlp_0.0001/seed100: best-val skill 0.025, test skill -0.010, 49s
+[6/6] cvar_cond/grid_a2c_mlp_0.0001/seed101: best-val skill 0.015, test skill 0.059, 49s
+objective  algo     lr     
+cvar_cond  a2c_mlp  0.00001    0.016285
+                    0.00003    0.038903
+                    0.00010    0.014994
+done in 1.1 min
+6 runs, budget 12000 rollouts each, 6 workers
+[1/6] cvar_cond/grid_trpo_mlp_0.0001/seed100: best-val skill 0.031, test skill 0.011, 51s
+[2/6] cvar_cond/grid_trpo_mlp_0.0001/seed101: best-val skill 0.034, test skill 0.029, 50s
+[3/6] cvar_cond/grid_trpo_mlp_0.00030000000000000003/seed100: best-val skill 0.025, test skill 0.016, 48s
+[4/6] cvar_cond/grid_trpo_mlp_0.00030000000000000003/seed101: best-val skill 0.053, test skill 0.046, 50s
+[5/6] cvar_cond/grid_trpo_mlp_0.001/seed100: best-val skill 0.030, test skill 0.022, 51s
+[6/6] cvar_cond/grid_trpo_mlp_0.001/seed101: best-val skill 0.070, test skill 0.067, 51s
+objective  algo      lr    
+cvar_cond  trpo_mlp  0.0001   -0.004684
+                     0.0003   -0.132063
+                     0.0010   -0.575142
+done in 1.2 min
+6 runs, budget 12000 rollouts each, 6 workers
+[1/6] cvar_cond/grid_ppo_mlp_1e-05/seed100: best-val skill 0.183, test skill 0.122, 172s
+[2/6] cvar_cond/grid_ppo_mlp_1e-05/seed101: best-val skill 0.000, test skill 0.000, 173s
+[3/6] cvar_cond/grid_ppo_mlp_2.9999999999999997e-05/seed100: best-val skill 0.065, test skill 0.079, 173s
+[4/6] cvar_cond/grid_ppo_mlp_2.9999999999999997e-05/seed101: best-val skill 0.000, test skill 0.000, 172s
+[5/6] cvar_cond/grid_ppo_mlp_0.0001/seed100: best-val skill 0.000, test skill 0.000, 173s
+[6/6] cvar_cond/grid_ppo_mlp_0.0001/seed101: best-val skill 0.000, test skill 0.000, 173s
+objective  algo     lr     
+cvar_cond  ppo_mlp  0.00001   -0.618131
+                    0.00003   -3.722180
+                    0.00010   -4.219917
+done in 3.4 min
+6 runs, budget 12000 rollouts each, 6 workers
+[1/6] cvar_cond/grid_dpg_mlp_1.0000000000000002e-06/seed100: best-val skill 0.057, test skill 0.084, 136s
+[2/6] cvar_cond/grid_dpg_mlp_1.0000000000000002e-06/seed101: best-val skill 0.050, test skill 0.103, 135s
+[3/6] cvar_cond/grid_dpg_mlp_3e-06/seed100: best-val skill 0.000, test skill 0.000, 135s
+[4/6] cvar_cond/grid_dpg_mlp_3e-06/seed101: best-val skill 0.000, test skill 0.000, 135s
+[5/6] cvar_cond/grid_dpg_mlp_1e-05/seed100: best-val skill 0.000, test skill 0.000, 135s
+[6/6] cvar_cond/grid_dpg_mlp_1e-05/seed101: best-val skill 0.000, test skill 0.000, 135s
+objective  algo     lr      
+cvar_cond  dpg_mlp  0.000001   -0.709879
+                    0.000003   -5.670686
+                    0.000010   -9.962331
+done in 2.5 min
+5 runs, budget 30000 rollouts each, 5 workers
+[1/5] neutral_cond/reinforce_mlp/seed0: best-val skill 0.075, test skill 0.060, 28s
+[2/5] neutral_cond/reinforce_mlp/seed1: best-val skill 0.106, test skill 0.045, 27s
+[3/5] neutral_cond/reinforce_mlp/seed2: best-val skill 0.124, test skill 0.108, 28s
+[4/5] neutral_cond/reinforce_mlp/seed3: best-val skill 0.162, test skill 0.130, 27s
+[5/5] neutral_cond/reinforce_mlp/seed4: best-val skill 0.182, test skill 0.139, 28s
+                            best_val_val_skill  best_val_test_skill  days_to_95
+objective    algo                                                              
+cvar         a2c                      0.321148             0.239225         NaN
+             dpg                      0.294450             0.037071         NaN
+             fdpg                     0.537074             0.359398         NaN
+             fdpg_spsa                0.399469             0.271590         NaN
+             ppo                      0.082256            -0.011318         NaN
+             reinforce                0.217826             0.082713         NaN
+             trpo                     0.284260             0.115488         NaN
+cvar_cond    a2c                      0.037104             0.047634         NaN
+             dpg                      0.000000             0.000000         NaN
+             fdpg                     0.250693             0.184226         NaN
+             fdpg_spsa                0.130605             0.103042         NaN
+             ppo                      0.000000             0.000000         NaN
+             reinforce                0.017944             0.016237         NaN
+             trpo                     0.000000             0.000000         NaN
+meanvar      a2c                      0.610055             1.404256         NaN
+             dpg                      0.562689             0.891708     13248.0
+             fdpg                     1.820391             3.759429      9120.0
+             fdpg_spsa                1.948323             3.560011      7488.0
+             ppo                      0.748653             1.507216     27456.0
+             reinforce                0.269243             0.193330         NaN
+             trpo                     0.389985             0.665404         NaN
+meanvar_cond a2c                      0.275356             0.249691         NaN
+             dpg                      0.066897             0.018517         NaN
+             fdpg                     0.516641             0.439526         NaN
+             fdpg_spsa                0.342782             0.301321         NaN
+             ppo                      0.000000             0.000000         NaN
+             reinforce                0.105631             0.105436         NaN
+             trpo                     0.004501             0.016908         NaN
+neutral_cond a2c                      0.168435             0.145581         NaN
+             dpg                      0.061080             0.053913         NaN
+             fdpg                     0.303605             0.274070         NaN
+             fdpg_spsa                0.205766             0.209263         NaN
+             ppo                      0.000000             0.000000         NaN
+             reinforce                0.062653             0.064737         NaN
+             reinforce_mlp            0.123662             0.108317         NaN
+             trpo                     0.047328             0.066205         NaN
+done in 0.7 min
+5 runs, budget 30000 rollouts each, 5 workers
+[1/5] neutral_cond/a2c_mlp/seed0: best-val skill 0.205, test skill 0.187, 30s
+[2/5] neutral_cond/a2c_mlp/seed1: best-val skill 0.181, test skill 0.163, 30s
+[3/5] neutral_cond/a2c_mlp/seed2: best-val skill 0.141, test skill 0.129, 30s
+[4/5] neutral_cond/a2c_mlp/seed3: best-val skill 0.199, test skill 0.175, 30s
+[5/5] neutral_cond/a2c_mlp/seed4: best-val skill 0.201, test skill 0.150, 30s
+                            best_val_val_skill  best_val_test_skill  days_to_95
+objective    algo                                                              
+cvar         a2c                      0.321148             0.239225         NaN
+             dpg                      0.294450             0.037071         NaN
+             fdpg                     0.537074             0.359398         NaN
+             fdpg_spsa                0.399469             0.271590         NaN
+             ppo                      0.082256            -0.011318         NaN
+             reinforce                0.217826             0.082713         NaN
+             trpo                     0.284260             0.115488         NaN
+cvar_cond    a2c                      0.037104             0.047634         NaN
+             dpg                      0.000000             0.000000         NaN
+             fdpg                     0.250693             0.184226         NaN
+             fdpg_spsa                0.130605             0.103042         NaN
+             ppo                      0.000000             0.000000         NaN
+             reinforce                0.017944             0.016237         NaN
+             trpo                     0.000000             0.000000         NaN
+meanvar      a2c                      0.610055             1.404256         NaN
+             dpg                      0.562689             0.891708     13248.0
+             fdpg                     1.820391             3.759429      9120.0
+             fdpg_spsa                1.948323             3.560011      7488.0
+             ppo                      0.748653             1.507216     27456.0
+             reinforce                0.269243             0.193330         NaN
+             trpo                     0.389985             0.665404         NaN
+meanvar_cond a2c                      0.275356             0.249691         NaN
+             dpg                      0.066897             0.018517         NaN
+             fdpg                     0.516641             0.439526         NaN
+             fdpg_spsa                0.342782             0.301321         NaN
+             ppo                      0.000000             0.000000         NaN
+             reinforce                0.105631             0.105436         NaN
+             trpo                     0.004501             0.016908         NaN
+neutral_cond a2c                      0.168435             0.145581         NaN
+             a2c_mlp                  0.199404             0.162622         NaN
+             dpg                      0.061080             0.053913         NaN
+             fdpg                     0.303605             0.274070         NaN
+             fdpg_spsa                0.205766             0.209263         NaN
+             ppo                      0.000000             0.000000         NaN
+             reinforce                0.062653             0.064737         NaN
+             reinforce_mlp            0.123662             0.108317         NaN
+             trpo                     0.047328             0.066205         NaN
+done in 0.7 min
+5 runs, budget 30000 rollouts each, 5 workers
+[1/5] neutral_cond/trpo_mlp/seed0: best-val skill 0.134, test skill 0.133, 62s
+[2/5] neutral_cond/trpo_mlp/seed1: best-val skill 0.139, test skill 0.132, 62s
+[3/5] neutral_cond/trpo_mlp/seed2: best-val skill 0.014, test skill 0.005, 62s
+[4/5] neutral_cond/trpo_mlp/seed3: best-val skill 0.062, test skill 0.052, 62s
+[5/5] neutral_cond/trpo_mlp/seed4: best-val skill 0.128, test skill 0.106, 61s
+                            best_val_val_skill  best_val_test_skill  days_to_95
+objective    algo                                                              
+cvar         a2c                      0.321148             0.239225         NaN
+             dpg                      0.294450             0.037071         NaN
+             fdpg                     0.537074             0.359398         NaN
+             fdpg_spsa                0.399469             0.271590         NaN
+             ppo                      0.082256            -0.011318         NaN
+             reinforce                0.217826             0.082713         NaN
+             trpo                     0.284260             0.115488         NaN
+cvar_cond    a2c                      0.037104             0.047634         NaN
+             dpg                      0.000000             0.000000         NaN
+             fdpg                     0.250693             0.184226         NaN
+             fdpg_spsa                0.130605             0.103042         NaN
+             ppo                      0.000000             0.000000         NaN
+             reinforce                0.017944             0.016237         NaN
+             trpo                     0.000000             0.000000         NaN
+meanvar      a2c                      0.610055             1.404256         NaN
+             dpg                      0.562689             0.891708     13248.0
+             fdpg                     1.820391             3.759429      9120.0
+             fdpg_spsa                1.948323             3.560011      7488.0
+             ppo                      0.748653             1.507216     27456.0
+             reinforce                0.269243             0.193330         NaN
+             trpo                     0.389985             0.665404         NaN
+meanvar_cond a2c                      0.275356             0.249691         NaN
+             dpg                      0.066897             0.018517         NaN
+             fdpg                     0.516641             0.439526         NaN
+             fdpg_spsa                0.342782             0.301321         NaN
+             ppo                      0.000000             0.000000         NaN
+             reinforce                0.105631             0.105436         NaN
+             trpo                     0.004501             0.016908         NaN
+neutral_cond a2c                      0.168435             0.145581         NaN
+             a2c_mlp                  0.199404             0.162622         NaN
+             dpg                      0.061080             0.053913         NaN
+             fdpg                     0.303605             0.274070         NaN
+             fdpg_spsa                0.205766             0.209263         NaN
+             ppo                      0.000000             0.000000         NaN
+             reinforce                0.062653             0.064737         NaN
+             reinforce_mlp            0.123662             0.108317         NaN
+             trpo                     0.047328             0.066205         NaN
+             trpo_mlp                 0.128207             0.106198         NaN
+done in 1.3 min
+5 runs, budget 30000 rollouts each, 5 workers
+[1/5] neutral_cond/ppo_mlp/seed0: best-val skill 0.153, test skill 0.132, 320s
+[2/5] neutral_cond/ppo_mlp/seed1: best-val skill 0.006, test skill -0.006, 321s
+[3/5] neutral_cond/ppo_mlp/seed2: best-val skill 0.208, test skill 0.181, 316s
+[4/5] neutral_cond/ppo_mlp/seed3: best-val skill 0.039, test skill 0.030, 323s
+[5/5] neutral_cond/ppo_mlp/seed4: best-val skill 0.215, test skill 0.187, 319s
+                            best_val_val_skill  best_val_test_skill  days_to_95
+objective    algo                                                              
+cvar         a2c                      0.321148             0.239225         NaN
+             dpg                      0.294450             0.037071         NaN
+             fdpg                     0.537074             0.359398         NaN
+             fdpg_spsa                0.399469             0.271590         NaN
+             ppo                      0.082256            -0.011318         NaN
+             reinforce                0.217826             0.082713         NaN
+             trpo                     0.284260             0.115488         NaN
+cvar_cond    a2c                      0.037104             0.047634         NaN
+             dpg                      0.000000             0.000000         NaN
+             fdpg                     0.250693             0.184226         NaN
+             fdpg_spsa                0.130605             0.103042         NaN
+             ppo                      0.000000             0.000000         NaN
+             reinforce                0.017944             0.016237         NaN
+             trpo                     0.000000             0.000000         NaN
+meanvar      a2c                      0.610055             1.404256         NaN
+             dpg                      0.562689             0.891708     13248.0
+             fdpg                     1.820391             3.759429      9120.0
+             fdpg_spsa                1.948323             3.560011      7488.0
+             ppo                      0.748653             1.507216     27456.0
+             reinforce                0.269243             0.193330         NaN
+             trpo                     0.389985             0.665404         NaN
+meanvar_cond a2c                      0.275356             0.249691         NaN
+             dpg                      0.066897             0.018517         NaN
+             fdpg                     0.516641             0.439526         NaN
+             fdpg_spsa                0.342782             0.301321         NaN
+             ppo                      0.000000             0.000000         NaN
+             reinforce                0.105631             0.105436         NaN
+             trpo                     0.004501             0.016908         NaN
+neutral_cond a2c                      0.168435             0.145581         NaN
+             a2c_mlp                  0.199404             0.162622         NaN
+             dpg                      0.061080             0.053913         NaN
+             fdpg                     0.303605             0.274070         NaN
+             fdpg_spsa                0.205766             0.209263         NaN
+             ppo                      0.000000             0.000000         NaN
+             ppo_mlp                  0.152788             0.132424         NaN
+             reinforce                0.062653             0.064737         NaN
+             reinforce_mlp            0.123662             0.108317         NaN
+             trpo                     0.047328             0.066205         NaN
+             trpo_mlp                 0.128207             0.106198         NaN
+done in 5.6 min
+5 runs, budget 30000 rollouts each, 5 workers
+[1/5] neutral_cond/dpg_mlp/seed0: best-val skill 0.218, test skill 0.187, 213s
+[2/5] neutral_cond/dpg_mlp/seed1: best-val skill 0.180, test skill 0.175, 213s
+[3/5] neutral_cond/dpg_mlp/seed2: best-val skill 0.134, test skill 0.108, 214s
+[4/5] neutral_cond/dpg_mlp/seed3: best-val skill 0.249, test skill 0.218, 213s
+[5/5] neutral_cond/dpg_mlp/seed4: best-val skill 0.211, test skill 0.172, 213s
+                            best_val_val_skill  best_val_test_skill  days_to_95
+objective    algo                                                              
+cvar         a2c                      0.321148             0.239225         NaN
+             dpg                      0.294450             0.037071         NaN
+             fdpg                     0.537074             0.359398         NaN
+             fdpg_spsa                0.399469             0.271590         NaN
+             ppo                      0.082256            -0.011318         NaN
+             reinforce                0.217826             0.082713         NaN
+             trpo                     0.284260             0.115488         NaN
+cvar_cond    a2c                      0.037104             0.047634         NaN
+             dpg                      0.000000             0.000000         NaN
+             fdpg                     0.250693             0.184226         NaN
+             fdpg_spsa                0.130605             0.103042         NaN
+             ppo                      0.000000             0.000000         NaN
+             reinforce                0.017944             0.016237         NaN
+             trpo                     0.000000             0.000000         NaN
+meanvar      a2c                      0.610055             1.404256         NaN
+             dpg                      0.562689             0.891708     13248.0
+             fdpg                     1.820391             3.759429      9120.0
+             fdpg_spsa                1.948323             3.560011      7488.0
+             ppo                      0.748653             1.507216     27456.0
+             reinforce                0.269243             0.193330         NaN
+             trpo                     0.389985             0.665404         NaN
+meanvar_cond a2c                      0.275356             0.249691         NaN
+             dpg                      0.066897             0.018517         NaN
+             fdpg                     0.516641             0.439526         NaN
+             fdpg_spsa                0.342782             0.301321         NaN
+             ppo                      0.000000             0.000000         NaN
+             reinforce                0.105631             0.105436         NaN
+             trpo                     0.004501             0.016908         NaN
+neutral_cond a2c                      0.168435             0.145581         NaN
+             a2c_mlp                  0.199404             0.162622         NaN
+             dpg                      0.061080             0.053913         NaN
+             dpg_mlp                  0.211373             0.175141         NaN
+             fdpg                     0.303605             0.274070         NaN
+             fdpg_spsa                0.205766             0.209263         NaN
+             ppo                      0.000000             0.000000         NaN
+             ppo_mlp                  0.152788             0.132424         NaN
+             reinforce                0.062653             0.064737         NaN
+             reinforce_mlp            0.123662             0.108317         NaN
+             trpo                     0.047328             0.066205         NaN
+             trpo_mlp                 0.128207             0.106198         NaN
+done in 3.8 min
+5 runs, budget 30000 rollouts each, 5 workers
+[1/5] cvar_cond/reinforce_mlp/seed0: best-val skill 0.000, test skill 0.000, 29s
+[2/5] cvar_cond/reinforce_mlp/seed1: best-val skill 0.055, test skill 0.023, 30s
+[3/5] cvar_cond/reinforce_mlp/seed2: best-val skill 0.019, test skill 0.010, 29s
+[4/5] cvar_cond/reinforce_mlp/seed3: best-val skill 0.080, test skill 0.047, 30s
+[5/5] cvar_cond/reinforce_mlp/seed4: best-val skill 0.091, test skill 0.053, 30s
+                            best_val_val_skill  best_val_test_skill  days_to_95
+objective    algo                                                              
+cvar         a2c                      0.321148             0.239225         NaN
+             dpg                      0.294450             0.037071         NaN
+             fdpg                     0.537074             0.359398         NaN
+             fdpg_spsa                0.399469             0.271590         NaN
+             ppo                      0.082256            -0.011318         NaN
+             reinforce                0.217826             0.082713         NaN
+             trpo                     0.284260             0.115488         NaN
+cvar_cond    a2c                      0.037104             0.047634         NaN
+             dpg                      0.000000             0.000000         NaN
+             fdpg                     0.250693             0.184226         NaN
+             fdpg_spsa                0.130605             0.103042         NaN
+             ppo                      0.000000             0.000000         NaN
+             reinforce                0.017944             0.016237         NaN
+             reinforce_mlp            0.054990             0.022549         NaN
+             trpo                     0.000000             0.000000         NaN
+meanvar      a2c                      0.610055             1.404256         NaN
+             dpg                      0.562689             0.891708     13248.0
+             fdpg                     1.820391             3.759429      9120.0
+             fdpg_spsa                1.948323             3.560011      7488.0
+             ppo                      0.748653             1.507216     27456.0
+             reinforce                0.269243             0.193330         NaN
+             trpo                     0.389985             0.665404         NaN
+meanvar_cond a2c                      0.275356             0.249691         NaN
+             dpg                      0.066897             0.018517         NaN
+             fdpg                     0.516641             0.439526         NaN
+             fdpg_spsa                0.342782             0.301321         NaN
+             ppo                      0.000000             0.000000         NaN
+             reinforce                0.105631             0.105436         NaN
+             trpo                     0.004501             0.016908         NaN
+neutral_cond a2c                      0.168435             0.145581         NaN
+             a2c_mlp                  0.199404             0.162622         NaN
+             dpg                      0.061080             0.053913         NaN
+             dpg_mlp                  0.211373             0.175141         NaN
+             fdpg                     0.303605             0.274070         NaN
+             fdpg_spsa                0.205766             0.209263         NaN
+             ppo                      0.000000             0.000000         NaN
+             ppo_mlp                  0.152788             0.132424         NaN
+             reinforce                0.062653             0.064737         NaN
+             reinforce_mlp            0.123662             0.108317         NaN
+             trpo                     0.047328             0.066205         NaN
+             trpo_mlp                 0.128207             0.106198         NaN
+done in 0.8 min
+5 runs, budget 30000 rollouts each, 5 workers
+[1/5] cvar_cond/a2c_mlp/seed0: best-val skill 0.156, test skill 0.104, 35s
+[2/5] cvar_cond/a2c_mlp/seed1: best-val skill 0.146, test skill 0.098, 34s
+[3/5] cvar_cond/a2c_mlp/seed2: best-val skill 0.168, test skill 0.119, 34s
+[4/5] cvar_cond/a2c_mlp/seed3: best-val skill 0.133, test skill 0.082, 35s
+[5/5] cvar_cond/a2c_mlp/seed4: best-val skill 0.096, test skill 0.055, 35s
+                            best_val_val_skill  best_val_test_skill  days_to_95
+objective    algo                                                              
+cvar         a2c                      0.321148             0.239225         NaN
+             dpg                      0.294450             0.037071         NaN
+             fdpg                     0.537074             0.359398         NaN
+             fdpg_spsa                0.399469             0.271590         NaN
+             ppo                      0.082256            -0.011318         NaN
+             reinforce                0.217826             0.082713         NaN
+             trpo                     0.284260             0.115488         NaN
+cvar_cond    a2c                      0.037104             0.047634         NaN
+             a2c_mlp                  0.145635             0.098100         NaN
+             dpg                      0.000000             0.000000         NaN
+             fdpg                     0.250693             0.184226         NaN
+             fdpg_spsa                0.130605             0.103042         NaN
+             ppo                      0.000000             0.000000         NaN
+             reinforce                0.017944             0.016237         NaN
+             reinforce_mlp            0.054990             0.022549         NaN
+             trpo                     0.000000             0.000000         NaN
+meanvar      a2c                      0.610055             1.404256         NaN
+             dpg                      0.562689             0.891708     13248.0
+             fdpg                     1.820391             3.759429      9120.0
+             fdpg_spsa                1.948323             3.560011      7488.0
+             ppo                      0.748653             1.507216     27456.0
+             reinforce                0.269243             0.193330         NaN
+             trpo                     0.389985             0.665404         NaN
+meanvar_cond a2c                      0.275356             0.249691         NaN
+             dpg                      0.066897             0.018517         NaN
+             fdpg                     0.516641             0.439526         NaN
+             fdpg_spsa                0.342782             0.301321         NaN
+             ppo                      0.000000             0.000000         NaN
+             reinforce                0.105631             0.105436         NaN
+             trpo                     0.004501             0.016908         NaN
+neutral_cond a2c                      0.168435             0.145581         NaN
+             a2c_mlp                  0.199404             0.162622         NaN
+             dpg                      0.061080             0.053913         NaN
+             dpg_mlp                  0.211373             0.175141         NaN
+             fdpg                     0.303605             0.274070         NaN
+             fdpg_spsa                0.205766             0.209263         NaN
+             ppo                      0.000000             0.000000         NaN
+             ppo_mlp                  0.152788             0.132424         NaN
+             reinforce                0.062653             0.064737         NaN
+             reinforce_mlp            0.123662             0.108317         NaN
+             trpo                     0.047328             0.066205         NaN
+             trpo_mlp                 0.128207             0.106198         NaN
+done in 0.8 min
+5 runs, budget 30000 rollouts each, 5 workers
+[1/5] cvar_cond/trpo_mlp/seed0: best-val skill 0.120, test skill 0.090, 67s
+[2/5] cvar_cond/trpo_mlp/seed1: best-val skill 0.157, test skill 0.087, 67s
+[3/5] cvar_cond/trpo_mlp/seed2: best-val skill 0.109, test skill 0.058, 67s
+[4/5] cvar_cond/trpo_mlp/seed3: best-val skill 0.062, test skill 0.072, 67s
+[5/5] cvar_cond/trpo_mlp/seed4: best-val skill 0.000, test skill 0.000, 67s
+                            best_val_val_skill  best_val_test_skill  days_to_95
+objective    algo                                                              
+cvar         a2c                      0.321148             0.239225         NaN
+             dpg                      0.294450             0.037071         NaN
+             fdpg                     0.537074             0.359398         NaN
+             fdpg_spsa                0.399469             0.271590         NaN
+             ppo                      0.082256            -0.011318         NaN
+             reinforce                0.217826             0.082713         NaN
+             trpo                     0.284260             0.115488         NaN
+cvar_cond    a2c                      0.037104             0.047634         NaN
+             a2c_mlp                  0.145635             0.098100         NaN
+             dpg                      0.000000             0.000000         NaN
+             fdpg                     0.250693             0.184226         NaN
+             fdpg_spsa                0.130605             0.103042         NaN
+             ppo                      0.000000             0.000000         NaN
+             reinforce                0.017944             0.016237         NaN
+             reinforce_mlp            0.054990             0.022549         NaN
+             trpo                     0.000000             0.000000         NaN
+             trpo_mlp                 0.109422             0.072127         NaN
+meanvar      a2c                      0.610055             1.404256         NaN
+             dpg                      0.562689             0.891708     13248.0
+             fdpg                     1.820391             3.759429      9120.0
+             fdpg_spsa                1.948323             3.560011      7488.0
+             ppo                      0.748653             1.507216     27456.0
+             reinforce                0.269243             0.193330         NaN
+             trpo                     0.389985             0.665404         NaN
+meanvar_cond a2c                      0.275356             0.249691         NaN
+             dpg                      0.066897             0.018517         NaN
+             fdpg                     0.516641             0.439526         NaN
+             fdpg_spsa                0.342782             0.301321         NaN
+             ppo                      0.000000             0.000000         NaN
+             reinforce                0.105631             0.105436         NaN
+             trpo                     0.004501             0.016908         NaN
+neutral_cond a2c                      0.168435             0.145581         NaN
+             a2c_mlp                  0.199404             0.162622         NaN
+             dpg                      0.061080             0.053913         NaN
+             dpg_mlp                  0.211373             0.175141         NaN
+             fdpg                     0.303605             0.274070         NaN
+             fdpg_spsa                0.205766             0.209263         NaN
+             ppo                      0.000000             0.000000         NaN
+             ppo_mlp                  0.152788             0.132424         NaN
+             reinforce                0.062653             0.064737         NaN
+             reinforce_mlp            0.123662             0.108317         NaN
+             trpo                     0.047328             0.066205         NaN
+             trpo_mlp                 0.128207             0.106198         NaN
+done in 1.4 min
+5 runs, budget 30000 rollouts each, 5 workers
+[1/5] cvar_cond/ppo_mlp/seed0: best-val skill 0.000, test skill 0.000, 341s
+[2/5] cvar_cond/ppo_mlp/seed1: best-val skill 0.000, test skill 0.000, 342s
+[3/5] cvar_cond/ppo_mlp/seed2: best-val skill 0.000, test skill 0.000, 343s
+[4/5] cvar_cond/ppo_mlp/seed3: best-val skill 0.000, test skill 0.000, 340s
+[5/5] cvar_cond/ppo_mlp/seed4: best-val skill 0.000, test skill 0.000, 341s
+                            best_val_val_skill  best_val_test_skill  days_to_95
+objective    algo                                                              
+cvar         a2c                      0.321148             0.239225         NaN
+             dpg                      0.294450             0.037071         NaN
+             fdpg                     0.537074             0.359398         NaN
+             fdpg_spsa                0.399469             0.271590         NaN
+             ppo                      0.082256            -0.011318         NaN
+             reinforce                0.217826             0.082713         NaN
+             trpo                     0.284260             0.115488         NaN
+cvar_cond    a2c                      0.037104             0.047634         NaN
+             a2c_mlp                  0.145635             0.098100         NaN
+             dpg                      0.000000             0.000000         NaN
+             fdpg                     0.250693             0.184226         NaN
+             fdpg_spsa                0.130605             0.103042         NaN
+             ppo                      0.000000             0.000000         NaN
+             ppo_mlp                  0.000000             0.000000         NaN
+             reinforce                0.017944             0.016237         NaN
+             reinforce_mlp            0.054990             0.022549         NaN
+             trpo                     0.000000             0.000000         NaN
+             trpo_mlp                 0.109422             0.072127         NaN
+meanvar      a2c                      0.610055             1.404256         NaN
+             dpg                      0.562689             0.891708     13248.0
+             fdpg                     1.820391             3.759429      9120.0
+             fdpg_spsa                1.948323             3.560011      7488.0
+             ppo                      0.748653             1.507216     27456.0
+             reinforce                0.269243             0.193330         NaN
+             trpo                     0.389985             0.665404         NaN
+meanvar_cond a2c                      0.275356             0.249691         NaN
+             dpg                      0.066897             0.018517         NaN
+             fdpg                     0.516641             0.439526         NaN
+             fdpg_spsa                0.342782             0.301321         NaN
+             ppo                      0.000000             0.000000         NaN
+             reinforce                0.105631             0.105436         NaN
+             trpo                     0.004501             0.016908         NaN
+neutral_cond a2c                      0.168435             0.145581         NaN
+             a2c_mlp                  0.199404             0.162622         NaN
+             dpg                      0.061080             0.053913         NaN
+             dpg_mlp                  0.211373             0.175141         NaN
+             fdpg                     0.303605             0.274070         NaN
+             fdpg_spsa                0.205766             0.209263         NaN
+             ppo                      0.000000             0.000000         NaN
+             ppo_mlp                  0.152788             0.132424         NaN
+             reinforce                0.062653             0.064737         NaN
+             reinforce_mlp            0.123662             0.108317         NaN
+             trpo                     0.047328             0.066205         NaN
+             trpo_mlp                 0.128207             0.106198         NaN
+done in 5.9 min
+5 runs, budget 30000 rollouts each, 5 workers
+[1/5] cvar_cond/dpg_mlp/seed0: best-val skill 0.057, test skill 0.032, 249s
+[2/5] cvar_cond/dpg_mlp/seed1: best-val skill 0.033, test skill 0.041, 249s
+[3/5] cvar_cond/dpg_mlp/seed2: best-val skill 0.025, test skill 0.050, 248s
+[4/5] cvar_cond/dpg_mlp/seed3: best-val skill 0.033, test skill 0.032, 250s
+[5/5] cvar_cond/dpg_mlp/seed4: best-val skill 0.017, test skill 0.005, 246s
+                            best_val_val_skill  best_val_test_skill  days_to_95
+objective    algo                                                              
+cvar         a2c                      0.321148             0.239225         NaN
+             dpg                      0.294450             0.037071         NaN
+             fdpg                     0.537074             0.359398         NaN
+             fdpg_spsa                0.399469             0.271590         NaN
+             ppo                      0.082256            -0.011318         NaN
+             reinforce                0.217826             0.082713         NaN
+             trpo                     0.284260             0.115488         NaN
+cvar_cond    a2c                      0.037104             0.047634         NaN
+             a2c_mlp                  0.145635             0.098100         NaN
+             dpg                      0.000000             0.000000         NaN
+             dpg_mlp                  0.032859             0.031951         NaN
+             fdpg                     0.250693             0.184226         NaN
+             fdpg_spsa                0.130605             0.103042         NaN
+             ppo                      0.000000             0.000000         NaN
+             ppo_mlp                  0.000000             0.000000         NaN
+             reinforce                0.017944             0.016237         NaN
+             reinforce_mlp            0.054990             0.022549         NaN
+             trpo                     0.000000             0.000000         NaN
+             trpo_mlp                 0.109422             0.072127         NaN
+meanvar      a2c                      0.610055             1.404256         NaN
+             dpg                      0.562689             0.891708     13248.0
+             fdpg                     1.820391             3.759429      9120.0
+             fdpg_spsa                1.948323             3.560011      7488.0
+             ppo                      0.748653             1.507216     27456.0
+             reinforce                0.269243             0.193330         NaN
+             trpo                     0.389985             0.665404         NaN
+meanvar_cond a2c                      0.275356             0.249691         NaN
+             dpg                      0.066897             0.018517         NaN
+             fdpg                     0.516641             0.439526         NaN
+             fdpg_spsa                0.342782             0.301321         NaN
+             ppo                      0.000000             0.000000         NaN
+             reinforce                0.105631             0.105436         NaN
+             trpo                     0.004501             0.016908         NaN
+neutral_cond a2c                      0.168435             0.145581         NaN
+             a2c_mlp                  0.199404             0.162622         NaN
+             dpg                      0.061080             0.053913         NaN
+             dpg_mlp                  0.211373             0.175141         NaN
+             fdpg                     0.303605             0.274070         NaN
+             fdpg_spsa                0.205766             0.209263         NaN
+             ppo                      0.000000             0.000000         NaN
+             ppo_mlp                  0.152788             0.132424         NaN
+             reinforce                0.062653             0.064737         NaN
+             reinforce_mlp            0.123662             0.108317         NaN
+             trpo                     0.047328             0.066205         NaN
+             trpo_mlp                 0.128207             0.106198         NaN
+done in 4.4 min
+ALL DONE

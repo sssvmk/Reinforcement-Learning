@@ -1,0 +1,158 @@
+{
+ "neutral|a2c": {
+  "lr": 0.0001
+ },
+ "neutral|dpg": {
+  "lr": 1e-05
+ },
+ "neutral|fdpg": {
+  "lr": 0.002
+ },
+ "neutral|fdpg_spsa": {
+  "lr": 0.0005
+ },
+ "neutral|ppo": {
+  "lr": 0.0003
+ },
+ "neutral|reinforce": {
+  "lr": 0.0001
+ },
+ "neutral|trpo": {
+  "lr": 0.001
+ },
+ "cvar|a2c": {
+  "lr": 0.0003
+ },
+ "cvar|dpg": {
+  "lr": 1e-05
+ },
+ "cvar|fdpg": {
+  "lr": 0.002
+ },
+ "cvar|fdpg_spsa": {
+  "lr": 0.0005
+ },
+ "cvar|ppo": {
+  "lr": 0.0003
+ },
+ "cvar|reinforce": {
+  "lr": 0.0001
+ },
+ "cvar|trpo": {
+  "lr": 0.001
+ },
+ "meanvar|a2c": {
+  "lr": 0.001
+ },
+ "meanvar|dpg": {
+  "lr": 0.0001
+ },
+ "meanvar|fdpg": {
+  "lr": 0.008
+ },
+ "meanvar|fdpg_spsa": {
+  "lr": 0.008
+ },
+ "meanvar|ppo": {
+  "lr": 0.001
+ },
+ "meanvar|reinforce": {
+  "lr": 0.0001
+ },
+ "meanvar|trpo": {
+  "lr": 0.001
+ },
+ "neutral_cond|a2c": {
+  "lr": 0.0001
+ },
+ "neutral_cond|dpg": {
+  "lr": 1e-05
+ },
+ "neutral_cond|fdpg": {
+  "lr": 0.002
+ },
+ "neutral_cond|fdpg_spsa": {
+  "lr": 0.0005
+ },
+ "neutral_cond|ppo": {
+  "lr": 0.001
+ },
+ "neutral_cond|reinforce": {
+  "lr": 0.0001
+ },
+ "neutral_cond|trpo": {
+  "lr": 0.001
+ },
+ "cvar_cond|a2c": {
+  "lr": 0.0001
+ },
+ "cvar_cond|dpg": {
+  "lr": 1e-05
+ },
+ "cvar_cond|fdpg": {
+  "lr": 0.0005
+ },
+ "cvar_cond|fdpg_spsa": {
+  "lr": 0.0005
+ },
+ "cvar_cond|ppo": {
+  "lr": 0.0003
+ },
+ "cvar_cond|reinforce": {
+  "lr": 0.0001
+ },
+ "cvar_cond|trpo": {
+  "lr": 0.001
+ },
+ "meanvar_cond|a2c": {
+  "lr": 0.0001
+ },
+ "meanvar_cond|dpg": {
+  "lr": 1e-05
+ },
+ "meanvar_cond|fdpg": {
+  "lr": 0.002
+ },
+ "meanvar_cond|fdpg_spsa": {
+  "lr": 0.0005
+ },
+ "meanvar_cond|ppo": {
+  "lr": 0.0003
+ },
+ "meanvar_cond|reinforce": {
+  "lr": 0.0001
+ },
+ "meanvar_cond|trpo": {
+  "lr": 0.001
+ },
+ "neutral_cond|reinforce_mlp": {
+  "lr": 0.0001
+ },
+ "neutral_cond|a2c_mlp": {
+  "lr": 0.0001
+ },
+ "neutral_cond|trpo_mlp": {
+  "lr": 0.0001
+ },
+ "neutral_cond|ppo_mlp": {
+  "lr": 1e-05
+ },
+ "neutral_cond|dpg_mlp": {
+  "lr": 1.0000000000000002e-06
+ },
+ "cvar_cond|reinforce_mlp": {
+  "lr": 2.9999999999999997e-05
+ },
+ "cvar_cond|a2c_mlp": {
+  "lr": 2.9999999999999997e-05
+ },
+ "cvar_cond|trpo_mlp": {
+  "lr": 0.0001
+ },
+ "cvar_cond|ppo_mlp": {
+  "lr": 1e-05
+ },
+ "cvar_cond|dpg_mlp": {
+  "lr": 1.0000000000000002e-06
+ }
+}
